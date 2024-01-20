@@ -7,16 +7,13 @@ const Navbar = () => {
           <div className="xl:container m-auto px-6 md:px-12">
               <div className="flex flex-wrap items-center justify-between gap-6 md:py-3 md:gap-0">
                   <div className="w-full flex justify-between lg:w-auto">
-                      <a href="#" aria-label="logo" className="flex space-x-2 items-center">
-                          <div aria-hidden="true" className="flex space-x-1">
-                              <div className="h-4 w-4 rounded-full bg-gray-900 "></div>
-                              <div className="h-6 w-2 bg-primary"></div>
-                          </div>
-                          <span className="text-base font-bold text-gray-600 ">SASS</span>
+                      <a href="/" aria-label="logo" className="flex space-x-2 items-center">
+                        <img src="/izi-logo.jpeg" alt="" className="w-14 h-12 md:h-10  object-contain" 
+                        />
                       </a>
                       <label htmlFor="hbr" className="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden">
-                          <div aria-hidden="true" className="m-auto h-0.5 w-6 rounded bg-gray-900  transition duration-300"></div>
-                          <div aria-hidden="true" className="m-auto mt-2 h-0.5 w-6 rounded bg-gray-900  transition duration-300"></div>
+                        <div aria-hidden="true" className="m-auto h-0.5 w-6 rounded bg-gray-900  transition duration-300"></div>
+                        <div aria-hidden="true" className="m-auto mt-2 h-0.5 w-6 rounded bg-gray-900  transition duration-300"></div>
                       </label>
                   </div>
                   <div className="navmenu hidden w-full flex-wrap justify-end items-center mb-16 space-y-8 p-6 border border-gray-100 rounded-3xl shadow-2xl shadow-gray-300/20 bg-white lg:space-y-0 lg:p-0 lg:m-0 lg:flex md:flex-nowrap lg:bg-transparent lg:w-7/12 lg:shadow-none  lg:border-0">

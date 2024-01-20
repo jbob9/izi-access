@@ -1,9 +1,8 @@
-import React from 'react'
 
 const Header = () => {
   return (  
     <div className="pt-32 md:py-12 xl:container m-auto px-6 md:px-12">
-      <div aria-hidden="true" className="absolute inset-0 my-auto w-96 h-32 rotate-45 bg-gradient-to-r from-primaryLight to-secondaryLight blur-3xl opacity-50 "></div>
+      <div aria-hidden="true" className="absolute inset-0 my-auto w-96 h-32 rotate-45 bg-gradient-to-r from-blue-500 from-10% to-pink-500 to-90% blur-2xl opacity-70 "></div>
       <div className="relative lg:flex lg:items-center lg:gap-12">
           <div className="text-center lg:text-left md:mt-12 lg:mt-0 sm:w-10/12 md:w-2/3 sm:mx-auto lg:mr-auto lg:w-6/12">
               <h1 className="text-gray-900 font-bold text-4xl md:text-6xl lg:text-5xl xl:text-6xl">Build in your way but with our experts <span className="text-primary">Support.</span></h1>
@@ -17,14 +16,14 @@ const Header = () => {
                                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                             </svg>
                           </div>
-                          <input autoComplete="email" placeholder="Your mail address" className="w-full p-4 rounded-full placeholder-gray-600  bg-transparent" type="email"/>
+                          <input autoComplete="email" placeholder="Your mail address" className="w-full p-4 rounded-full placeholder-gray-600 focus:outline-none bg-transparent" type="email"/>
                           <div className="md:pr-1.5 lg:pr-0">
                               <button type="button" title="Start buying" className="relative h-12 w-20 sm:w-auto ml-auto sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
                                 <span className="relative hidden w-max text-white font-semibold md:block">
                                     Get Started
                                 </span>
-                                <svg xmlns="http://www.w3.org/2000/svg" className="relative h-6 w-6 mx-auto text-white md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                <svg xmlns="http://www.w3.org/2000/svg" className="relative h-6 w-6 mx-auto text-white md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                    <path strokeLinecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
                               </button>
                           </div>

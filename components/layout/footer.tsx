@@ -9,7 +9,8 @@ const Footer = () => {
           <div
             className="mb-6 items-center justify-between gap-6 py-6 sm:flex md:mb-16 md:space-y-6 md:py-0"
           >
-            <img width="100" height="42" src="images/logo.svg" alt="logo iziAccess" className="w-32" />
+           
+            <img width="100" height="42" src="/izi-logo.jpeg" alt="logo iziAccess" className="w-16" />
             <div
             className="mt-6 flex flex-col-reverse flex-wrap gap-6 sm:mt-0 sm:flex-row sm:items-center"
             >
@@ -61,26 +62,7 @@ const Footer = () => {
           </div>
           <div>
             <div className="grid grid-cols-2 gap-6 pb-16 sm:grid-cols-3 md:grid-cols-5">
-              <div>
-                <h6 className="text-lg font-medium text-gray-700">Categories</h6>
-                <ul className="mt-4 list-inside space-y-4">
-                  <li>
-                    <a href="#" className="transition hover:text-primary">About</a>
-                  </li>
-                  <li>
-                    <a href="#" className="transition hover:text-primary">Customers</a>
-                  </li>
-                  <li>
-                    <a href="#" className="transition hover:text-primary">Enterprise</a>
-                  </li>
-                  <li>
-                    <a href="#" className="transition hover:text-primary">Partners</a>
-                  </li>
-                  <li>
-                    <a href="#" className="transition hover:text-primary">Jobs</a>
-                  </li>
-                </ul>
-              </div>
+              
               <div>
                 <h6 className="text-lg font-medium text-gray-700">Products</h6>
                 <ul className="mt-4 list-inside space-y-4">
@@ -152,7 +134,7 @@ const Footer = () => {
                           title="Submit"
                           className="absolute right-0 w-max rounded-r-3xl bg-primary py-3 px-6 text-center transition"
                         >
-                          <span className="font-semibold text-gray-900"> Send </span>
+                          <span className="font-semibold text-white"> Send </span>
                         </button>
                       </div>
                     </form>
