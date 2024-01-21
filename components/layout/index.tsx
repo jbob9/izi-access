@@ -1,18 +1,22 @@
+import { Inter } from "next/font/google";
+import { PropsWithChildren } from "react";
+import Footer from "./footer";
+import Navbar from "./navbar";
 
-import { PropsWithChildren } from 'react'
-import Navbar from './navbar'
-import Footer from './footer'
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (
-    <div>
-      <Navbar/>
-      <main>
-        {children}
-      </main>
-      <Footer/>
+    <div className={inter.variable}>
+      <Navbar />
+      <main>{children}</main>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

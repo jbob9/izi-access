@@ -1,19 +1,16 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Header from '../components/home/header'
-import Services from '../components/home/services'
-import Layout from '../components/layout'
-import BlogPreview from '../components/blog/blog-preview'
-
-const inter = Inter({ subsets: ['latin'] })
+import Image from "next/image";
+import Header from "../components/home/header";
+import Services from "../components/home/services";
+import Layout from "../components/layout";
+import BlogPreview from "../components/blog/blog-preview";
 
 export default function Home() {
   return (
-    <Layout>
-      <Header/>
+    <>
+      <Header />
 
-      <Services/>
-      <BlogPreview/>
-    </Layout>
-  )
+      <Services />
+      <BlogPreview />
+    </>
+  );
 }
