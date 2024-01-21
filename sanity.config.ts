@@ -1,7 +1,5 @@
 import { defineConfig, isDev } from "sanity";
-
-// import { deskTool } from "sanity/desk";
-// import { schemaTypes } from "./feature/sanity/studio/schemas";
+import { structureTool } from "sanity/structure";
 // import { structure } from "./feature/sanity/studio/desk";
 
 import { visionTool } from "@sanity/vision";
@@ -20,7 +18,8 @@ export default defineConfig({
   dataset: String(process.env.NEXT_PUBLIC_SANITY_DATASET),
 
   plugins: [
-    // deskTool({ structure }),
+    // structureTool({ structure }),
+    structureTool(),
     imageHotspotArrayPlugin(),
     media(),
     ...(isDev ? devOnlyPlugins : []),

@@ -1,6 +1,7 @@
 // Document types
+import user from "./documents/user";
 
-const documents = [];
+const documents = [user];
 
 // // Singleton document types
 // import home from "./singletons/home";
@@ -24,5 +25,5 @@ export const schemaTypes = [
   // ...singletons,
   // ...objects,
   ...blocks,
-  // ...documents,
+  ...documents,
 ];
