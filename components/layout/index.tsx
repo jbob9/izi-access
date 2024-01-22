@@ -1,19 +1,23 @@
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import { PropsWithChildren } from "react";
 import Footer from "./footer";
 import Navbar from "./navbar";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
+// const inter = Inter({
+//   subsets: ["latin"],
+//   display: "swap",
+//   variable: "--font-inter",
+// });
+
+// className={inter.variable}
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (
-    <div className={inter.variable}>
+    <div className="relative w-full overflow-hidden">
       <Navbar />
-      <main>{children}</main>
+      <div className="min-h-screen">
+        <main className="mt-4 md:mt-16">{children}</main>
+      </div>
       <Footer />
     </div>
   );

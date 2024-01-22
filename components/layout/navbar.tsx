@@ -1,56 +1,141 @@
-
 const Navbar = () => {
   return (
-    <header>
-      <input type="checkbox" name="hbr" id="hbr" className="hbr peer" hidden aria-hidden="true"/>
-      <nav className="fixed z-20 w-full bg-white/80 backdrop-blur navbar shadow-md shadow-gray-600/5 peer-checked:navbar-active md:relative md:bg-transparent">
-          <div className="xl:container m-auto px-6 md:px-12">
-              <div className="flex flex-wrap items-center justify-between gap-6 md:py-3 md:gap-0">
-                  <div className="w-full flex justify-between lg:w-auto">
-                      <a href="/" aria-label="logo" className="flex space-x-2 items-center">
-                        <img src="/izi-logo.jpeg" alt="" className="w-14 h-12 md:h-10  object-contain" 
-                        />
-                      </a>
-                      <label htmlFor="hbr" className="peer-checked:hamburger block relative z-20 p-6 -mr-6 cursor-pointer lg:hidden">
-                        <div aria-hidden="true" className="m-auto h-0.5 w-6 rounded bg-gray-900  transition duration-300"></div>
-                        <div aria-hidden="true" className="m-auto mt-2 h-0.5 w-6 rounded bg-gray-900  transition duration-300"></div>
-                      </label>
-                  </div>
-                  <div className="navmenu hidden w-full flex-wrap justify-end items-center mb-16 space-y-8 p-6 border border-gray-100 rounded-3xl shadow-2xl shadow-gray-300/20 bg-white lg:space-y-0 lg:p-0 lg:m-0 lg:flex md:flex-nowrap lg:bg-transparent lg:w-7/12 lg:shadow-none  lg:border-0">
-                      <div className="text-gray-600 lg:pr-4">
-                          <ul className="space-y-6 tracking-wide font-medium text-base lg:text-sm lg:flex lg:space-y-0">
-                              <li>
-                                  <a href="#" className="block md:px-4 transition hover:text-primary">
-                                      <span>Home</span>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#" className="block md:px-4 transition hover:text-primary">
-                                      <span>Portfolio</span>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="#" className="block md:px-4 transition hover:text-primary ">
-                                      <span>Services</span>
-                                  </a>
-                              </li>
-                          </ul>
-                      </div>
+    <nav className="absolute w-full">
+      <div className="container m-auto px-6 md:px-12 lg:px-7">
+        <div className="flex flex-wrap items-center justify-between py-6 gap-6 md:py-4 md:gap-0 relative">
+          <input
+            type="checkbox"
+            name="toggle_nav"
+            id="toggle_nav"
+            className="peer hidden"
+          />
+          <div className="w-full flex justify-between md:w-max md:px-0">
+            <a href="/" aria-label="logo">
+              <img
+                src="izi-logo.jpeg"
+                className="w-12"
+                alt="tailus logo"
+                width="60"
+                height="40"
+              />
+            </a>
 
-                      <div className="w-full space-y-2 border-primary/10 flex flex-col -ml-1 sm:flex-row lg:space-y-0 md:w-max lg:border-l">
-                          <a href="#" className="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full focus:before:bg-primary/10  before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
-                              <span className="relative text-sm font-semibold text-primary ">Sign Up</span>                    
-                          </a>
-                          <a href="#" className="relative flex h-9 ml-auto items-center justify-center sm:px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary  before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
-                              <span className="relative text-sm font-semibold text-white ">Login</span>                    
-                          </a>
-                      </div>
-                  </div>
+            <div className="flex items-center space-x-3">
+              <a
+                className="inline-flex md:hidden rounded-full px-4 py-1.5 text-sm font-semibold transition bg-neutral-950 text-white hover:bg-neutral-800"
+                href="/contact"
+              >
+                <span className="relative top-px">Contact us</span>
+              </a>
+              <div>
+                <div className="flex items-center md:hidden max-h-10">
+                  <label
+                    role="button"
+                    htmlFor="toggle_nav"
+                    aria-label="humburger"
+                    id="hamburger"
+                    className="relative z-40 px-2 py-3 sm:-mr-6"
+                  >
+                    <div
+                      id="line"
+                      className="m-auto h-0.5 w-6 rounded bg-sky-900 transition duration-300"
+                    ></div>
+                    <div
+                      id="line2"
+                      className="m-auto mt-2 h-0.5 w-6 rounded bg-sky-900  transition duration-300"
+                    ></div>
+                  </label>
+                </div>
               </div>
-          </div>
-      </nav>
-  </header>
-  )
-}
 
-export default Navbar
+              <label
+                role="button"
+                htmlFor="toggle_nav"
+                className="fixed w-full z-30 h-full top-0 left-0 bg-opacity-40 hidden peer-checked:block md:peer-checked:hidden"
+              ></label>
+            </div>
+          </div>
+
+          <div
+            className="flex z-50 flex-col md:flex-row justify-between 
+                    items-center gap-y-4 p-6 bg-white md:w-8/12 
+                    md:gap-y-4 md:p-0 
+                    md:bg-transparent lg:w-7/12 fixed top-0 -left-full transition-all duration-500 peer-checked:left-0 max-w-sm h-full 
+                    md:left-0 md:h-auto w-4/5 md:max-w-none md:relative lg:first-letter:top-0"
+          >
+            <div className="flex md:hidden w-full pb-5">
+              <a href="/" aria-label="logo">
+                <img
+                  src="izi-logo.jpeg"
+                  className="w-12"
+                  alt="tailus logo"
+                  width="50"
+                  height="40"
+                />
+              </a>
+            </div>
+            <div className="block w-full h-full md:h-auto">
+              <ul className="space-y-8 tracking-wide font-medium md:flex md:space-y-0">
+                <li>
+                  <a href="#" className="block md:px-3">
+                    <div
+                      className="relative text-yellow-800
+                    before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800"
+                    >
+                      <span>Nike</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block md:px-3 group">
+                    <div
+                      className="relative text-gray-600
+                        before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100"
+                    >
+                      <span className="transition group-hover:text-yellow-700 ">
+                        Adiddas
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block md:px-3 group">
+                    <div
+                      className="relative text-gray-600
+                                                    before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100"
+                    >
+                      <span className="transition group-hover:text-yellow-700">
+                        Cart
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row flex-col">
+              {/* <button
+                type="button"
+                title="Start buying"
+                className="group w-full py-3 px-6 text-center transition active:bg-yellow-200 focus:bg-yellow-100 sm:w-max"
+              >
+                <span className="block text-gray-700 font-semibold group-focus:text-yellow-700 ">
+                  Login
+                </span>
+              </button> */}
+              <button
+                type="button"
+                title="Start buying"
+                className="w-full py-3 px-6 text-center transition bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 md:w-max rounded-2xl"
+              >
+                <span className="block text-white font-semibold">Connect</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

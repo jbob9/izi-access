@@ -1,15 +1,17 @@
-import Image from "next/image";
+import Sponsors from "@/components/sponsors";
+import BlogPreview from "../components/blog/blog-preview";
 import Header from "../components/home/header";
 import Services from "../components/home/services";
-import Layout from "../components/layout";
-import BlogPreview from "../components/blog/blog-preview";
 
 export default function Home() {
   return (
     <>
       <Header />
-
+      <div className="mb-10">
+        <Sponsors />
+      </div>
       <Services />
+
       <BlogPreview />
     </>
   );
