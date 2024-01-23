@@ -1,35 +1,40 @@
 import { UserIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
-exports.user = {
-  name: "user",
-  title: "User",
+exports.account = {
+  name: "account",
+  title: "Account",
   type: "document",
   fields: [
     {
-      name: "name",
-      title: "Name",
+      name: "providerType",
       type: "string",
     },
     {
-      name: "email",
-      title: "Email",
+      name: "providerId",
       type: "string",
     },
     {
-      name: "image",
-      title: "Image",
-      type: "url",
-    },
-    {
-      name: "password",
+      name: "providerAccountId",
       type: "string",
-      hidden: true,
     },
     {
-      name: "emailVerified",
-      type: "datetime",
-      hidden: true,
+      name: "refreshToken",
+      type: "string",
+    },
+    {
+      name: "accessToken",
+      type: "string",
+    },
+    {
+      name: "accessTokenExpires",
+      type: "number",
+    },
+    {
+      name: "user",
+      title: "User",
+      type: "reference",
+      to: { type: "user" },
     },
   ],
 };
@@ -52,13 +57,8 @@ export default defineType({
       validation: (Rule) => Rule.required().email(),
     }),
     defineField({
-      name: "password",
-      type: "string",
-      hidden: true,
-    }),
-    defineField({
       name: "emailVerified",
-      type: "datetime",
+      type: "boolean",
       hidden: true,
     }),
   ],

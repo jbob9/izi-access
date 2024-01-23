@@ -1,7 +1,9 @@
 // Document types
+import account from "./documents/account";
 import user from "./documents/user";
+import verificationToken from "./documents/verificationToken";
 
-const documents = [user];
+const documents = [user, account, verificationToken];
 
 // // Singleton document types
 // import home from "./singletons/home";
