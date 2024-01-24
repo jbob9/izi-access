@@ -79,8 +79,8 @@ const Navbar = () => {
                 <li>
                   <a href="#" className="block md:px-3">
                     <div
-                      className="relative text-yellow-800
-                    before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800"
+                      className="relative text-gray-900
+                    before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900"
                     >
                       <span>Nike</span>
                     </div>
@@ -90,9 +90,9 @@ const Navbar = () => {
                   <a href="#" className="block md:px-3 group">
                     <div
                       className="relative text-gray-600
-                        before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100"
+                        before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900 before:transition before:scale-x-0 group-hover:before:scale-x-100"
                     >
-                      <span className="transition group-hover:text-yellow-700 ">
+                      <span className="transition group-hover:text-gray-700 ">
                         Adiddas
                       </span>
                     </div>
@@ -102,9 +102,9 @@ const Navbar = () => {
                   <a href="#" className="block md:px-3 group">
                     <div
                       className="relative text-gray-600
-                                                    before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100"
+                                                    before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900 before:transition before:scale-x-0 group-hover:before:scale-x-100"
                     >
-                      <span className="transition group-hover:text-yellow-700">
+                      <span className="transition group-hover:text-gray-700">
                         Cart
                       </span>
                     </div>
@@ -119,7 +119,7 @@ const Navbar = () => {
                 title="Start buying"
                 className="group w-full py-3 px-6 text-center transition active:bg-yellow-200 focus:bg-yellow-100 sm:w-max"
               >
-                <span className="block text-gray-700 font-semibold group-focus:text-yellow-700 ">
+                <span className="block text-gray-700 font-semibold group-focus:text-gray-700 ">
                   Login
                 </span>
               </button> */}
