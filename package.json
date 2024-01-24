@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev:host": "next dev -H 192.168.1.19",
+    "start:host": "next start -H 192.168.1.19"
   },
   "dependencies": {
     "@portabletext/react": "^3.0.11",
