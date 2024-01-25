@@ -1,109 +1,77 @@
+const people = [
+  {
+    name: 'Leslie Alexander',
+    role: 'Co-Founder / CEO',
+    imageUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Leslie Alexander',
+    role: 'Co-Founder / CEO',
+    imageUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+
+  {
+    name: 'Leslie Alexander',
+    role: 'Co-Founder / CEO',
+    imageUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Leslie Alexander',
+    role: 'Co-Founder / CEO',
+    imageUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Leslie Alexander',
+    role: 'Co-Founder / CEO',
+    imageUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Leslie Alexander',
+    role: 'Co-Founder / CEO',
+    imageUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+  {
+    name: 'Leslie Alexander',
+    role: 'Co-Founder / CEO',
+    imageUrl:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
+
+]
+
 const Team = () => {
   return (
-    <div className="py-20">
-      <div className="xl:container mx-auto px-6 md:px-12">
-        <div className="mb-16 md:w-2/3 lg:w-1/2">
-          <h2 className="mb-4 text-2xl font-bold text-gray-800 md:text-4xl">
-            Tailus blocks leadership
-          </h2>
-          <p className="text-gray-600">
-            Tailus prides itself not only on award-winning technology, but also
-            on the talent of its people of some of the brightest minds and most
-            experienced executives in business.
+    <div>
+      <div className="bg-white py-24 sm:py-32">
+      <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+        <div className="max-w-2xl">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our leadership</h2>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper
+            suspendisse.
           </p>
         </div>
-        <div className="grid gap-6 px-4 sm:px-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <div className="group relative rounded-3xl  space-y-6 overflow-hidden">
-            <img
-              className="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0"
-              src="https://tailus.io/sources/blocks/leadership/preview/images/woman1.jpg"
-              alt="woman"
-              loading="lazy"
-              width="640"
-              height="805"
-            />
-            <div className="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0">
-              <div>
-                <h4 className="text-xl font-semibold text-white">
-                  Hentoni Doe
-                </h4>
-                <span className="block text-sm text-gray-500">CEO-Founder</span>
+        <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+          {people.map((person) => (
+            <li key={person.name}>
+              <div className="flex items-center gap-x-6">
+                <img className="h-16 w-16 rounded-full" src={person.imageUrl} alt="" />
+                <div>
+                  <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
+                  <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
+                </div>
               </div>
-              <p className="mt-8 text-gray-300">
-                Quae labore quia tempora dolor impedit. Possimus, sint ducimus
-                ipsam?
-              </p>
-            </div>
-          </div>
-          <div className="group relative rounded-3xl  space-y-6 overflow-hidden">
-            <img
-              className="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0"
-              src="https://tailus.io/sources/blocks/leadership/preview/images/woman.jpg"
-              alt="woman"
-              loading="lazy"
-              width="640"
-              height="805"
-            />
-            <div className="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0">
-              <div>
-                <h4 className="text-xl font-semibold text-white">
-                  Hentoni Doe
-                </h4>
-                <span className="block text-sm text-gray-500">CEO-Founder</span>
-              </div>
-              <p className="mt-8 text-gray-300">
-                Quae labore quia tempora dolor impedit. Possimus, sint ducimus
-                ipsam?
-              </p>
-            </div>
-          </div>
-          <div className="group relative rounded-3xl  space-y-6 overflow-hidden">
-            <img
-              className="mx-auto h-[26rem] w-full grayscale object-cover object-top transition duration-500 group-hover:scale-105 group-hover:grayscale-0"
-              src="https://tailus.io/sources/blocks/leadership/preview/images/man.jpg"
-              alt="woman"
-              loading="lazy"
-              width="640"
-              height="805"
-            />
-            <div className="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0">
-              <div>
-                <h4 className="text-xl font-semibold text-white">
-                  Hentoni Doe
-                </h4>
-                <span className="block text-sm text-gray-500">CEO-Founder</span>
-              </div>
-              <p className="mt-8 text-gray-300">
-                Quae labore quia tempora dolor impedit. Possimus, sint ducimus
-                ipsam?
-              </p>
-            </div>
-          </div>
-          <div className="group relative rounded-3xl  space-y-6 overflow-hidden">
-            <img
-              className="mx-auto h-[26rem] w-full grayscale object-cover object-top ransition duration-500 group-hover:scale-105 group-hover:grayscale-0"
-              src="https://tailus.io/sources/blocks/leadership/preview/images/woman1.jpg"
-              alt="woman"
-              loading="lazy"
-              width="640"
-              height="805"
-            />
-            <div className="absolute bottom-0 inset-x-0 h-max mt-auto px-8 py-6 bg-gray-800 translate-y-24 transition duration-300 ease-in-out group-hover:translate-y-0">
-              <div>
-                <h4 className="text-xl font-semibold text-white">
-                  Hentoni Doe
-                </h4>
-                <span className="block text-sm text-gray-500">CEO-Founder</span>
-              </div>
-              <p className="mt-8 text-gray-300">
-                Quae labore quia tempora dolor impedit. Possimus, sint ducimus
-                ipsam?
-              </p>
-            </div>
-          </div>
-        </div>
+            </li>
+          ))}
+        </ul>
       </div>
-    </div>
+    </div>    </div>
   );
 };
 
