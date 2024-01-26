@@ -2,6 +2,7 @@ import Sponsors2 from "@/components/sponsors2";
 import BlogPreview from "../components/blog/blog-preview";
 import Header from "../components/home/header";
 import Services from "../components/home/services";
+import Carousel from "@/components/carousel";
 
 export function Example() {
   return (
@@ -59,8 +60,23 @@ export function Example() {
 
 
 export default function Home() {
+  // const slides = Array.from(Array(4).keys())
   return (
     <>
+      {/* <div className="pt-16 md:pt-4 relative">
+        <Carousel options={{}} slides={slides}>
+          {slides.map((index) => (
+            <div className="embla__slide" key={index}>
+              
+              <img
+                className="block w-full h-[19rem] md:h-[30rem] object-cover"
+                src={`/slide-${index+1}.jpg`}
+                alt="Your alt text"
+              />
+            </div>
+          ))}
+        </Carousel>
+      </div> */}
       <Header />
       <div className="mb-10">
         <Sponsors2 />

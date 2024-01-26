@@ -8,10 +8,10 @@ const Footer = () => {
             role="list"
             className="flex  items-center justify-center gap-4 py-4  sm:gap-8"
           >
-            <li role="listitem"><a href="#" className="hover:text-primary">Home</a></li>
-            <li role="listitem"><a href="#" className="hover:text-primary">Features</a></li>
-            <li role="listitem"><a href="#" className="hover:text-primary">Get started</a></li>
-            <li role="listitem"><a href="#" className="hover:text-primary">About us</a></li>
+            <li role="listitem"><a href="#" className="hover:text-main">Home</a></li>
+            <li role="listitem"><a href="#" className="hover:text-main">Features</a></li>
+            <li role="listitem"><a href="#" className="hover:text-main">Get started</a></li>
+            <li role="listitem"><a href="#" className="hover:text-main">About us</a></li>
           </ul>
           <div className="m-auto flex w-max items-center justify-between space-x-4">
             <a href="tel:+243996660436" aria-label="call">

@@ -19,7 +19,7 @@ const Services = () => {
                   alt="illustration"
                   loading="lazy"
                 />
-                <h3 className="text-2xl font-semibold text-gray-800">Web development</h3>
+                <h3 className="text-2xl font-semibold text-gray-800">Formations</h3>
                 <p>
                   Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam
                   tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.
@@ -40,7 +40,7 @@ const Services = () => {
                   alt="illustration"
                   loading="lazy"
                 />
-                <h3 className="text-2xl font-semibold text-gray-800">Seo</h3>
+                <h3 className="text-2xl font-semibold text-gray-800">Accompagnement</h3>
                 <p>
                   Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam
                   tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.
@@ -62,7 +62,7 @@ const Services = () => {
                   alt="illustration"
                   loading="lazy"
                 />
-                <h3 className="text-2xl font-semibold text-gray-800">Web Design</h3>
+                <h3 className="text-2xl font-semibold text-gray-800">Financement</h3>
                 <p>
                   Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam
                   tempora ipsa iste officia sed officiis! Incidunt ea animi officiis.
