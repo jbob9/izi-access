@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Navbar = () => {
   return (
     <nav className="absolute w-full">
@@ -12,8 +14,8 @@ const Navbar = () => {
           <div className="w-full flex justify-between md:w-max md:px-0">
             <a href="/" aria-label="logo">
               <img
-                src="izi-logo.jpeg"
-                className="w-12"
+                src="Izi-Access-Logo.png"
+                className="w-28 h-8 object-cover"
                 alt="tailus logo"
                 width="60"
                 height="40"
@@ -21,12 +23,12 @@ const Navbar = () => {
             </a>
 
             <div className="flex items-center space-x-3">
-              <a
+              <Link
                 className="inline-flex md:hidden rounded-full px-4 py-1.5 text-sm font-semibold transition bg-neutral-950 text-white hover:bg-neutral-800"
-                href="/contact"
+                href="/connect"
               >
-                <span className="relative top-px">Contact us</span>
-              </a>
+                <span className="relative top-px">Connect</span>
+              </Link>
               <div>
                 <div className="flex items-center md:hidden max-h-10">
                   <label
@@ -66,8 +68,8 @@ const Navbar = () => {
             <div className="flex md:hidden w-full pb-5">
               <a href="/" aria-label="logo">
                 <img
-                  src="izi-logo.jpeg"
-                  className="w-12"
+                  src="Izi-Access-Logo.png"
+                  className="w-28 h-8 object-cover"
                   alt="tailus logo"
                   width="50"
                   height="40"
@@ -77,38 +79,50 @@ const Navbar = () => {
             <div className="block w-full h-full md:h-auto">
               <ul className="space-y-8 tracking-wide font-medium md:flex md:space-y-0">
                 <li>
-                  <a href="#" className="block md:px-3">
+                  <Link href={'/'} className="block md:px-3">
                     <div
                       className="relative text-gray-900
                     before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900"
                     >
-                      <span>Nike</span>
+                      <span>Home</span>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="block md:px-3 group">
+                  <Link href="/about" className="block md:px-3 group">
                     <div
                       className="relative text-gray-600
                         before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900 before:transition before:scale-x-0 group-hover:before:scale-x-100"
                     >
                       <span className="transition group-hover:text-gray-700 ">
-                        Adiddas
+                        About
                       </span>
                     </div>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="block md:px-3 group">
+                  <Link href="#services" className="block md:px-3 group">
+                    <div
+                      className="relative text-gray-600
+                        before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900 before:transition before:scale-x-0 group-hover:before:scale-x-100"
+                    >
+                      <span className="transition group-hover:text-gray-700 ">
+                        Our services
+                      </span>
+                    </div>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="block md:px-3 group">
                     <div
                       className="relative text-gray-600
                                                     before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900 before:transition before:scale-x-0 group-hover:before:scale-x-100"
                     >
                       <span className="transition group-hover:text-gray-700">
-                        Cart
+                        Contact us
                       </span>
                     </div>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -123,13 +137,11 @@ const Navbar = () => {
                   Login
                 </span>
               </button> */}
-              <button
-                type="button"
-                title="Start buying"
+              <Link href={'/connect'}
                 className="w-full py-3 px-6 text-center transition bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 md:w-max rounded-2xl"
               >
                 <span className="block text-white font-semibold">Connect</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
