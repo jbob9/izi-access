@@ -65,13 +65,12 @@ export const NextButton: React.FC<PropType> = (props) => {
 
 
 type Props = {
-  slides: number[]
   options?: EmblaOptionsType
   withArrows?: boolean
 }
 
 const Carousel = (props: PropsWithChildren<Props>) => {
-  const { slides, options, withArrows = false } = props
+  const { options, withArrows = false } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true)

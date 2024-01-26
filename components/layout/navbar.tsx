@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="absolute w-full z-40 bg-white shadow">
+    <nav className="absolute w-full z-40 bg-dot-black/[0.2]">
       <div className="container m-auto px-6 md:px-12 lg:px-7">
         <div className="flex flex-wrap items-center justify-between py-6 gap-6 md:py-4 md:gap-0 relative">
           <input
