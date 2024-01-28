@@ -1,3 +1,8 @@
+import AboutHero from "@/components/aboutHero"
+import { Button } from "@/components/ui/button"
+import { ArrowRightIcon } from "@sanity/icons"
+import Link from "next/link"
+
 const people = [
   {
     name: 'Leslie Alexander',
@@ -46,13 +51,15 @@ const people = [
 
 const About = () => {
   return (
-    <div>
-
-      <div className="bg-white py-24 sm:py-32">
+    <div className="pt-20 md:pt-16 px-4 pb-24">
+      <div className="pb-12">
+        <AboutHero/>
+      </div>
+      <div className="bg-white pt-16 pb-10 border-b border-t">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our leadership</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg text-center md:text-start leading-8 text-gray-600">
               Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper
               suspendisse.
             </p>
@@ -71,7 +78,29 @@ const About = () => {
             ))}
           </ul>
         </div>
-      </div>  
+      </div> 
+
+      {/* About foooter */}
+      <div className="px-6 mt-8">
+        <div className="flex flex-col md:flex-row space-y-8 flex-1 justify-between items-center">
+          <div className="flex justify-center items-stretch">
+            <p className="tracking-tight max-w-[16ch] font-extrabold leading-[1.1em] text-[3.5rem]">
+              Join us and shape the future of the web
+            </p>
+          </div>
+          <div className="closing_closing-buttons__YSVNC">
+            <div className="flex-grow-0 flex-shrink-0 justify-start items-stretch">
+              <div className="flex-1 justify-start items-stretch">
+                <Button className="rounded-3xl h-12 bg-neutral-950">
+                  <Link href="/membership" className="flex items-center">
+                    <span>Become a member</span><ArrowRightIcon className="w-6 h-6 text-white ml-2"/>
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
     </div>
   )
 }
