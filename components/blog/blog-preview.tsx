@@ -1,16 +1,16 @@
-import React from 'react'
 import BlogCard from './blog-card'
 
 const BlogPreview = () => {
   return (
-    
-    <div className="py-16">
-    <div className="xl:container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-      <div className="grid gap-12 md:gap-6 md:grid-cols-2 lg:gap-12">
-        <BlogCard/>
-        <BlogCard/>
-        
-      </div>
+  
+  <div className='px-2 md:px-4 py-12'>
+    <div className="flex overflow-y-hidden overflow-x-scroll py-4 scrollbar-none space-x-3 md:space-x-5 pb-4">
+      <BlogCard/>
+      <BlogCard/>
+      <BlogCard/>
+      <BlogCard/>
+      <BlogCard/>
+      
     </div>
   </div>
                                       

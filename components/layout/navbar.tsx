@@ -1,9 +1,16 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 const Navbar = () => {
+  const router = useRouter()
+  const [open, setOpen] = useState(false)
+
+  const toggleOpen = () => setOpen((o) => !o)
+
   return (
-    <nav className="absolute w-full z-40 bg-dot-black/[0.2]">
-      <div className="container m-auto px-6 md:px-12 lg:px-7">
+    <nav className={`absolute w-full z-40 ${router.pathname === '/' ? 'bg-dot-black/[0.2]': ''}`}>
+      <div className="container m-auto px-3 md:px-12 lg:px-6">
         <div className="flex flex-wrap items-center justify-between py-6 gap-6 md:py-4 md:gap-0 relative">
           <input
             type="checkbox"
@@ -12,22 +19,22 @@ const Navbar = () => {
             className="peer hidden"
           />
           <div className="w-full flex justify-between md:w-max md:px-0">
-            <a href="/" aria-label="logo">
+            <Link href="/" aria-label="logo">
               <img
                 src="Izi-Access-Logo.png"
-                className="w-28 h-8 object-cover"
+                className="w-28 md:w-32 h-8 object-cover"
                 alt="tailus logo"
                 width="60"
                 height="40"
               />
-            </a>
+            </Link>
 
             <div className="flex items-center space-x-3">
               <Link
-                className="inline-flex md:hidden rounded-full px-4 py-1.5 text-sm font-semibold transition bg-neutral-950 text-white hover:bg-neutral-800"
-                href="/connect"
+                className="inline-flex md:hidden rounded-full px-4 py-1.5 text-xs md:text-sm font-semibold transition bg-neutral-950 text-white hover:bg-neutral-800"
+                href="/membership"
               >
-                <span className="relative top-px">Connect</span>
+                <span className="relative top-px">Become a member</span>
               </Link>
               <div>
                 <div className="flex items-center md:hidden max-h-10">
@@ -107,7 +114,7 @@ const Navbar = () => {
                         before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900 before:transition before:scale-x-0 group-hover:before:scale-x-100"
                     >
                       <span className="transition group-hover:text-gray-700 ">
-                        Our services
+                        Services
                       </span>
                     </div>
                   </Link>
@@ -137,10 +144,10 @@ const Navbar = () => {
                   Login
                 </span>
               </button> */}
-              <Link href={'/connect'}
-                className="w-full py-3 px-6 text-center transition bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 md:w-max rounded-2xl"
+              <Link href={'/membership'}
+                className="w-full py-1.5 px-6 text-center transition bg-neutral-950 md:w-max rounded-3xl"
               >
-                <span className="block text-white font-semibold">Connect</span>
+                <span className="block text-white font-semibold">Become a member</span>
               </Link>
             </div>
           </div>

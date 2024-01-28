@@ -3,15 +3,14 @@ const Footer = () => {
     <footer className="w-full bg-gray-100 py-16">
       <div className="md:px-12 lg:px-28">
         <div className="container m-auto space-y-6 text-gray-600 ">
-          <img src="/izi-logo.jpeg" alt="logo Izi Access" className="m-auto w-16" />
+          <img src="/Izi-Access-Logo.png" alt="logo Izi Access" className="m-auto w-28" />
           <ul
             role="list"
             className="flex  items-center justify-center gap-4 py-4  sm:gap-8"
           >
             <li role="listitem"><a href="#" className="hover:text-main">Home</a></li>
-            <li role="listitem"><a href="#" className="hover:text-main">Features</a></li>
-            <li role="listitem"><a href="#" className="hover:text-main">Get started</a></li>
-            <li role="listitem"><a href="#" className="hover:text-main">About us</a></li>
+            <li role="listitem"><a href="#" className="hover:text-main">Services</a></li>
+            <li role="listitem"><a href="#" className="hover:text-main">About</a></li>
           </ul>
           <div className="m-auto flex w-max items-center justify-between space-x-4">
             <a href="tel:+243996660436" aria-label="call">

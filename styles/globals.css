@@ -65,6 +65,21 @@
     --ring: 216 12.2% 83.9%;
   }
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  padding: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a7abad;
+  border-radius: 4px;
+}
  
 @layer base {
   * {
@@ -87,10 +102,10 @@
   }
 
   .bg-main {
-    @apply bg-gradient-to-r from-yellow-300 to-pink-500;
+    @apply bg-gradient-to-r from-blue-300 to-pink-500;
   }
   .text-main {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-pink-500;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-pink-500;
   }
   
   .embla__slide {
@@ -98,5 +113,9 @@
     min-width: 0;
     padding-left: 1rem;
     position: relative;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
   }
 }
