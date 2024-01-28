@@ -1,6 +1,10 @@
-const BlogCard = () => {
+import { cn } from "@/lib/utils";
+
+const BlogCard = ({ withMinWidth = true }) => {
   return (
-    <div className="group min-w-80 md:min-w-[26rem]">
+    <div className={cn('group', {
+      'min-w-80 md:min-w-[26rem]': withMinWidth
+    })}>
       <img
         src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
         alt="art cover"
