@@ -1,14 +1,12 @@
 const Services = () => {
   return (
-    
-    <div className="py-16">
+    <div>
       <div className="xl:container m-auto text-gray-500">
         <div className="relative py-16">
-          <div className="container relative m-auto px-6 text-gray-500 md:px-12">
+          <div className="container relative m-auto px-3 text-gray-500 md:px-12">
             <div className="pb-6">
               <h2 className="mt-4 text-2xl font-bold text-gray-700  md:text-4xl">
-                A technology-first approach to payments <br className="lg:block" hidden />
-                and finance
+                Services
               </h2>
             </div>
             <div className="grid gap-6 md:mx-auto md:w-8/12 lg:w-full lg:grid-cols-3">

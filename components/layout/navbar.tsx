@@ -21,9 +21,9 @@ const Navbar = () => {
           <div className="w-full flex justify-between md:w-max md:px-0">
             <Link href="/" aria-label="logo">
               <img
-                src="Izi-Access-Logo.png"
+                src="/Izi-Access-Logo.png"
                 className="w-28 md:w-32 h-8 object-cover"
-                alt="tailus logo"
+                alt="iziAccess logo"
                 width="60"
                 height="40"
               />
@@ -96,6 +96,17 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/#services" className="block md:px-3 group">
+                    <div
+                      className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900 before:transition before:scale-x-0 group-hover:before:scale-x-100"
+                    >
+                      <span className="transition group-hover:text-gray-700 ">
+                        Services
+                      </span>
+                    </div>
+                  </Link>
+                </li>
+                <li>
                   <Link href="/about" className="block md:px-3 group">
                     <div
                       className="relative text-gray-600
@@ -107,17 +118,7 @@ const Navbar = () => {
                     </div>
                   </Link>
                 </li>
-                <li>
-                  <Link href="/#services" className="block md:px-3 group">
-                    <div
-                      className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900 before:transition before:scale-x-0 group-hover:before:scale-x-100"
-                    >
-                      <span className="transition group-hover:text-gray-700 ">
-                        Services
-                      </span>
-                    </div>
-                  </Link>
-                </li>
+                
                 <li>
                   <Link href="/contact" className="block md:px-3 group">
                     <div

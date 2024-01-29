@@ -52,10 +52,10 @@ const people = [
 const About = () => {
   return (
     <div className="pt-20 md:pt-16 px-4 pb-24">
-      <div className="pb-12">
+      <div className="pb-20">
         <AboutHero/>
       </div>
-      <div className="bg-white pt-16 pb-10 border-b border-t">
+      <div className="bg-white py-24 border-b border-t">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our leadership</h2>

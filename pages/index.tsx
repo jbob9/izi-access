@@ -20,14 +20,14 @@ export default function Home() {
       <div className="py-6">
         <CallToAction1/>
       </div>
-      <div className="py-24">
+      <div className="pt-20 pb-6">
         <header className="px-fluid-base  md:text-center md:items-center mx-auto flex flex-col justify-center mb-8">
           <div className="flex items-center gap-x-4">
-          <h2 className="text-thd-color-violet-90 text-5xl font-semibold mb-4 md:mb-6">
+          <h2 className="text-2xl md:text-5xl font-semibold mb-4 md:mb-6 text-center">
             The easiest screen recorder you’ll ever use
           </h2>
           </div>
-          <div className="font-semibold text-xl text-gray-700">
+          <div className="font-semibold text-base md:text-xl text-gray-600 text-center">
             <p>
               Record in a few clicks. Share anywhere. Collaborate better.
             </p>
@@ -40,7 +40,7 @@ export default function Home() {
 
       {/* <Testimonials/> */}
       
-    <Testi2/>
+      <Testi2/>
                               
       <BlogPreview />
     </>
