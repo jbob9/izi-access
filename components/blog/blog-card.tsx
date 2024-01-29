@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const BlogCard = ({ withMinWidth = true }) => {
   return (
-    <div className={cn('group', {
+    <Link href={'/blog/ejeueueueu'} className={cn('group', {
       'min-w-80 md:min-w-[26rem]': withMinWidth
     })}>
       <img
@@ -42,7 +43,7 @@ const BlogCard = ({ withMinWidth = true }) => {
         </span>
       
       </div>
-    </div>
+    </Link>
   );
 };
 

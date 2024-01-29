@@ -20,7 +20,7 @@ const AboutHero = () => {
         <div>
           <div className="flex space-x-3">
             <div className="bg-neutral-950 p-3 rounded-lg h-fit text-white">
-              <svg className="text-current w-5 h-5" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+              <svg className="text-current w-5 h-5" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
                 <path d="M2.625 21.2992L21.2992 2.625M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"></path>
               </svg>
             </div>
@@ -37,7 +37,7 @@ const AboutHero = () => {
         <div>
           <div className="flex space-x-3">
             <div className="bg-neutral-950 p-3 rounded-lg h-fit text-white">
-              <svg className="with-icon_icon__MHUeb text-current w-5 h-5" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" ><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"></path></svg>
+              <svg className="with-icon_icon__MHUeb text-current w-5 h-5" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24" ><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"></path></svg>
             </div>
             <div>
               <p className="text_wrapper__i87JK text-2xl leading-8 tracking-wide font-semibold" >
@@ -52,7 +52,7 @@ const AboutHero = () => {
         <div>
           <div className="flex space-x-3">
             <div className="bg-neutral-950 p-3 rounded-lg h-fit text-white">
-              <svg className="text-current w-5 h-5"  fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+              <svg className="text-current w-5 h-5"  fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
                 <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
                 <circle cx="8.5" cy="7" r="4"></circle>
                 <path d="M17 11l2 2 4-4"></path>
