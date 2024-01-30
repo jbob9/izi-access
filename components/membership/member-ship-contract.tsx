@@ -39,8 +39,8 @@ const MemberShipContract = () => {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum minus facilis, incidunt iure veritatis possimus magnam illum odit ex quos cumque ea molestiae? Corporis amet alias obcaecati impedit vel, quibusdam aperiam deleniti ut magnam? Corporis, nemo sit, placeat doloribus, itaque illo quos iste quaerat hic similique totam. Itaque quaerat quae iste saepe ad? Inventore quam est vel, quis magni consectetur necessitatibus quod magnam alias quia dignissimos placeat molestiae officia eos cum itaque ullam provident perferendis. Eligendi nisi expedita laboriosam sunt quibusdam ipsam autem quod quisquam fuga ea omnis quia facilis beatae quos, perspiciatis cum iure velit veniam debitis! Repudiandae possimus quod enim repellendus doloribus eligendi ex incidunt deleniti vero mollitia sint blanditiis, fugiat, est, atque totam ratione? At sint aspernatur fugit repudiandae a consequuntur accusantium dignissimos debitis error itaqu doloribus obcaecati quis facere nulla! Alias enim tenetur voluptatum commodi dolorem labore non ducimus esse.
         </p>
       </article>
-      <div className="items-top flex space-x-2 py-6 ">
-        <Checkbox id="terms1" />
+      <div className="items-top flex space-x-2 pb-6 py-10">
+        <Checkbox id="terms1" checked={accept} onCheckedChange={(v) => setAccept(v.valueOf() as boolean)} />
         <div className="grid gap-1.5 leading-none">
           <label
             htmlFor="terms1"
