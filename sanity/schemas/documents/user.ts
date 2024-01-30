@@ -42,7 +42,17 @@ export default defineType({
   fields: [
     defineField({
       name: "name",
-      title: "Name",
+      title: "name",
+      type: "string",
+    }),
+    defineField({
+      name: "firstname",
+      title: "Firstname",
+      type: "string",
+    }),
+    defineField({
+      name: "lastname",
+      title: "lastname",
       type: "string",
     }),
     defineField({
@@ -50,6 +60,16 @@ export default defineType({
       title: "Email",
       type: "string",
       validation: (Rule) => Rule.required().email(),
+    }),
+    defineField({
+      name: "country",
+      title: "Country",
+      type: "string",
+    }),
+    defineField({
+      name: "address",
+      title: "Address",
+      type: "string",
     }),
     defineField({
       name: "password",

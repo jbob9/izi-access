@@ -1,16 +1,9 @@
-import { GetServerSidePropsContext } from 'next'
+import { Checkbox } from "../ui/checkbox"
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  return {
-    props: {}
-  };
-}
-
-const Blog = () => {
+const MemberShipContract = () => {
   return (
-    <div className='max-w-2xl container mx-auto pt-20 md:pt-14 pb-20 px-4'>
-      {/* <h2 className="font-bold text-3xl pb-12 text-gray-800 dark:text-white">First blog</h2> */}
-      <article className="prose lg:prose-xl">
+    <div className="">
+      <article className="prose lg:prose-xl h-screen overflow-y-scroll">
         <h2>Garlic bread with cheese: What the science tells us</h2>
         <p>
           For years parents have espoused the health benefits of eating garlic bread with cheese to their
@@ -34,8 +27,30 @@ const Blog = () => {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum minus facilis, incidunt iure veritatis possimus magnam illum odit ex quos cumque ea molestiae? Corporis amet alias obcaecati impedit vel, quibusdam aperiam deleniti ut magnam? Corporis, nemo sit, placeat doloribus, itaque illo quos iste quaerat hic similique totam. Itaque quaerat quae iste saepe ad? Inventore quam est vel, quis magni consectetur necessitatibus quod magnam alias quia dignissimos placeat molestiae officia eos cum itaque ullam provident perferendis. Eligendi nisi expedita laboriosam sunt quibusdam ipsam autem quod quisquam fuga ea omnis quia facilis beatae quos, perspiciatis cum iure velit veniam debitis! Repudiandae possimus quod enim repellendus doloribus eligendi ex incidunt deleniti vero mollitia sint blanditiis, fugiat, est, atque totam ratione? At sint aspernatur fugit repudiandae a consequuntur accusantium dignissimos debitis error itaqu doloribus obcaecati quis facere nulla! Alias enim tenetur voluptatum commodi dolorem labore non ducimus esse.
         </p>
       </article>
+      <div className="items-top flex space-x-2 py-6 ">
+        <Checkbox id="terms1" />
+        <div className="grid gap-1.5 leading-none">
+          <label
+            htmlFor="terms1"
+            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            Accept terms and conditions
+          </label>
+          <p className="text-sm text-muted-foreground">
+            You agree to our Terms of Service and Privacy Policy.
+          </p>
+        </div>
+      </div>
+      <div className="flex justify-end pb-4 pr-3">
+        <button
+          className="inline-flex rounded-full px-4 py-1.5 text-xs md:text-sm font-semibold transition bg-neutral-950 text-white hover:bg-neutral-800"
+        >
+          <span className="relative top-px">Become a member</span>
+        </button>
+      </div>
+
     </div>
   )
 }
 
-export default Blog
+export default MemberShipContract

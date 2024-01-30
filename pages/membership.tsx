@@ -1,13 +1,16 @@
+import MemberShip from '@/components/membership'
 import { CheckmarkIcon, EnvelopeIcon } from '@sanity/icons'
 
-const MemberShip = () => {
+const MemberShipPage = () => {
 
   const handleOpen = () => {
     window.open('https://www.zeffy.com/en-CA/embed/ticketing/cc3cccd9-ab4e-4eb9-ae05-d930d6a5bef7', 'membership', 'scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=600,height=300,left=100,top=100')
   }
   return (
-    <div className="xl:container mx-3 md:m-auto py-24 md:px-12 lg:px-20">
-      <div className="m-auto text-center lg:w-8/12 xl:w-7/12">
+    
+    <div className="xl:container mx-3 md:m-auto pt-24 md:px-12 lg:px-20">
+      <MemberShip/>
+      {/* <div className="m-auto text-center lg:w-8/12 xl:w-7/12">
         <h2 className="text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
           A Tailus Blocks subscription gives you access to our components and more.
         </h2>
@@ -90,33 +93,12 @@ const MemberShip = () => {
               Team can be any size, and you can add or switch members as needed. Companies using
               our platform include:
             </p>
-            {/* <div className="mt-6 flex justify-between gap-6">
-              <img
-                className="w-16 lg:w-24"
-                src="images/clients/airbnb.svg"
-                loading="lazy"
-                alt="airbnb"
-              />
-              <img
-                className="w-8 lg:w-16"
-                src="images/clients/bissell.svg"
-                loading="lazy"
-                alt="bissell"
-              />
-              <img className="w-6 lg:w-12" src="images/clients/ge.svg" loading="lazy" alt="ge" />
-              <img
-                className="w-20 lg:w-28"
-                src="images/clients/microsoft.svg"
-                loading="lazy"
-                alt="microsoft"
-              />
-            </div> */}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
                                       
   )
 }
 
-export default MemberShip
+export default MemberShipPage
