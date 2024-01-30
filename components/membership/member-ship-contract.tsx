@@ -54,7 +54,7 @@ const MemberShipContract = () => {
         </div>
       </div>
       <div className="flex justify-end pb-4 pr-3">
-        <Button className="rounded-2xl" disabled={!accept}>
+        <Button className="rounded-2xl" disabled={!accept} onClick={handleSubmit}>
           Become a member
         </Button>
       </div>
