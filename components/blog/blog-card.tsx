@@ -3,24 +3,29 @@ import Link from "next/link";
 
 const BlogCard = ({ withMinWidth = true }) => {
   return (
-    <Link href={'/blog/ejeueueueu'} className={cn('group', {
+    <div className={cn('group', {
       'min-w-80 md:min-w-[26rem]': withMinWidth
     })}>
-      <img
-        src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-        alt="art cover"
-        loading="lazy"
-        width="1000"
-        height="667"
-        className="h-60 md:h-80 w-full rounded-3xl object-cover"
-      />
-      <h3 className="text-lg md:text-2xl font-semibold text-gray-800 my-4 ">
-        Flipper and JS: why we added JavaScript support to a mobil...
-      </h3>
-      <p className="text-gray-600 text-sm">
-        Finding the right open source project for your first contribution can
-        feel daunting....
-      </p>
+      <Link href={'/blog/ejeueueueu'}>
+        <img
+          src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
+          alt="art cover"
+          loading="lazy"
+          width="1000"
+          height="667"
+          className="h-60 md:h-80 w-full rounded-3xl object-cover"
+        />
+      </Link>
+      <Link href={'/blog/ejeueueueu'}>
+        <h3 className="text-lg md:text-2xl font-semibold text-gray-800 my-4 ">
+          Flipper and JS: why we added JavaScript support to a mobil...
+        </h3>
+        <p className="text-gray-600 text-sm">
+          Finding the right open source project for your first contribution can
+          feel daunting....
+        </p>
+      </Link>
+      
       <div className="flex gap-6 justify-between items-end mt-2">
         <a
           href="#"
@@ -43,7 +48,7 @@ const BlogCard = ({ withMinWidth = true }) => {
         </span>
       
       </div>
-    </Link>
+    </div>
   );
 };
 

@@ -2,6 +2,7 @@ import Layout from "@/components/layout";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Inter as FontSans } from "next/font/google";
+import { SessionProvider } from "next-auth/react"
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -16,11 +17,15 @@ export default function App({ Component, pageProps }: AppProps) {
           font-family: ${fontSans.style.fontFamily};
         }
       `}</style>
-      <div className={`${fontSans.variable} font-sans`}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </div>
+       <SessionProvider session={pageProps.session}>
+        <div className={`${fontSans.variable} font-sans`}>
+          
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </div>
+       </SessionProvider>
+      
     </>
   );
 }

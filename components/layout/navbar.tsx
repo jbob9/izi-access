@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { useSession } from "next-auth/react"
 
 const Navbar = () => {
   const router = useRouter()
   const [open, setOpen] = useState(false)
+  const { data: session } = useSession()
 
   const toggleOpen = () => setOpen((o) => !o)
-
+  console.log(session, 'session')
   return (
     <nav className={`absolute w-full z-40 ${router.pathname === '/' ? 'bg-dot-black/[0.2]': ''}`}>
       <div className="container m-auto px-3 md:px-12 lg:px-6">
@@ -30,12 +32,12 @@ const Navbar = () => {
             </Link>
 
             <div className="flex items-center space-x-3">
-              <Link
+              {!session?.user ? <Link
                 className="inline-flex md:hidden rounded-full px-4 py-1.5 text-xs md:text-sm font-semibold transition bg-neutral-950 text-white hover:bg-neutral-800"
                 href="/membership"
               >
                 <span className="relative top-px">Become a member</span>
-              </Link>
+              </Link> : null}
               <div>
                 <div className="flex items-center md:hidden max-h-10">
                   <label
@@ -134,20 +136,11 @@ const Navbar = () => {
             </div>
 
             <div className="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row flex-col">
-              {/* <button
-                type="button"
-                title="Start buying"
-                className="group w-full py-3 px-6 text-center transition active:bg-yellow-200 focus:bg-yellow-100 sm:w-max"
-              >
-                <span className="block text-gray-700 font-semibold group-focus:text-gray-700 ">
-                  Login
-                </span>
-              </button> */}
-              <Link href={'/membership'}
+              {!session?.user ? <Link href={'/membership'}
                 className="w-full py-1.5 px-6 text-center transition bg-neutral-950 md:w-max rounded-3xl"
               >
                 <span className="block text-white font-semibold">Become a member</span>
-              </Link>
+              </Link> : null}
             </div>
           </div>
         </div>

@@ -1,65 +1,47 @@
 import { UserIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
-exports.account = {
+export default defineType({
   name: "account",
   title: "Account",
-  type: "document",
-  fields: [
-    {
-      name: "providerType",
-      type: "string",
-    },
-    {
-      name: "providerId",
-      type: "string",
-    },
-    {
-      name: "providerAccountId",
-      type: "string",
-    },
-    {
-      name: "refreshToken",
-      type: "string",
-    },
-    {
-      name: "accessToken",
-      type: "string",
-    },
-    {
-      name: "accessTokenExpires",
-      type: "number",
-    },
-    {
-      name: "user",
-      title: "User",
-      type: "reference",
-      to: { type: "user" },
-    },
-  ],
-};
-
-export default defineType({
-  name: "user",
-  title: "User",
   type: "document",
   icon: UserIcon,
   fields: [
     defineField({
-      name: "name",
-      title: "Name",
+      name: "providerType",
+      title: "providerType",
       type: "string",
     }),
     defineField({
-      name: "email",
-      title: "Email",
+      name: "providerId",
+      title: "ProviderId",
       type: "string",
-      validation: (Rule) => Rule.required().email(),
     }),
     defineField({
-      name: "emailVerified",
-      type: "boolean",
-      hidden: true,
+      name: "providerAccountId",
+      title: "ProviderAccountId",
+      type: "string",
     }),
+    defineField({
+      name: "refreshToken",
+      title: "RefreshToken",
+      type: "string",
+    }),
+    defineField({
+      name: "accessToken",
+      title: "AccessToken",
+      type: "string",
+    }),
+    defineField({
+      name: "accessTokenExpires",
+      title: "AccessTokenExpires",
+      type: "number",
+    }),
+    defineField({
+      name: "user",
+      title: "User",
+      type: "reference",
+      to: { type: "user" },
+    })
   ],
 });

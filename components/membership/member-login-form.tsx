@@ -21,12 +21,15 @@ import {
 } from "../ui/select";
 import { signUp } from 'next-auth-sanity/client';
 import { signIn } from 'next-auth/react';
+import { ReloadIcon } from "@radix-ui/react-icons"
+import { useState } from "react"
 
 interface Props {
   handleChangeSection: (section: string) => void
 }
 
 const MemberShipLoginForm = ({ handleChangeSection }: Props) => {
+  const [loading, setLoading] = useState(false)
   const form = useForm<z.infer<typeof savePersonalInfoSchema>>({
     resolver: zodResolver(savePersonalInfoSchema),
     defaultValues: {
@@ -40,6 +43,7 @@ const MemberShipLoginForm = ({ handleChangeSection }: Props) => {
   })
  
   async function onSubmit(values: z.infer<typeof savePersonalInfoSchema>) {
+    setLoading(true)
     const user = await signUp({
       email: values.email,
       password: values.password,
@@ -58,7 +62,7 @@ const MemberShipLoginForm = ({ handleChangeSection }: Props) => {
       });
       handleChangeSection('condition-info')
     }
-    
+    setLoading(false)
   }
 
   return (
@@ -152,9 +156,23 @@ const MemberShipLoginForm = ({ handleChangeSection }: Props) => {
                   </FormItem>
                 )}
                 />
+                <FormField
+                control={form.control}
+                name="password"
+                render={({ field }) => (
+                  <FormItem className="col-span-full">
+                    <FormLabel>Password (To protect and save your identity)</FormLabel>
+                    <FormControl>
+                      <Input placeholder="********" type="password" required {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+                />
               </div>
               <div className="mt-5 flex items-center justify-end gap-x-6">
-                <Button type="submit" className="rounded-2xl">
+                <Button type="submit" className="rounded-2xl" disabled={loading}>
+                  {loading ? <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />: null}
                   Save personal info
                 </Button>
               </div>

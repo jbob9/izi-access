@@ -1,39 +1,6 @@
 import { UserIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
-exports.user = {
-  name: "user",
-  title: "User",
-  type: "document",
-  fields: [
-    {
-      name: "name",
-      title: "Name",
-      type: "string",
-    },
-    {
-      name: "email",
-      title: "Email",
-      type: "string",
-    },
-    {
-      name: "image",
-      title: "Image",
-      type: "url",
-    },
-    {
-      name: "password",
-      type: "string",
-      hidden: true,
-    },
-    {
-      name: "emailVerified",
-      type: "datetime",
-      hidden: true,
-    },
-  ],
-};
-
 export default defineType({
   name: "user",
   title: "User",

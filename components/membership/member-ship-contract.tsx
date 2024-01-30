@@ -1,10 +1,22 @@
+import { useState } from "react"
 import { Checkbox } from "../ui/checkbox"
+import { Button } from "../ui/button"
 
 const MemberShipContract = () => {
+  const [accept, setAccept] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  const handleSubmit = () => {
+    if(accept) {
+
+      window.open('https://www.zeffy.com/en-CA/embed/ticketing/cc3cccd9-ab4e-4eb9-ae05-d930d6a5bef7')
+    }
+  }
+
   return (
     <div className="">
       <article className="prose lg:prose-xl h-screen overflow-y-scroll">
-        <h2>Garlic bread with cheese: What the science tells us</h2>
+        <h2>Terms and conditions</h2>
         <p>
           For years parents have espoused the health benefits of eating garlic bread with cheese to their
           children, with the food earning such an iconic status in our culture that kids will often dress
@@ -42,11 +54,9 @@ const MemberShipContract = () => {
         </div>
       </div>
       <div className="flex justify-end pb-4 pr-3">
-        <button
-          className="inline-flex rounded-full px-4 py-1.5 text-xs md:text-sm font-semibold transition bg-neutral-950 text-white hover:bg-neutral-800"
-        >
-          <span className="relative top-px">Become a member</span>
-        </button>
+        <Button className="rounded-2xl" disabled={!accept}>
+          Become a member
+        </Button>
       </div>
 
     </div>
