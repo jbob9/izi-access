@@ -27,7 +27,7 @@ const Header = () => {
                   <PlayIcon className="w-6 h-6 text-white mr-2"/> Why us?
                 </Button>
               </DialogTrigger>
-              <DialogContent className="px-0">
+              <DialogContent className="px-0 bg-transparent border-none">
                 <div className="pt-6 relative h-0 pb-[66.5%]" >
                   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vFdUPeHknfg?si=q0_Wxj0w0vWEG9wg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className="absolute left-0 right-0"></iframe>
                 </div>
