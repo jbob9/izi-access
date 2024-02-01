@@ -3,14 +3,15 @@ import { SanityAdapter, SanityCredentials } from "next-auth-sanity";
 import { client } from "@/sanity";
 import type { SanityClient } from "sanity";
 
-const options: NextAuthOptions = {
+export const authOptions: NextAuthOptions = {
   providers: [
     SanityCredentials(client as SanityClient),
   ],
   session: {
     strategy: "jwt",
+    maxAge: 90 * 24 * 60 * 60
   },
   adapter: SanityAdapter(client as SanityClient),
 };
 
-export default NextAuth(options);
+export default NextAuth(authOptions);

@@ -9,3 +9,7 @@ export const savePersonalInfoSchema = z.object({
   password: z.string().min(8),
   address: z.string(),
 })
+
+export const acceptConditionSchema = z.object({
+  accept: z.string(),
+})
