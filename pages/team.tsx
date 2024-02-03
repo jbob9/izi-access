@@ -47,6 +47,27 @@ const people = [
 const Team = () => {
   return (
     <div>
+      {/* Garlic bread with cheese: What the science tells us
+
+
+
+For years parents have espoused the health benefits of eating garlic bread with cheese to their children, with the food earning such an iconic status in our culture that kids will often dress up as warm, cheesy loaf for Halloween.
+
+But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases springing up around the country.
+
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit enim excepturi id error maxime necessitatibus laudantium, quae voluptates quaerat, nulla officiis eaque ipsam alias labore hic odit quisquam dignissimos? Ipsum!
+
+
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cupiditate quia possimus repellat hic vel illo consequuntur. Suscipit itaque voluptas iste dolorem saepe debitis! Dolor quia reprehenderit esse eum eaque?
+
+
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eligendi libero tempora, vel reprehenderit cupiditate debitis quae obcaecati officia nostrum nemo consequatur sit, cumque est quasi, nesciunt ullam. Voluptatibus, natus.
+
+
+
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum minus facilis, incidunt iure veritatis possimus magnam illum odit ex quos cumque ea molestiae? Corporis amet alias obcaecati impedit vel, quibusdam aperiam deleniti ut magnam? Corporis, nemo sit, placeat doloribus, itaque illo quos iste quaerat hic similique totam. Itaque quaerat quae iste saepe ad? Inventore quam est vel, quis magni consectetur necessitatibus quod magnam alias quia dignissimos placeat molestiae officia eos cum itaque ullam provident perferendis. Eligendi nisi expedita laboriosam sunt quibusdam ipsam autem quod quisquam fuga ea omnis quia facilis beatae quos, perspiciatis cum iure velit veniam debitis! Repudiandae possimus quod enim repellendus doloribus eligendi ex incidunt deleniti vero mollitia sint blanditiis, fugiat, est, atque totam ratione? At sint aspernatur fugit repudiandae a consequuntur accusantium dignissimos debitis error itaqu doloribus obcaecati quis facere nulla! Alias enim tenetur voluptatum commodi dolorem labore non ducimus esse. */}
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
           <div className="max-w-2xl">

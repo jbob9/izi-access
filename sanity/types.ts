@@ -4,6 +4,7 @@ export type Blog = {
   description: string;
   slug: string;
   image: string;
+  content: string;
   author: {
     name: string;
     activity: string;

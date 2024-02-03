@@ -27,19 +27,19 @@ export function urlForImage(source: SanityImageSource) {
 const PortableTextComponents = {
   types: {
     image: ({ value }: any) => {
-      return `
+      return (
         <picture>
           <source
-            srcset="${urlForImage(value.asset).format("webp").url()}"
+            srcSet={urlForImage(value.asset).format("webp").url()}
             type="image/webp"
           />
           <img
-            class="responsive__img"
-            src="${urlForImage(value.asset).url()}"
-            alt="${value.alt}"
+            className="responsive__img rounded-md"
+            src={urlForImage(value.asset).url()}
+            alt=""
           />
         </picture>
-        `;
+        );
     },
   },
 
