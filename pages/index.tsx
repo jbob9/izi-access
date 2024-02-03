@@ -5,11 +5,22 @@ import Services from "../components/home/services";
 import CallToAction1 from "@/components/call-to-action-1";
 import CallToAction2 from "@/components/call-to-action-2";
 import Testi2 from "@/components/testimonials/testi2";
+import { InferGetStaticPropsType } from "next";
+import { getArticles } from "@/sanity/queries";
 
+export async function getStaticProps() {
+  const latestArticles = await getArticles(6);
 
+  return {
+    props: {
+      latestArticles
+    },
+    revalidate: 7200,
+  };
+}
 
-export default function Home() {
-  // const slides = Array.from(Array(4).keys())
+export default function Home({ latestArticles }: InferGetStaticPropsType<typeof getStaticProps>) {
+  
   return (
     <>
       <Header />
@@ -42,7 +53,7 @@ export default function Home() {
       
       <Testi2/>
                               
-      <BlogPreview />
+      <BlogPreview latestArticles={latestArticles}/>
     </>
   );
 }

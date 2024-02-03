@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import BlogCard from './blog-card'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
+import { Blog } from '@/sanity/types'
 
-const BlogPreview = () => {
+const BlogPreview = ({ latestArticles}: { latestArticles: Blog[]}) => {
   return (
   
   <div className='px-2 md:px-4 pt-4 pb-12'>
@@ -15,11 +16,9 @@ const BlogPreview = () => {
       </Link>
     </div>
     <div className="flex overflow-y-hidden overflow-x-scroll py-4 scrollbar-none space-x-3 md:space-x-5 pb-4">
-      <BlogCard/>
-      <BlogCard/>
-      <BlogCard/>
-      <BlogCard/>
-      <BlogCard/>
+      {latestArticles.map((article) => (
+        <BlogCard key={article._id} article={article}/>
+      ))}
       
     </div>
   </div>

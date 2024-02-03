@@ -1,7 +1,22 @@
 import BlogCard from "@/components/blog/blog-card";
 import Link from "next/link";
 
-const Blog = () => {
+import { getArticles } from "@/sanity/queries";
+import { InferGetStaticPropsType } from "next";
+
+export async function getStaticProps() {
+  const articles = await getArticles(30);
+
+  return {
+    props: {
+      articles
+    },
+    revalidate: 7200,
+  };
+}
+
+
+const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div className="py-20 px-2 md:px-4">
       <div className="mx-auto max-w-2xl lg:mx-0">
@@ -61,14 +76,9 @@ const Blog = () => {
         </div>
       </div>
       <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        <BlogCard withMinWidth={false}/>
-        <BlogCard withMinWidth={false}/>
-        <BlogCard withMinWidth={false}/>
-        <BlogCard withMinWidth={false}/>
-        <BlogCard withMinWidth={false}/>
-        <BlogCard withMinWidth={false}/>
-        <BlogCard withMinWidth={false}/>
-        <BlogCard withMinWidth={false}/>
+        {articles.map((article) => (
+          <BlogCard withMinWidth={false} article={article} key={article._id}/>
+        ))}
       </div>
     </div>
   );

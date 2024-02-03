@@ -1,50 +1,57 @@
 import { cn } from "@/lib/utils";
+import { Blog } from "@/sanity/types";
+import Image from "next/image";
 import Link from "next/link";
+import dayjs from 'dayjs'
 
-const BlogCard = ({ withMinWidth = true }) => {
+interface Props{
+  article: Blog
+  withMinWidth?: boolean;
+}
+
+const BlogCard = ({ withMinWidth = true, article }: Props) => {
   return (
     <div className={cn('group', {
       'min-w-80 md:min-w-[26rem]': withMinWidth
     })}>
-      <Link href={'/blog/ejeueueueu'}>
-        <img
-          src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-          alt="art cover"
-          loading="lazy"
-          width="1000"
+      <Link href={`/blog/${article.slug}`}>
+        <Image
+          src={article.image}
+          alt="article cover"
+          width="800"
           height="667"
-          className="h-60 md:h-80 w-full rounded-3xl object-cover"
+          className="h-60 md:h-80 w-full rounded-3xl object-cover bg-gray-100"
         />
       </Link>
-      <Link href={'/blog/ejeueueueu'}>
+      <Link href={`/blog/${article.slug}`}>
         <h3 className="text-lg md:text-2xl font-semibold text-gray-800 my-4 ">
-          Flipper and JS: why we added JavaScript support to a mobil...
+          {article.title}
         </h3>
         <p className="text-gray-600 text-sm">
-          Finding the right open source project for your first contribution can
-          feel daunting....
+          {article.description}
         </p>
       </Link>
       
       <div className="flex gap-6 justify-between items-end mt-2">
-        <a
-          href="#"
+        <div
           className="-ml-1 p-1 rounded-full flex items-center gap-3 hover:bg-gray-50"
         >
-          <img
-            className="w-10 h-10 object-cover rounded-full"
-            src="https://tailus.io/sources/blocks/twocolumns/preview/images/man.jpg"
-            alt=""
+          <Image
+            className="w-10 h-10 object-cover rounded-full bg-gray-100"
+            src={article.author.avatar}
+            width={40}
+            height={40}
+            alt="author avatar"
           />
           <div className="flex flex-col space-y-1">
             <span className="font-semibold text-sm text-gray-600 ">
-              Bernard Ng.
+              {article.author.name}
             </span>
-            <span className="text-xs">CTO of IziAccess</span>
+            <span className="text-xs">{article.author.activity}</span>
           </div>
-        </a>
+        </div>
         <span className="w-max block font-semibold text-sm text-gray-500 sm:mt-0">
-          Aug 27 2022
+          {dayjs(article._createdAt).format('MMM DD YYYY')}
         </span>
       
       </div>
