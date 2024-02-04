@@ -1,20 +1,28 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import MemberShipLoginForm from './member-login-form'
 import MemberShipContract from './member-ship-contract'
 import { cn } from '@/lib/utils'
+import { useSession } from "next-auth/react"
 
 const MemberShip = () => {
   const [section, setSection] = useState('personal-info')
+  const { data: session } = useSession()
 
   const handleChangeSection = (section: string) => setSection(section)
+
+  useEffect(() => {
+    if(session) {
+      handleChangeSection('condition-info')
+    }
+  }, [session])
+  
 
   return (
     <div>
       <ol className="flex items-center w-full p-3 space-x-2 text-sm font-medium text-center text-gray-500 bg-white border border-gray-200 rounded-lg shadow-sm dark:text-gray-400 sm:text-base sm:p-4 sm:space-x-4 rtl:space-x-reverse">
-          <li className={cn("flex items-center cursor-pointer", {
+          <li className={cn("flex items-center", {
             "text-blue-600": section === 'personal-info'
           })}
-          onClick={() => handleChangeSection('personal-info')}
           >
             <span className={cn("flex items-center justify-center w-5 h-5 me-2 text-xs border rounded-full shrink-0", {
               "border-blue-600": section === 'personal-info'
@@ -26,10 +34,9 @@ const MemberShip = () => {
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m7 9 4-4-4-4M1 9l4-4-4-4"/>
             </svg>
           </li>
-          <li className={cn("flex items-center cursor-pointer", {
+          <li className={cn("flex items-center", {
             "text-blue-600": section === 'condition-info'
           })}
-          onClick={() => handleChangeSection('condition-info')}
           >
             <span className={cn("flex items-center justify-center w-5 h-5 me-2 text-xs border rounded-full shrink-0", {
               "border-blue-600": section === 'condition-info'

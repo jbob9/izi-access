@@ -39,6 +39,12 @@ export default defineType({
       type: "string",
     }),
     defineField({
+      name: "acceptCondition",
+      title: 'Accept Condition',
+      type: "boolean",
+      initialValue: false,
+    }),
+    defineField({
       name: "password",
       type: "string",
       hidden: true,

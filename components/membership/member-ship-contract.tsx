@@ -1,15 +1,30 @@
 import { useState } from "react"
 import { Checkbox } from "../ui/checkbox"
 import { Button } from "../ui/button"
+import { ReloadIcon } from "@radix-ui/react-icons"
+import { useRouter } from "next/router"
 
 const MemberShipContract = () => {
   const [accept, setAccept] = useState(false)
   const [loading, setLoading] = useState(false)
+  const router = useRouter()
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if(accept) {
-
-      window.open('https://www.zeffy.com/en-CA/embed/ticketing/cc3cccd9-ab4e-4eb9-ae05-d930d6a5bef7')
+      try {
+        setLoading(true)
+        const response = await fetch('/api/sanity/update-user', {
+          method: 'POST',
+          body: JSON.stringify({ accept: true }),
+        })
+        if(response.ok) {
+          window.open('https://www.zeffy.com/en-CA/embed/ticketing/cc3cccd9-ab4e-4eb9-ae05-d930d6a5bef7')
+          router.push('/')
+        }
+      } catch (e) {
+        setLoading(false)
+      }
+      setLoading(false)
     }
   }
 
@@ -54,7 +69,8 @@ const MemberShipContract = () => {
         </div>
       </div>
       <div className="flex justify-end pb-4 pr-3">
-        <Button className="rounded-2xl" disabled={!accept} onClick={handleSubmit}>
+        <Button className="rounded-2xl" disabled={!accept || loading} onClick={handleSubmit}>
+          {loading ? <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />: null}
           Become a member
         </Button>
       </div>

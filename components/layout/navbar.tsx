@@ -9,7 +9,7 @@ const Navbar = () => {
   const { data: session } = useSession()
 
   const toggleOpen = () => setOpen((o) => !o)
-  console.log(session, 'session')
+  
   return (
     <nav className={`absolute w-full z-40 ${router.pathname === '/' ? 'bg-dot-black/[0.2]': ''}`}>
       <div className="container m-auto px-3 md:px-12 lg:px-6">
