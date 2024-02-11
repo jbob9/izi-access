@@ -1,17 +1,21 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { useSession } from "next-auth/react"
+import { useSession } from "next-auth/react";
 
 const Navbar = () => {
-  const router = useRouter()
-  const [open, setOpen] = useState(false)
-  const { data: session } = useSession()
+  const router = useRouter();
+  const [open, setOpen] = useState(false);
+  const { data: session } = useSession();
 
-  const toggleOpen = () => setOpen((o) => !o)
-  
+  const toggleOpen = () => setOpen((o) => !o);
+
   return (
-    <nav className={`absolute w-full z-40 ${router.pathname === '/' ? 'bg-dot-black/[0.2]': ''}`}>
+    <nav
+      className={`absolute w-full z-40 ${
+        router.pathname === "/" ? "bg-dot-black/[0.2]" : ""
+      }`}
+    >
       <div className="container m-auto px-3 md:px-12 lg:px-6">
         <div className="flex flex-wrap items-center justify-between py-6 gap-6 md:py-4 md:gap-0 relative">
           <input
@@ -32,12 +36,14 @@ const Navbar = () => {
             </Link>
 
             <div className="flex items-center space-x-3">
-              {!session?.user ? <Link
-                className="inline-flex md:hidden rounded-full px-4 py-1.5 text-xs md:text-sm font-semibold transition bg-neutral-950 text-white hover:bg-neutral-800"
-                href="/membership"
-              >
-                <span className="relative top-px">Become a member</span>
-              </Link> : null}
+              {!session?.user ? (
+                <Link
+                  className="inline-flex md:hidden rounded-full px-4 py-1.5 text-xs md:text-sm font-semibold transition bg-neutral-950 text-white hover:bg-neutral-800"
+                  href="/membership"
+                >
+                  <span className="relative top-px">Become a member</span>
+                </Link>
+              ) : null}
               <div>
                 <div className="flex items-center md:hidden max-h-10">
                   <label
@@ -85,50 +91,38 @@ const Navbar = () => {
                 />
               </a>
             </div>
-            <div className="block w-full h-full md:h-auto">
+            <div className="block w-full md:w-auto h-full md:h-auto p-3 rounded-3xl md:compose-shadow">
               <ul className="space-y-8 tracking-wide font-medium md:flex md:space-y-0">
                 <li>
-                  <Link href={'/'} className="block md:px-3">
-                    <div
-                      className="relative text-gray-900
-                    before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900"
-                    >
+                  <Link href={"/"} className="block md:px-3">
+                    <div className="leading-5 text-sm text-gray-500 hover:text-gray-400">
                       <span>Acceuil</span>
                     </div>
                   </Link>
                 </li>
                 <li>
                   <Link href="/#services" className="block md:px-3 group">
-                    <div
-                      className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900 before:transition before:scale-x-0 group-hover:before:scale-x-100"
-                    >
-                      <span className="transition group-hover:text-gray-700 ">
-                        Services
-                      </span>
+                    <div className="leading-5 text-sm text-gray-500 hover:text-gray-400">
+                      <span className="">Services</span>
                     </div>
                   </Link>
                 </li>
                 <li>
                   <Link href="/about" className="block md:hidden md:px-3 group">
                     <div
-                      className="relative text-gray-600
-                        before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900 before:transition before:scale-x-0 group-hover:before:scale-x-100"
+                      className="leading-5 text-sm text-gray-500 hover:text-gray-400"
                     >
-                      <span className="transition group-hover:text-gray-700 ">
+                      <span>
                         A propos
                       </span>
                     </div>
                   </Link>
                 </li>
-                
+
                 <li>
                   <Link href="/blog" className="block md:px-3 group">
-                    <div
-                      className="relative text-gray-600 before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left before:mx-auto before:mt-auto before:rounded-full before:bg-gray-900 before:transition before:scale-x-0 group-hover:before:scale-x-100"
-                    >
-                      <span className="transition group-hover:text-gray-700">
-                        Articles
-                      </span>
+                    <div className="leading-5 text-sm text-gray-500 hover:text-gray-400">
+                      <span className="">Articles</span>
                     </div>
                   </Link>
                 </li>
@@ -136,11 +130,16 @@ const Navbar = () => {
             </div>
 
             <div className="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row flex-col">
-              {!session?.user ? <Link href={'/membership'}
-                className="w-full py-1.5 px-6 text-center transition bg-neutral-950 md:w-max rounded-3xl"
-              >
-                <span className="block text-white font-semibold">Become a member</span>
-              </Link> : null}
+              {!session?.user ? (
+                <Link
+                  href={"/membership"}
+                  className="w-full py-1.5 px-6 text-center transition bg-neutral-950 md:w-max rounded-3xl"
+                >
+                  <span className="block text-white font-semibold">
+                    Become a member
+                  </span>
+                </Link>
+              ) : null}
             </div>
           </div>
         </div>

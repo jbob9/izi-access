@@ -1,5 +1,5 @@
 import { EnvelopeClosedIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-// import { EnvelopeIcon } from "@sanity/icons";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -11,9 +11,9 @@ const Footer = () => {
             role="list"
             className="flex  items-center justify-center gap-4 py-4  sm:gap-8"
           >
-            <li role="listitem"><a href="#" className="font-semibold">Acceuil</a></li>
-            <li role="listitem"><a href="#" className="font-semibold">Services</a></li>
-            <li role="listitem"><a href="#" className="font-semibold">A propos</a></li>
+            <li role="listitem"><Link href="/" className="font-semibold">Acceuil</Link></li>
+            <li role="listitem"><Link href="/#services" className="font-semibold">Services</Link></li>
+            <li role="listitem"><Link href="/about" className="font-semibold">A propos</Link></li>
           </ul>
           <div className="m-auto flex w-max items-center justify-between space-x-4">
             <a href="tel:+243996660436" aria-label="call">
