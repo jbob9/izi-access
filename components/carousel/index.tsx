@@ -1,34 +1,36 @@
-import { useState, useEffect, useCallback, PropsWithChildren, DetailedHTMLProps, ButtonHTMLAttributes } from 'react'
-import { EmblaCarouselType, EmblaOptionsType } from 'embla-carousel'
-import useEmblaCarousel from 'embla-carousel-react'
-import s from './index.module.css';
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
+import { EmblaCarouselType, EmblaOptionsType } from "embla-carousel";
+import useEmblaCarousel from "embla-carousel-react";
+import {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  PropsWithChildren,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
+import s from "./index.module.css";
 // import imageByIndex from './imageByIndex'
 type PropType = PropsWithChildren<
-  DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  >
->
+  DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+>;
 
 export const DotButton: React.FC<PropType> = (props) => {
-  const { children, ...restProps } = props
+  const { children, ...restProps } = props;
 
   return (
     <button type="button" {...restProps}>
       {children}
     </button>
-  )
-}
-
-
+  );
+};
 
 export const PrevButton: React.FC<PropType> = (props) => {
-  const { children, ...restProps } = props
+  const { children, ...restProps } = props;
 
   return (
     <button
-      className={cn(s.embla__button, 'embla__button--prev')}
+      className={cn(s.embla__button, "embla__button--prev")}
       type="button"
       {...restProps}
     >
@@ -40,15 +42,15 @@ export const PrevButton: React.FC<PropType> = (props) => {
       </svg>
       {children}
     </button>
-  )
-}
+  );
+};
 
 export const NextButton: React.FC<PropType> = (props) => {
-  const { children, ...restProps } = props
+  const { children, ...restProps } = props;
 
   return (
     <button
-      className={cn(s.embla__button, 'embla__button--next')}
+      className={cn(s.embla__button, "embla__button--next")}
       type="button"
       {...restProps}
     >
@@ -60,83 +62,85 @@ export const NextButton: React.FC<PropType> = (props) => {
       </svg>
       {children}
     </button>
-  )
-}
-
+  );
+};
 
 type Props = {
-  options?: EmblaOptionsType
-  withArrows?: boolean
-}
+  options?: EmblaOptionsType;
+  withArrows?: boolean;
+  withDots?: boolean;
+};
 
 const Carousel = (props: PropsWithChildren<Props>) => {
-  const { options, withArrows = false } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
-  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
-  const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
-  const [selectedIndex, setSelectedIndex] = useState(0)
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
+  const { options, withArrows = false, withDots = false } = props;
+  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
     [emblaApi]
-  )
+  );
   const scrollNext = useCallback(
     () => emblaApi && emblaApi.scrollNext(),
     [emblaApi]
-  )
+  );
   const scrollTo = useCallback(
     (index: number) => emblaApi && emblaApi.scrollTo(index),
     [emblaApi]
-  )
+  );
 
   const onInit = useCallback((emblaApi: EmblaCarouselType) => {
-    setScrollSnaps(emblaApi.scrollSnapList())
-  }, [])
+    setScrollSnaps(emblaApi.scrollSnapList());
+  }, []);
 
   const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
-    setSelectedIndex(emblaApi.selectedScrollSnap())
-    setPrevBtnDisabled(!emblaApi.canScrollPrev())
-    setNextBtnDisabled(!emblaApi.canScrollNext())
-  }, [])
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+    setPrevBtnDisabled(!emblaApi.canScrollPrev());
+    setNextBtnDisabled(!emblaApi.canScrollNext());
+  }, []);
 
   useEffect(() => {
-    if (!emblaApi) return
+    if (!emblaApi) return;
 
-    onInit(emblaApi)
-    onSelect(emblaApi)
-    emblaApi.on('reInit', onInit)
-    emblaApi.on('reInit', onSelect)
-    emblaApi.on('select', onSelect)
-  }, [emblaApi, onInit, onSelect])
+    onInit(emblaApi);
+    onSelect(emblaApi);
+    emblaApi.on("reInit", onInit);
+    emblaApi.on("reInit", onSelect);
+    emblaApi.on("select", onSelect);
+  }, [emblaApi, onInit, onSelect]);
 
   return (
-    <>
+    <div className="relative">
       <div className={s.embla}>
         <div className={s.embla__viewport} ref={emblaRef}>
-          <div className={s.embla__container}>
-            {props.children}
-          </div>
+          <div className={s.embla__container}>{props.children}</div>
         </div>
-        {withArrows && <div className={s.embla__buttons}>
-          <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
-          <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
-        </div>}
+        {withArrows && (
+          <div className={s.embla__buttons}>
+            <PrevButton onClick={scrollPrev} disabled={prevBtnDisabled} />
+            <NextButton onClick={scrollNext} disabled={nextBtnDisabled} />
+          </div>
+        )}
       </div>
 
-      <div className={s.embla__dots}>
-        {scrollSnaps.map((_, index) => (
-          <DotButton
-            key={index}
-            onClick={() => scrollTo(index)}
-            className={cn(s.embla__dot, {
-              [s.embla__dot__selected]: index === selectedIndex
-            })}
-          />
-        ))}
-      </div>
-    </>
-  )
-}
+      {withDots && (
+        <div className={s.embla__dots}>
+          {scrollSnaps.map((_, index) => (
+            <DotButton
+              key={index}
+              onClick={() => scrollTo(index)}
+              className={cn(s.embla__dot, {
+                [s.embla__dot__selected]: index === selectedIndex,
+              })}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
-export default Carousel
+export default Carousel;
