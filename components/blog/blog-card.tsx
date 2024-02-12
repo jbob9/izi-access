@@ -3,14 +3,7 @@ import { Blog } from "@/sanity/types";
 import Image from "next/image";
 import Link from "next/link";
 import dayjs from "dayjs";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 interface Props {
   article: Blog;

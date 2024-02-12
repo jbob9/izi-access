@@ -1,12 +1,13 @@
 import Sponsors2 from "@/components/sponsors2";
 import BlogPreview from "../components/blog/blog-preview";
 import Header from "../components/home/header";
-import Services from "../components/home/services";
+// import Services from "../components/home/services";
 import CallToAction1 from "@/components/call-to-action-1";
 import CallToAction2 from "@/components/call-to-action-2";
 import Testi2 from "@/components/testimonials/testi2";
 import { InferGetStaticPropsType } from "next";
 import { getArticles } from "@/sanity/queries";
+import Services from "@/components/services";
 
 export async function getStaticProps() {
   const latestArticles = await getArticles(6);
@@ -47,7 +48,8 @@ export default function Home({ latestArticles }: InferGetStaticPropsType<typeof 
         <CallToAction2/>
       </div>
   
-      <Services />
+      {/* <Services /> */}
+      <Services/>
 
       {/* <Testimonials/> */}
       
