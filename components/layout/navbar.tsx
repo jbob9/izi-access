@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav
       className={`absolute w-full z-40 ${
-        router.pathname === "/" ? "bg-dot-black/[0.2]" : ""
+        router.pathname === "/" ? "" : ""
       }`}
     >
       <div className="container m-auto px-3 md:px-12 lg:px-6">

@@ -23,7 +23,7 @@ export async function getStaticProps() {
 export default function Home({ latestArticles }: InferGetStaticPropsType<typeof getStaticProps>) {
   
   return (
-    <>
+    <div className="pt-0 md:pt-4">
       <Header />
       <div className="my-28">
         <Sponsors2 />
@@ -56,6 +56,6 @@ export default function Home({ latestArticles }: InferGetStaticPropsType<typeof 
       <Testi2/>
                               
       <BlogPreview latestArticles={latestArticles}/>
-    </>
+    </div>
   );
 }
