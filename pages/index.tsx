@@ -36,8 +36,6 @@ export default function Home({ latestArticles }: InferGetStaticPropsType<typeof 
       <BlockTest/>
 
       <Services/>
-      
-      
 
       {/* <Testimonials/> */}
       

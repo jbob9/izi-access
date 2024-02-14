@@ -28,11 +28,13 @@ const BlogCard = ({ withMinWidth = true, article }: Props) => {
               className="h-56 w-full rounded-2xl object-cover bg-gray-100"
             />
           </Link>
-          <Link href={`/blog/${article.slug}`} className="my-4 block">
-            <h3 className="text-lg md:text-2xl font-semibold text-gray-700 mb-2 ">
+          <Link href={`/blog/${article.slug}`} className="mb-4 mt-5 block">
+            <h3 className="text-lg md:text-2xl font-semibold text-gray-700 mb-2 line-clamp-2">
               {article.title}
             </h3>
-            <p className="text-gray-600 text-sm">{article.description}</p>
+            <p className="text-gray-600 text-sm line-clamp-2">
+              {article.description}
+            </p>
           </Link>
 
           <div className="flex gap-6 justify-between items-end mt-2">
