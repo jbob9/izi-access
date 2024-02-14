@@ -8,6 +8,7 @@ import Testi2 from "@/components/testimonials/testi2";
 import { InferGetStaticPropsType } from "next";
 import { getArticles } from "@/sanity/queries";
 import Services from "@/components/services";
+import BlockTest from "@/components/block-test";
 
 export async function getStaticProps() {
   const latestArticles = await getArticles(6);
@@ -28,34 +29,25 @@ export default function Home({ latestArticles }: InferGetStaticPropsType<typeof 
       <div className="my-28">
         <Sponsors2 />
       </div>
-
+      
       <div className="py-6">
         <CallToAction1/>
       </div>
-      <div className="pt-20 pb-6">
-        <header className="px-fluid-base  md:text-center md:items-center mx-auto flex flex-col justify-center mb-8">
-          <div className="flex items-center gap-x-4">
-          <h2 className="text-2xl md:text-5xl font-semibold mb-4 md:mb-6 text-center">
-            The easiest screen recorder you’ll ever use
-          </h2>
-          </div>
-          <div className="font-semibold text-base md:text-xl text-gray-600 text-center">
-            <p>
-              Record in a few clicks. Share anywhere. Collaborate better.
-            </p>
-          </div>
-        </header>
-        <CallToAction2/>
-      </div>
-  
-      {/* <Services /> */}
+      <BlockTest/>
+
       <Services/>
+      
+      
 
       {/* <Testimonials/> */}
       
       <Testi2/>
                               
       <BlogPreview latestArticles={latestArticles}/>
+
+      <div>
+        <CallToAction2/>
+      </div>
     </div>
   );
 }
