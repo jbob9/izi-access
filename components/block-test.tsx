@@ -1,5 +1,7 @@
+import { ArrowRightIcon } from "@sanity/icons";
 import Skeleton from "./Skeleton";
 import EventCard from "./events/event-card";
+import { Button } from "./ui/button";
 
 export default function BlockTest() {
   return (
@@ -65,34 +67,19 @@ export default function BlockTest() {
         }
         className="md:col-span-2"
       />
-      <div className="row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 bg-card border-border border justify-between flex flex-col space-y-4 md:col-span-1">
+      <div className="row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 bg-card border-border border justify-center flex flex-col space-y-4 md:col-span-1">
         <div className="flex flex-col gap-2">
-          <p className="font-bold">Login</p>
+          <p className="font-bold">Events</p>
         </div>
         <div className="flex flex-col gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-key size-4 text-neutral-500"
-          >
-            <circle cx="7.5" cy="15.5" r="5.5"></circle>
-            <path d="m21 2-9.6 9.6"></path>
-            <path d="m15.5 7.5 3 3L22 7l-3-3"></path>
-          </svg>
-          <p className="text-lg font-semibold">Authentification gratuite</p>
+          {/* <p className="text-lg font-semibold">Authentification gratuite</p> */}
           <p className="text-sm text-muted-foreground">
             <span className="text-sm">
               Suppression de compte, mot de passe, OAuth, etc. Tout est géré
               sans avoir besoin de payer un SaaS.
             </span>
           </p>
+          <Button className="mt-2 w-full">See all <ArrowRightIcon className="w-6 h-6 ml-3" stroke="2"/></Button>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ const Services = () => {
   return (
     <div className="max-w-4xl mx-2 md:m-auto">
       <div className="flex items-center justify-center">
-        <h2 className="text-center leading-snug mb-8 text-neutral-700 md:mb-14 mx-6 text-2xl md:text-5xl">
+        <h2 className="scroll-m-20 font-caption text-4xl font-extrabold tracking-tight lg:text-5xl mb-8 text-center lg:mb-16">
           IziAccess is all-in-one, not one-size-fits-all
         </h2>
       </div>

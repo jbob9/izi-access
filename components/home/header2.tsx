@@ -31,7 +31,7 @@ const Header2 = () => {
           or any other web app and make your first $ online fast.
         </p>
         <div className="space-y-4">
-          <Button className="" title="Go to ShipFast Checkout">
+          <Button className="px-20 py-6 rounded-xl text-lg">
             Get ShipFast
           </Button>
         </div>

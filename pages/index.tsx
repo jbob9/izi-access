@@ -28,18 +28,28 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div className="pt-0 md:pt-4">
-      <Header2 />
+      <div className="pt-20 md:pt-4">
+        <Header2 />
+      </div>
       <div className="mb-16 md:mb-28 mt-10">
         <Sponsors />
       </div>
 
+      <div className="py-12">
       <Services />
+      </div>
 
       <div className="py-20 md:py-28">
         <CallToAction1 />
       </div>
 
-      <div className="mx-2 md:mx-auto">
+      <div className="mx-2 md:mx-auto py-10">
+        <div className="flex items-center justify-center">
+          <h2 className="scroll-m-20 font-caption text-4xl font-extrabold tracking-tight lg:text-5xl mb-8 text-center lg:mb-16">
+            Comment je vais t'aider de A à Z :
+          </h2>
+        </div>
+
         <BlockTest />
       </div>
 
