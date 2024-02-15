@@ -1,8 +1,8 @@
-import { cn } from "@/lib/utils";
-import { Button } from "./ui/button";
 import { CalendarIcon } from "@sanity/icons";
+import { Button } from "../ui/button";
+import { cn } from "@/lib/utils";
 
-export const BentoGridItem = ({
+export const EventCard = ({
   className,
   title,
   description,
@@ -38,47 +38,4 @@ export const BentoGridItem = ({
   );
 };
 
-export const BentoGrid = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children?: React.ReactNode;
-}) => {
-  return (
-    <div
-      className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
-        className
-      )}
-    >
-      {children}
-    </div>
-  );
-};
-
-const EventsBentoLayout = ({
-  items,
-}: {
-  items: {
-    title: string;
-    description: string;
-    header: React.JSX.Element;
-  }[];
-}) => {
-  return (
-    <BentoGrid className="max-w-4xl mx-auto">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-        />
-      ))}
-    </BentoGrid>
-  );
-};
-
-export default EventsBentoLayout;
+export default EventCard

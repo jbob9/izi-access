@@ -10,43 +10,45 @@ import { getArticles } from "@/sanity/queries";
 import Services from "@/components/services";
 import BlockTest from "@/components/block-test";
 import Sponsors from "@/components/sponsors";
+import Header2 from "@/components/home/header2";
 
 export async function getStaticProps() {
   const latestArticles = await getArticles(6);
 
   return {
     props: {
-      latestArticles
+      latestArticles,
     },
     revalidate: 7200,
   };
 }
 
-export default function Home({ latestArticles }: InferGetStaticPropsType<typeof getStaticProps>) {
-  
+export default function Home({
+  latestArticles,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div className="pt-0 md:pt-4">
-      <Header />
+      <Header2 />
       <div className="mb-16 md:mb-28 mt-10">
         <Sponsors />
       </div>
 
-      <Services/>
+      <Services />
 
       <div className="py-20 md:py-28">
-        <CallToAction1/>
+        <CallToAction1 />
       </div>
 
       <div className="mx-2 md:mx-auto">
-        <BlockTest/>
+        <BlockTest />
       </div>
 
-      <Testi2/>
-                              
-      <BlogPreview latestArticles={latestArticles}/>
+      <Testi2 />
+
+      <BlogPreview latestArticles={latestArticles} />
 
       <div>
-        <CallToAction2/>
+        <CallToAction2 />
       </div>
     </div>
   );

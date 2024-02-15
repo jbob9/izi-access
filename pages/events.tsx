@@ -1,5 +1,5 @@
 import Skeleton from "@/components/Skeleton";
-import EventsBentoLayout from "@/components/events-bento-layout";
+import EventsBentoLayout from "@/components/events/events-bento-layout";
 
 const items = [
   {
@@ -42,7 +42,7 @@ const items = [
 
 const Events = () => {
   return (
-    <div className="pt-20 md:pt-14 pb-28 mx-2 md:mx-auto">
+    <div className="pt-20 md:pt-14 pb-28 max-w-4xl mx-2 md:mx-auto">
       <div className="pb-5">
         <h2 className="text-2xl font-medium tracking-tight text-gray-900">
           Latest events

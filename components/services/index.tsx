@@ -1,4 +1,5 @@
 import ServiceCard from "./service-card";
+
 const Services = () => {
   return (
     <div className="max-w-4xl mx-2 md:m-auto">
