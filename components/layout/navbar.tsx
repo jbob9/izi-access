@@ -146,7 +146,7 @@ const Navbar = () => {
               <button className="w-full py-1.5 px-6 text-center transition border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground font-semibold block md:hidden md:w-max rounded-3xl text-sm">
                 Donate
               </button>
-              {/* {!session?.user ? ( */}
+              {!session?.user ? (
                 <Link
                   href={"/membership"}
                   className="w-full py-1.5 px-6 md:ml-2 text-center transition bg-neutral-950 md:w-max rounded-3xl"
@@ -155,7 +155,7 @@ const Navbar = () => {
                     Become a member
                   </span>
                 </Link>
-              {/* ) : null} */}
+              ) : null}
             </div>
           </div>
         </div>

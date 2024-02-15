@@ -4,9 +4,9 @@ const Sponsors = () => {
   return (
     <div>
       <div className="container m-auto space-y-8 px-6 text-gray-500 md:px-16">
-        <div className="mb-8 border-b-2 w-fit pb-4">
+        <div className="mb-8 w-fit">
           <h6 className="text-2xl font-bold text-neutral-700">
-            Trusted by +5 giants
+            Trusted by <span className="text-pink-500">giants</span>
           </h6>
         </div>
         <div>

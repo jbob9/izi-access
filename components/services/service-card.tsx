@@ -9,11 +9,11 @@ import {
 } from "@/components/ui/card";
 import { ArrowRightIcon } from "@sanity/icons";
 
-const ServiceCard = ({ image, title }: { image: string, title: string }) => {
+const ServiceCard = ({ image, title }: { image: string; title: string }) => {
   return (
     <Card className="rounded-2xl group">
       <CardContent className="p-0">
-        <div className="h-72 rounded-t-2xl overflow-hidden">
+        <div className="h-[16rem] rounded-t-2xl overflow-hidden">
           <img
             src={image}
             className="object-cover rounded-t-2xl group-hover:scale-105 transition duration-300"

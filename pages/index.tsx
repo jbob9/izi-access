@@ -27,16 +27,20 @@ export default function Home({ latestArticles }: InferGetStaticPropsType<typeof 
   return (
     <div className="pt-0 md:pt-4">
       <Header />
-      <div className="mb-28 mt-10">
+      <div className="mb-16 md:mb-28 mt-10">
         <Sponsors />
       </div>
 
       <Services/>
-      <div className="py-6">
+
+      <div className="py-20 md:py-28">
         <CallToAction1/>
       </div>
-      <BlockTest/>
-      
+
+      <div className="mx-2 md:mx-auto">
+        <BlockTest/>
+      </div>
+
       <Testi2/>
                               
       <BlogPreview latestArticles={latestArticles}/>
