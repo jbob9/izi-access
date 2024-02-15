@@ -2,7 +2,7 @@ import React from "react";
 
 const Card2 = () => {
   return (
-    <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none min-w-80">
+    <div className="aspect-auto p-8 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none min-w-80 max-w-80">
       <div className="flex gap-4">
         <img
           className="w-12 h-12 rounded-full"

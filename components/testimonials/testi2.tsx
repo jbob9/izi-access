@@ -1,5 +1,6 @@
 import Carousel from "../carousel";
 import Card2 from "./card-2";
+import Marquee from "react-fast-marquee";
 
 const Testi2 = () => {
   return (
@@ -11,7 +12,7 @@ const Testi2 = () => {
           </h2>
         </div>
         <div>
-          <Carousel withArrows>
+          <Marquee>
             <div className="mx-2">
               <Card2 />
             </div>
@@ -30,7 +31,7 @@ const Testi2 = () => {
             <div className="mx-2">
               <Card2 />
             </div>
-          </Carousel>
+          </Marquee>
         </div>
       </div>
     </div>

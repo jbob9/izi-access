@@ -1,13 +1,16 @@
+import Skeleton from "./Skeleton";
+
 export default function BlockTest() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto max-w-4xl md:auto-rows-[22rem]">
       <div className="row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 bg-card border-border border justify-between flex flex-col space-y-4 md:col-span-1">
         <div className="flex h-full flex-col gap-2">
-          <img
+          {/* <img
           src="/scott-graham-5fNmWej4tAA-unsplash.jpg"
           className="object-cover rounded-lg w-full max-h-44"
           alt=""
-          />
+          /> */}
+          <Skeleton />
         </div>
         <div className="flex flex-col gap-2">
           <svg

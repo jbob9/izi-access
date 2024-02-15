@@ -34,6 +34,7 @@
     "next-sanity": "^7.0.12",
     "react": "^18",
     "react-dom": "^18",
+    "react-fast-marquee": "^1.6.4",
     "react-hook-form": "^7.49.3",
     "sanity": "^3.25.0",
     "sanity-plugin-hotspot-array": "^1.0.1",

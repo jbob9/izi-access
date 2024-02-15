@@ -9,6 +9,7 @@ import { InferGetStaticPropsType } from "next";
 import { getArticles } from "@/sanity/queries";
 import Services from "@/components/services";
 import BlockTest from "@/components/block-test";
+import Sponsors from "@/components/sponsors";
 
 export async function getStaticProps() {
   const latestArticles = await getArticles(6);
@@ -26,18 +27,15 @@ export default function Home({ latestArticles }: InferGetStaticPropsType<typeof 
   return (
     <div className="pt-0 md:pt-4">
       <Header />
-      <div className="my-28">
-        <Sponsors2 />
+      <div className="mb-28 mt-10">
+        <Sponsors />
       </div>
-      
+
+      <Services/>
       <div className="py-6">
         <CallToAction1/>
       </div>
       <BlockTest/>
-
-      <Services/>
-
-      {/* <Testimonials/> */}
       
       <Testi2/>
                               
