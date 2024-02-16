@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { Bricolage_Grotesque } from "next/font/google";
+import Link from "next/link";
 
 export const Brico = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -27,12 +28,14 @@ const Header2 = () => {
           </span>
         </h1>
         <p className="text-lg opacity-80 leading-relaxed">
-          The NextJS boilerplate with all you need to build your SaaS, AI tool,
+          The organisation with all you need to build your SaaS, AI tool,
           or any other web app and make your first $ online fast.
         </p>
         <div className="space-y-4">
           <Button className="px-20 py-6 rounded-xl text-lg">
-            Get ShipFast
+            <Link href={'/membership'}>
+              Climb on board
+            </Link>
           </Button>
         </div>
       </div>

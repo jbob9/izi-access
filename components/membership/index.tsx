@@ -3,6 +3,7 @@ import MemberShipLoginForm from './member-login-form'
 import MemberShipContract from './member-ship-contract'
 import { cn } from '@/lib/utils'
 import { useSession } from "next-auth/react"
+import MemberShipPayment from './membership-payment'
 
 const MemberShip = () => {
   const [section, setSection] = useState('personal-info')
@@ -19,39 +20,41 @@ const MemberShip = () => {
 
   return (
     <div>
-      <ol className="flex items-center w-full p-3 space-x-2 text-sm font-medium text-center text-gray-500 bg-white border border-gray-200 rounded-lg shadow-sm dark:text-gray-400 sm:text-base sm:p-4 sm:space-x-4 rtl:space-x-reverse">
-          <li className={cn("flex items-center", {
-            "text-blue-600": section === 'personal-info'
-          })}
-          >
-            <span className={cn("flex items-center justify-center w-5 h-5 me-2 text-xs border rounded-full shrink-0", {
-              "border-blue-600": section === 'personal-info'
-            })}>
-                1
-            </span>
-            Personal <span className="hidden sm:inline-flex sm:ms-2">Info</span>
-            <svg className="w-3 h-3 ms-2 sm:ms-4 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m7 9 4-4-4-4M1 9l4-4-4-4"/>
-            </svg>
-          </li>
-          <li className={cn("flex items-center", {
-            "text-blue-600": section === 'condition-info'
-          })}
-          >
-            <span className={cn("flex items-center justify-center w-5 h-5 me-2 text-xs border rounded-full shrink-0", {
-              "border-blue-600": section === 'condition-info'
-            })}>
-                2
-            </span>
-            Condition <span className="hidden sm:inline-flex sm:ms-2">Info</span>
-            {/* <svg className="w-3 h-3 ms-2 sm:ms-4 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m7 9 4-4-4-4M1 9l4-4-4-4"/>
-            </svg> */}
-          </li>
-      </ol>
-      <div className="mx-auto max-w-2xl px-2 pt-8 pb-16 lg:px-8">
+     <div className='md:px-12 lg:px-20'>
+        <ol className="flex items-center w-full p-3 space-x-2 text-sm font-medium text-center text-gray-500 bg-white border border-gray-200 rounded-lg shadow-sm dark:text-gray-400 sm:text-base sm:p-4 sm:space-x-4 rtl:space-x-reverse">
+              <li className={cn("flex items-center", {
+                "text-blue-600": section === 'personal-info'
+              })}
+              >
+                Personal <span className="hidden sm:inline-flex sm:ms-2">Info</span>
+                <svg className="w-3 h-3 ms-4 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m7 9 4-4-4-4M1 9l4-4-4-4"/>
+                </svg>
+              </li>
+              <li className={cn("flex items-center", {
+                "text-blue-600": section === 'condition-info'
+              })}
+              onClick={() => handleChangeSection('condition-info')}
+              >
+                Condition <span className="hidden sm:inline-flex sm:ms-2">Info</span>
+                <svg className="w-3 h-3 ms-4 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 10">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m7 9 4-4-4-4M1 9l4-4-4-4"/>
+                </svg>
+              </li>
+              <li className={cn("flex items-center", {
+                "text-blue-600": section === 'membership'
+              })}
+              onClick={() => handleChangeSection('membership')}
+              >
+              
+                Membership
+              </li>
+          </ol>
+     </div>
+      <div className="px-2 pt-8 pb-16 lg:px-8">
         {section === 'personal-info' && <MemberShipLoginForm handleChangeSection={handleChangeSection}/>}
-        {section === 'condition-info' && <MemberShipContract/>}
+        {section === 'condition-info' && <MemberShipContract handleChangeSection={handleChangeSection}/>}
+        {section === 'membership' && <MemberShipPayment handleChangeSection={handleChangeSection}/>}
       </div>
     </div>
   )

@@ -38,11 +38,41 @@ const items = [
     description: "Embark on exciting journeys and thrilling discoveries.",
     header: <Skeleton />,
   },
+  {
+    title: "The Spirit of Adventure",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <Skeleton />,
+  },
+  {
+    title: "The Spirit of Adventure",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <Skeleton />,
+  },
+  {
+    title: "The Spirit of Adventure",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <Skeleton />,
+  },
+  {
+    title: "The Spirit of Adventure",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <Skeleton />,
+  },
+  {
+    title: "The Spirit of Adventure",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <Skeleton />,
+  },
+  {
+    title: "The Spirit of Adventure",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: <Skeleton />,
+  },
 ];
 
 const Events = () => {
   return (
-    <div className="pt-20 md:pt-14 pb-28 max-w-4xl mx-2 md:mx-auto">
+    <div className="pt-20 md:pt-14 pb-28 max-w-5xl mx-2 md:mx-auto">
       <div className="pb-5">
         <h2 className="text-2xl font-medium tracking-tight text-gray-900">
           Latest events

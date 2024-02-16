@@ -2,10 +2,11 @@ import { ArrowRightIcon } from "@sanity/icons";
 import Skeleton from "./Skeleton";
 import EventCard from "./events/event-card";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function BlockTest() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto max-w-4xl md:auto-rows-[22rem]">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto max-w-5xl md:auto-rows-[22rem]">
       <EventCard
         title={"Setup en 5 secondes"}
         description={
@@ -79,7 +80,11 @@ export default function BlockTest() {
               sans avoir besoin de payer un SaaS.
             </span>
           </p>
-          <Button className="mt-2 w-full">See all <ArrowRightIcon className="w-6 h-6 ml-3" stroke="2"/></Button>
+          <Button className="mt-2 w-full">
+            <Link href="/events" className="flex items-center">
+              See all <ArrowRightIcon className="w-6 h-6 ml-3" stroke="2"/>
+            </Link>
+          </Button>
         </div>
       </div>
     </div>

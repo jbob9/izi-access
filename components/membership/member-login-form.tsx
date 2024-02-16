@@ -66,7 +66,7 @@ const MemberShipLoginForm = ({ handleChangeSection }: Props) => {
   }
 
   return (
-    <div>
+    <div className="mx-auto max-w-2xl">
       <div className="space-y-12">
         <div className="pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">Personal Information</h2>
