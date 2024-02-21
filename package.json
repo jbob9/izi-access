@@ -32,6 +32,7 @@
     "next": "^14.1.0",
     "next-auth-sanity": "^1.5.3",
     "next-sanity": "^7.0.12",
+    "nodejs-moncash-sdk": "https://github.com/ecelestin/ecelestin-Moncash-sdk-nodejs",
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.4",
