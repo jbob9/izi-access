@@ -18,24 +18,23 @@ const Header2 = () => {
             Brico.className
           )}
         >
-          <span className="relative">Ship your startup</span>
+          <span className="relative">Nouns avons tous le droit</span>
           <span className="whitespace-nowrap relative ">
-            <span className="mr-3 sm:mr-4 md:mr-5">in days,</span>
+            <span className="mr-3 sm:mr-4 md:mr-5">de reussir,</span>
             <span className=" relative whitespace-nowrap">
               <span className="absolute bg-neutral-900 -left-2 -top-1 -bottom-1 -right-2 md:-left-3 md:-top-0 md:-bottom-0 md:-right-3 -rotate-1"></span>
-              <span className="relative text-neutral-50">not weeks</span>
+              <span className="relative text-neutral-50">nos reves</span>
             </span>
           </span>
         </h1>
         <p className="text-lg opacity-80 leading-relaxed">
-          The organisation with all you need to build your SaaS, AI tool,
-          or any other web app and make your first $ online fast.
+          Une formation concrète, un accompagnement personnalisé et un
+          financement accessible pour ne plus jamais etre seul avec son projet &
+          commencer à vivre de son activité.
         </p>
         <div className="space-y-4">
           <Button className="px-20 py-6 rounded-xl text-lg">
-            <Link href={'/membership'}>
-              Climb on board
-            </Link>
+            <Link href={"/membership"}>Devenir membre</Link>
           </Button>
         </div>
       </div>
