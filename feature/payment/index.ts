@@ -1,2 +1,1 @@
-export * from "./moncash"
-export * from "./stripe"
+export * from "./moncash";
