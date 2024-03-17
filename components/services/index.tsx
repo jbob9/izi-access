@@ -19,15 +19,18 @@ const Services = () => {
       <div className="m-auto flex items-center overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ServiceCard
+            link="/"
             image="https://www.klaviyo.com/wp-content/uploads/2022/07/retail-768x531.webp"
             title="Formations"
           />
           <ServiceCard
+            link="/accompaniement"
             image="https://www.klaviyo.com/wp-content/uploads/2022/07/agencies.webp"
             title="Accompagnement"
           />
           <div className="col-span-full">
             <ServiceCard
+              link={'/funding'}
               image="https://www.klaviyo.com/wp-content/uploads/2022/07/enterprise.webp"
               title="Financement"
             />

@@ -40,15 +40,14 @@ const Header2 = () => {
       </div>
       <div className="relative max-md:-m-4 lg:w-full">
         <img
-          alt="Mongo + Mailgun + Stripe + NextJS + Tailwind + NextAuth = ShipFast"
-          fetchPriority="high"
+          alt=""
+          fetch-priority="high"
           width="1080"
           height="1080"
           decoding="async"
           data-nimg="1"
-          className="w-full max-w-xl ml-auto"
-          style={{ color: "transparent" }}
-          src="/undraw_showing_support_re_5f2v.svg"
+          className="w-full max-w-xl ml-auto rounded-lg"
+          src="/test-1.jpg"
         />
       </div>
     </section>

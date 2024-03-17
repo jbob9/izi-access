@@ -32,7 +32,7 @@ export default function Home({
         <Sponsors />
       </div>
 
-      <div className="py-12">
+      <div className="py-12" id="services">
         <Services />
       </div>
 
