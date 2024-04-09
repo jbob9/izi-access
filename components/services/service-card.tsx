@@ -6,8 +6,9 @@ interface Props {
   image: string;
   title: string;
   link: string;
+  description?: string;
 }
-const ServiceCard = ({ image, title, link }: Props) => {
+const ServiceCard = ({ image, title, link, description }: Props) => {
   return (
     <Card className="rounded-2xl group">
       <Link href={link}>
@@ -22,11 +23,14 @@ const ServiceCard = ({ image, title, link }: Props) => {
             />
           </div>
         </CardContent>
-        <CardFooter className="p-0">
-          <div className="pt-0 md:pt-6 pb-6 pl-5 flex items-center w-full">
+        <CardFooter className="pt-0 md:pt-6 pb-6 pl-5 flex flex-col space-y-3">
+          <div className=" flex items-center w-full">
             <div className="text-2xl leading-tight mr-3">{title}</div>
             <ArrowRightIcon className="w-7 h-7" stroke="2" />
           </div>
+          <p className="text-sm opacity-80 leading-relaxed">
+            {description}
+          </p>
         </CardFooter>
       </Link>
     </Card>

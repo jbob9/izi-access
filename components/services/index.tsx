@@ -21,18 +21,28 @@ const Services = () => {
           <ServiceCard
             link="/"
             image="https://www.klaviyo.com/wp-content/uploads/2022/07/retail-768x531.webp"
-            title="Formations"
+            title="Formation & Developpement Professionel"
+            description="Nous proposons une variété de formations et de programmes de développement
+            professionnel pour renforcer les compétences et les connaissances des individus dans
+            divers domaines, notamment le leadership, la gestion d'entreprise et les compétences
+            techniques."
           />
           <ServiceCard
-            link="/accompaniement"
+            link="/accompagnement"
             image="https://www.klaviyo.com/wp-content/uploads/2022/07/agencies.webp"
-            title="Accompagnement"
+            title="Accompagnement Personnalise"
+            description="Nous offrons un accompagnement individualisé et des conseils stratégiques pour aider
+            les entrepreneurs et les professionnels à surmonter les défis et à saisir les opportunités
+            de croissance."
           />
           <div className="col-span-full">
             <ServiceCard
               link={'/funding'}
               image="https://www.klaviyo.com/wp-content/uploads/2022/07/enterprise.webp"
-              title="Financement"
+              title="Financement & Investissement"
+              description="Grâce à notre réseau de partenaires et d'investisseurs, nous facilitons l'accès au
+              financement et aux investissements pour les projets et les entreprises à fort potentiel de
+              croissance."
             />
           </div>
         </div>
