@@ -18,9 +18,11 @@ export const fundingFormSchema = z.object({
   firstname: z.string(),
   lastname: z.string(),
   email: z.string().email(),
-  country: z.string(),
-  password: z.string().min(8),
-  address: z.string(),
+  phonenumber: z.string(),
+  rising: z.number(),
+  objectif: z.string(),
+  description: z.string(),
+  more_info: z.string()
 })
 
 export const accompagnementFormSchema = z.object({

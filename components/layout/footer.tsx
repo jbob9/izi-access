@@ -12,15 +12,17 @@ const Footer = () => {
         <div>
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2">
             <nav>
-              <Link href="/" className="font-display font-semibold tracking-wider text-neutral-950">
-                Accueil
-              </Link>
-              <Link href="/#services" className="font-display font-semibold tracking-wider text-neutral-950">
-                Services
-              </Link>
-              <Link href="/about" className="font-display font-semibold tracking-wider text-neutral-950">
-                A propos
-              </Link>
+              <div className="space-x-3">
+                <Link href="/" className=" font-semibold tracking-wider leading-7 text-gray-900">
+                  Accueil
+                </Link>
+                <Link href="/#services" className="font-semibold tracking-wider leading-7 text-gray-900">
+                  Services
+                </Link>
+                <Link href="/about" className="font-semibold tracking-wider leading-7 text-gray-900">
+                  A propos
+                </Link>
+              </div>
               <div className="flex items-center space-x-4 py-5">
                 <a href="tel:+243996660436" aria-label="call">
                   <InstagramLogoIcon className="w-5 h-5" />

@@ -8,14 +8,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { savePersonalInfoSchema } from "@/validations";
+import { Textarea } from "@/components/ui/textarea";
+import { fundingFormSchema } from "@/validations";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckIcon, ReloadIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
@@ -28,19 +22,11 @@ import { z } from "zod";
 
 const Funding = () => {
   const [loading, setLoading] = useState(false);
-  const form = useForm<z.infer<typeof savePersonalInfoSchema>>({
-    resolver: zodResolver(savePersonalInfoSchema),
-    defaultValues: {
-      firstname: "",
-      lastname: "",
-      email: "",
-      country: "us",
-      address: "",
-      password: "",
-    },
+  const form = useForm<z.infer<typeof fundingFormSchema>>({
+    resolver: zodResolver(fundingFormSchema),
   });
 
-  async function onSubmit(values: z.infer<typeof savePersonalInfoSchema>) {
+  async function onSubmit(values: z.infer<typeof fundingFormSchema>) {
     setLoading(true);
     // await
 
@@ -144,7 +130,7 @@ const Funding = () => {
                 control={form.control}
                 name="email"
                 render={({ field }) => (
-                  <FormItem className="col-span-full">
+                  <FormItem className="sm:col-span-3">
                     <FormLabel>Email address</FormLabel>
                     <FormControl>
                       <Input
@@ -158,28 +144,20 @@ const Funding = () => {
                   </FormItem>
                 )}
               />
-
               <FormField
                 control={form.control}
-                name="country"
+                name="phonenumber"
                 render={({ field }) => (
-                  <FormItem className="col-span-full">
-                    <FormLabel>Country</FormLabel>
-                    <Select
-                      onValueChange={field.onChange}
-                      defaultValue={field.value}
-                    >
-                      <FormControl>
-                        <SelectTrigger className="w-full">
-                          <SelectValue placeholder="Select a country" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <SelectItem value="us">United States</SelectItem>
-                        <SelectItem value="ca">Canada</SelectItem>
-                        <SelectItem value="ht">Haiti</SelectItem>
-                      </SelectContent>
-                    </Select>
+                  <FormItem className="sm:col-span-3">
+                    <FormLabel>Telelphone</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Numero de telephone"
+                        type="string"
+                        required
+                        {...field}
+                      />
+                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -187,12 +165,73 @@ const Funding = () => {
 
               <FormField
                 control={form.control}
-                name="address"
+                name="rising"
                 render={({ field }) => (
                   <FormItem className="col-span-full">
-                    <FormLabel>Address</FormLabel>
+                    <FormLabel>Montant souhaiter</FormLabel>
                     <FormControl>
-                      <Input placeholder="Address" required {...field} />
+                      <Input
+                        placeholder="Montant"
+                        type="number"
+                        required
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="objectif"
+                render={({ field }) => (
+                  <FormItem className="col-span-full">
+                    <FormLabel>Objectif du financement</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        rows={3}
+                        placeholder="objectif"
+                        required
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="description"
+                render={({ field }) => (
+                  <FormItem className="col-span-full">
+                    <FormLabel>Description de l'entreprise</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        rows={6}
+                        placeholder="Description"
+                        required
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="more_info"
+                render={({ field }) => (
+                  <FormItem className="col-span-full">
+                    <FormLabel>Info supplémentaires (optional)</FormLabel>
+                    <FormControl>
+                      <Textarea
+                        rows={4}
+                        placeholder="Info supplémentaires"
+                        required
+                        {...field}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

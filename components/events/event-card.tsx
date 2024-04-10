@@ -32,7 +32,7 @@ export const EventCard = ({
         <div className="font-sans font-normal text-neutral-600 text-xs line-clamp-2">
           {description}
         </div>
-        <Button className="mt-2 w-full">Request accesst</Button>
+        <Button className="mt-2 w-full">Buy ticket</Button>
       </div>
     </div>
   );
