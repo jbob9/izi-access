@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Bricolage_Grotesque } from "next/font/google";
 import Link from "next/link";
-import { Button } from "../ui/button";
 
 export const Brico = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -33,12 +32,14 @@ const Header2 = () => {
           dans les communautés.
         </p>
         <div className="space-x-2 flex items-center">
-          <Button className=" py-6 rounded-xl text-lg">
-            <Link href={"/membership"}>Devenir membre</Link>
-          </Button>
-          <Button variant={'outline'} className=" py-6 rounded-xl text-lg">
-            <Link href={"/membership"}>Ouvrir un fonds commus</Link>
-          </Button>
+          <Link
+            href={"/membership"}
+            className="w-full py-2.5 px-6 md:ml-2 text-center transition bg-neutral-950 md:w-max rounded-3xl"
+          >
+            <span className="block text-white text-sm font-semibold">
+              Become a member
+            </span>
+          </Link>
         </div>
       </div>
       <div className="relative max-md:-m-4 lg:w-full">
