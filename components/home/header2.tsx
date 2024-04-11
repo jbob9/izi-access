@@ -17,7 +17,7 @@ const Header2 = () => {
             Brico.className
           )}
         >
-          <span className="relative">Nous avons tous et toutes le droit</span>
+          <span className="relative">Nous avons tous le droit</span>
           <span className="whitespace-nowrap relative ">
             <span className="mr-3 sm:mr-4 md:mr-5">de réaliser</span>
             <span className=" relative whitespace-nowrap">
