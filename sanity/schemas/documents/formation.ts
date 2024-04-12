@@ -29,25 +29,11 @@ export default defineType({
       type: "string",
     }),
     defineField({
-      name: "rising",
-      title: "Rising",
-      type: "string",
+      name: "message",
+      title: "Message",
+      type: "text",
     }),
-    defineField({
-      name: "objectif",
-      title: "Objectif",
-      type: "string",
-    }),
-    defineField({
-      name: "description",
-      title: "Description",
-      type: "string",
-    }),
-    defineField({
-      name: "more_info",
-      title: "More info",
-      type: "string",
-    }),
+  
 
   ]
 })
