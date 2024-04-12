@@ -25,6 +25,14 @@ export const fundingFormSchema = z.object({
   more_info: z.string()
 })
 
+export const formationFormSchema = z.object({
+  firstname: z.string(),
+  lastname: z.string(),
+  email: z.string().email(),
+  phonenumber: z.string(),
+  message: z.string()
+})
+
 export const accompagnementFormSchema = z.object({
   firstname: z.string(),
   lastname: z.string(),

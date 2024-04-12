@@ -1,12 +1,25 @@
 // Document types
+import accompagnement from "./documents/accompagnement";
 import account from "./documents/account";
+import author from "./documents/author";
+import blog from "./documents/blog";
+import category from "./documents/category";
+import formation from "./documents/formation";
+import funding from "./documents/funding";
 import user from "./documents/user";
 import verificationToken from "./documents/verificationToken";
-import author from "./documents/author";
-import category from "./documents/category";
-import blog from "./documents/blog";
 
-const documents = [user, account, verificationToken, blog,author, category];
+const documents = [
+  user,
+  account,
+  verificationToken,
+  blog,
+  author,
+  category,
+  funding,
+  formation,
+  accompagnement,
+];
 
 // // Singleton document types
 // import home from "./singletons/home";
@@ -16,7 +29,6 @@ const singletons = [];
 
 // Block content
 import body from "./blocks/body";
-
 
 const blocks = [body];
 

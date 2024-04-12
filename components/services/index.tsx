@@ -19,7 +19,7 @@ const Services = () => {
       <div className="m-auto flex items-center overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ServiceCard
-            link="/"
+            link="/formation"
             image="https://www.klaviyo.com/wp-content/uploads/2022/07/retail-768x531.webp"
             title="Formation & Developpement Professionel"
             description="Nous proposons une variété de formations et de programmes de développement

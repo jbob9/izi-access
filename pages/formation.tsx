@@ -9,20 +9,20 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { accompagnementFormSchema } from "@/validations";
+import { formationFormSchema } from "@/validations";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckIcon, ReloadIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-const Accompaniement = () => {
+const Formation = () => {
   const [loading, setLoading] = useState(false);
-  const form = useForm<z.infer<typeof accompagnementFormSchema>>({
-    resolver: zodResolver(accompagnementFormSchema),
+  const form = useForm<z.infer<typeof formationFormSchema>>({
+    resolver: zodResolver(formationFormSchema),
   });
 
-  async function onSubmit(values: z.infer<typeof accompagnementFormSchema>) {
+  async function onSubmit(values: z.infer<typeof formationFormSchema>) {
     setLoading(true);
     // await
 
@@ -30,64 +30,64 @@ const Accompaniement = () => {
   }
 
   return (
-    <div className="xl:container mx-3 md:m-auto pt-20 md:px-12 lg:px-20">
+    <div className="xl:container mx-3 md:m-auto pt-24 md:px-12 lg:px-20">
       <div className="px-2 pt-8 pb-16 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <h1 className="text-3xl font-bold leading-7 text-gray-900">
-            ACCOMPAGNEMENT PERSONNALISE
+            FORMATION
           </h1>
           <p className="text-sm opacity-80 leading-relaxed pt-2">
-            Formulaire de Demande d'Accompagnement Personnalisé
+            Formulaire de Demande de Formation
           </p>
 
           <div className="pt-8">
             <h2 className="text-base font-semibold leading-7 text-gray-900">
-              Pourquoi Choisir Izi Access pour Votre Accompagnement Personnalisé
-              ?
+              Pourquoi Choisir Izi Access pour Votre Formation ?
             </h2>
             <div className="pt-4 space-y-6">
               <div className="flex space-x-2">
                 <CheckIcon className="text-green-500 w-10 h-10" />
                 <p className="text-sm opacity-90 leading-relaxed">
                   {" "}
-                  Nous vous proposons un accompagnement personnalisé adapté à
-                  vos besoins, vos objectifs et votre situation spécifique.
+                  Nous proposons des programmes de formation personnalisés
+                  adaptés à vos besoins spécifiques et à vos objectifs
+                  professionnels.
                 </p>
               </div>
               <div className="flex space-x-2">
                 <CheckIcon className="text-green-500 w-10 h-10" />
                 <p className="text-sm opacity-90 leading-relaxed">
                   {" "}
-                  Nos conseillers expérimentés vous fourniront des conseils
-                  stratégiques et des solutions personnalisées pour vous aider à
-                  atteindre vos objectifs.
+                  Nos formateurs sont des experts dans leur domaine, offrant des
+                  connaissances et des compétences de pointe pour vous aider à
+                  réussir.
                 </p>
               </div>
               <div className="flex space-x-2">
                 <CheckIcon className="text-green-500 w-10 h-10" />
                 <p className="text-sm opacity-90 leading-relaxed">
                   {" "}
-                  Nous restons à vos côtés tout au long de votre parcours pour
-                  vous fournir un soutien continu et vous aider à surmonter les
-                  obstacles.
+                  En plus de la formation, vous aurez accès à une variété de
+                  ressources supplémentaires pour enrichir votre expérience
+                  d'apprentissage.
                 </p>
               </div>
               <div className="flex space-x-2">
                 <CheckIcon className="text-green-500 w-10 h-10" />
                 <p className="text-sm opacity-90 leading-relaxed">
                   {" "}
-                  Nous prenons en compte tous les aspects de votre vie
-                  professionnelle et personnelle pour vous offrir un
-                  accompagnement complet et équilibré.
+                  En participant à nos formations, vous aurez l'opportunité de
+                  rencontrer d'autres professionnels de votre domaine et de
+                  développer votre réseau.
                 </p>
               </div>
               <div className="flex space-x-2">
                 <CheckIcon className="text-green-500 w-10 h-10" />
                 <p className="text-sm opacity-90 leading-relaxed">
                   {" "}
-                  : Nous nous engageons à vous aider à atteindre des résultats
-                  tangibles et mesurables qui auront un impact significatif sur
-                  votre vie et votre carrière.
+                  Nous restons à votre disposition même après la formation pour
+                  vous fournir un soutien et des conseils supplémentaires selon
+                  vos besoins.
                 </p>
               </div>
             </div>
@@ -140,16 +140,15 @@ const Accompaniement = () => {
                   </FormItem>
                 )}
               />
-
               <FormField
                 control={form.control}
                 name="phonenumber"
                 render={({ field }) => (
                   <FormItem className="col-span-full">
-                    <FormLabel>Telephone</FormLabel>
+                    <FormLabel>Telelphone</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Telephone"
+                        placeholder="Numero de telephone"
                         type="string"
                         required
                         {...field}
@@ -159,31 +158,16 @@ const Accompaniement = () => {
                   </FormItem>
                 )}
               />
-
-              <FormField
-                control={form.control}
-                name="address"
-                render={({ field }) => (
-                  <FormItem className="col-span-full">
-                    <FormLabel>Address</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Address" required {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
               <FormField
                 control={form.control}
                 name="message"
                 render={({ field }) => (
                   <FormItem className="col-span-full">
-                    <FormLabel>Message et Objectifs</FormLabel>
+                    <FormLabel>Objectif de la formation</FormLabel>
                     <FormControl>
                       <Textarea
                         rows={6}
-                        placeholder="Message et Objectifs"
+                        placeholder="Objectif de la formation"
                         required
                         {...field}
                       />
@@ -194,7 +178,11 @@ const Accompaniement = () => {
               />
             </div>
             <div className="mt-5 flex items-center justify-end gap-x-6">
-              <Button type="submit" className="rounded-2xl w-full" disabled={loading}>
+              <Button
+                type="submit"
+                className="rounded-2xl w-full"
+                disabled={loading}
+              >
                 {loading ? (
                   <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
                 ) : null}
@@ -208,4 +196,4 @@ const Accompaniement = () => {
   );
 };
 
-export default Accompaniement;
+export default Formation;

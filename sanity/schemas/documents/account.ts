@@ -37,11 +37,11 @@ export default defineType({
       title: "AccessTokenExpires",
       type: "number",
     }),
-    defineField({
+    {
       name: "user",
       title: "User",
       type: "reference",
-      to: { type: "user" },
-    })
+      to: [{ type: "user" }],
+    }
   ],
 });
