@@ -24,10 +24,9 @@ export default async function handler(
       .status(200)
       .send({ message: "You are not authenticated.", error: true });
     }
-  
+
     const body = (JSON.parse(req.body))
     
-
     try{
       const { url } = await createMoncashSession(
         'Price', 

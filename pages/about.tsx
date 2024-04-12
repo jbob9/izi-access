@@ -40,7 +40,7 @@ const groups = [
     ],
   },
   {
-    name: "Équipe d'Haïti",
+    name: 'Collaboration Internationale "AYITI SE NOU"',
     team: [
       {
         name: "Kerven CANTAVE",
@@ -86,7 +86,7 @@ const About = () => {
       </div>
       <div className="bg-white pb-20 pt-10 border-b border-t">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-16 px-2 lg:px-8 xl:grid-cols-3">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl col-span-1">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Notre Équipe
             </h2>
@@ -95,39 +95,41 @@ const About = () => {
               sans relâche pour réaliser notre mission et nos objectifs
             </p>
           </div>
-          {groups.map((group) => (
-            <div>
-              <h2 className="text-2xl pb-4 font-bold leading-7 text-gray-900">
-                {group.name}
-              </h2>
-              <div
-                role="list"
-                className="grid gap-x-8 gap-y-8 sm:grid-cols-2 xl:col-span-2"
-              >
-                {group.team.map((person) => (
-                  <Card key={person.name}>
-                    <CardContent className="px-5 py-3">
-                      <div className="flex items-center gap-x-6">
-                        {/* <img
+          <div className="col-span-2 space-y-8">
+            {groups.map((group) => (
+              <div>
+                <h2 className="text-2xl pb-4 font-bold leading-7 text-gray-900">
+                  {group.name}
+                </h2>
+                <div
+                  role="list"
+                  className="grid gap-x-8 gap-y-8 sm:grid-cols-2 xl:col-span-2"
+                >
+                  {group.team.map((person) => (
+                    <Card key={person.name}>
+                      <CardContent className="px-5 py-3">
+                        <div className="flex items-center gap-x-6">
+                          {/* <img
                       className="h-16 w-16 rounded-full"
                       src={person.imageUrl}
                       alt=""
                     /> */}
-                        <div>
-                          <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
-                            {person.name}
-                          </h3>
-                          <p className="text-sm font-semibold leading-6 text-indigo-600">
-                            {person.role}
-                          </p>
+                          <div>
+                            <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
+                              {person.name}
+                            </h3>
+                            <p className="text-sm font-semibold leading-6 text-indigo-600">
+                              {person.role}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 

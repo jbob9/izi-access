@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
 import { formationFormSchema } from "@/validations";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckIcon, ReloadIcon } from "@radix-ui/react-icons";
@@ -18,13 +19,26 @@ import { z } from "zod";
 
 const Formation = () => {
   const [loading, setLoading] = useState(false);
+  const { toast } = useToast()
   const form = useForm<z.infer<typeof formationFormSchema>>({
     resolver: zodResolver(formationFormSchema),
   });
 
   async function onSubmit(values: z.infer<typeof formationFormSchema>) {
-    setLoading(true);
-    // await
+    try {
+      setLoading(true);
+      const response = await fetch("/api/formation", {
+        method: "POST",
+        body: JSON.stringify(values),
+      });
+      if (response.ok) {
+        toast({
+          title: "Your request have been accepted.",
+        })
+      }
+    } catch (e) {
+      setLoading(false);
+    }
 
     setLoading(false);
   }

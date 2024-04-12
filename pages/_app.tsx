@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Inter as FontSans } from "next/font/google";
 import { SessionProvider } from "next-auth/react"
+import { Toaster } from "@/components/ui/toaster"
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <Layout>
             <Component {...pageProps} />
           </Layout>
+          <Toaster/>
         </div>
        </SessionProvider>
       

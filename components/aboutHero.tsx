@@ -7,12 +7,12 @@ const AboutHero = () => {
             <p className="text-blue-500 uppercase text-sm tracking-widest pb-5">
               Notre Mission
             </p>
-            <h2 className="text-center mx-auto  leading-tight font-bold text-2xl md:text-5xl tracking-wider max-w-[24ch]">
+            <h2 className="text-center mx-auto  leading-tight font-bold text-2xl md:text-5xl tracking-wider max-w-[30ch]">
               Izi Accesss à pour mission d'aider en offrant ressources,
               opportunités et soutien à la communaute noire.
             </h2>
           </div>
-          <h5 className="text-center font-normal  leading-[1.41em] max-w-[40ch] mx-auto text-xl">
+          <h5 className="text-center font-normal  leading-[1.41em] max-w-[55ch] mx-auto text-xl">
             Chez Izi Access, notre mission est de renforcer et d'autonomiser la
             communauté noire en favorisant le développement économique, social
             et culturel à travers des initiatives innovantes et impactantes.

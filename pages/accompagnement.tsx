@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
 import { accompagnementFormSchema } from "@/validations";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckIcon, ReloadIcon } from "@radix-ui/react-icons";
@@ -18,13 +19,26 @@ import { z } from "zod";
 
 const Accompaniement = () => {
   const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof accompagnementFormSchema>>({
     resolver: zodResolver(accompagnementFormSchema),
   });
 
   async function onSubmit(values: z.infer<typeof accompagnementFormSchema>) {
-    setLoading(true);
-    // await
+    try {
+      setLoading(true);
+      const response = await fetch("/api/formation", {
+        method: "POST",
+        body: JSON.stringify(values),
+      });
+      if (response.ok) {
+        toast({
+          title: "Your request have been accepted.",
+        });
+      }
+    } catch (e) {
+      setLoading(false);
+    }
 
     setLoading(false);
   }
@@ -194,7 +208,11 @@ const Accompaniement = () => {
               />
             </div>
             <div className="mt-5 flex items-center justify-end gap-x-6">
-              <Button type="submit" className="rounded-2xl w-full" disabled={loading}>
+              <Button
+                type="submit"
+                className="rounded-2xl w-full"
+                disabled={loading}
+              >
                 {loading ? (
                   <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
                 ) : null}
