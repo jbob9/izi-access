@@ -13,7 +13,7 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   if (req.method === "POST") {
-    const form = fundingFormSchema.safeParse(req.body);
+    const form = fundingFormSchema.safeParse(JSON.parse(req.body));
 
     if (form.success) {
       await client.create({

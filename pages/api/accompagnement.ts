@@ -13,7 +13,7 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   if (req.method === "POST") {
-    const form = accompagnementFormSchema.safeParse(req.body);
+    const form = accompagnementFormSchema.safeParse(JSON.parse(req.body));
 
     if (form.success) {
       await client.create({
