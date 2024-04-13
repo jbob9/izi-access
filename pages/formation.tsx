@@ -27,6 +27,23 @@ const Formation = () => {
   async function onSubmit(values: z.infer<typeof formationFormSchema>) {
     try {
       setLoading(true);
+      // const user = await signUp({
+      //   email: values.email,
+      //   password: values.password,
+      //   name: `${values.firstname} ${values.lastname}`,
+      //   firstname: values.firstname,
+      //   lastname: values.lastname,
+      //   country: values.country,
+      //   address: values.address
+      // });
+  
+      // if(user){
+      //   await signIn('sanity-login', {
+      //     redirect: false,
+      //     email: values.email,
+      //     password: values.password
+      //   });
+      // }
       const response = await fetch("/api/formation", {
         method: "POST",
         body: JSON.stringify(values),
