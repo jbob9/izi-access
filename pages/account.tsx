@@ -20,6 +20,7 @@ import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
+import { accountFormSchema } from "@/validations";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -49,46 +50,22 @@ const items = [
   },
 ];
 
-const profileFormSchema = z.object({
-  username: z
-    .string()
-    .min(2, {
-      message: "Username must be at least 2 characters.",
-    })
-    .max(30, {
-      message: "Username must not be longer than 30 characters.",
-    }),
-  email: z
-    .string({
-      required_error: "Please select an email to display.",
-    })
-    .email(),
-  bio: z.string().max(160).min(4),
-  urls: z
-    .array(
-      z.object({
-        value: z.string().url({ message: "Please enter a valid URL." }),
-      })
-    )
-    .optional(),
-});
-
-type ProfileFormValues = z.infer<typeof profileFormSchema>;
+type AccountFormValues = z.infer<typeof accountFormSchema>;
 
 // This can come from your database or API.
-const defaultValues: Partial<ProfileFormValues> = {
+const defaultValues: Partial<AccountFormValues> = {
   bio: "I own a computer.",
 };
 const Settings = () => {
   const router = useRouter();
 
-  const form = useForm<ProfileFormValues>({
-    resolver: zodResolver(profileFormSchema),
+  const form = useForm<AccountFormValues>({
+    resolver: zodResolver(accountFormSchema),
     defaultValues,
     mode: "onChange",
   });
 
-  function onSubmit(data: ProfileFormValues) {
+  function onSubmit(data: AccountFormValues) {
     toast({
       title: "You submitted the following values:",
       description: (
@@ -102,9 +79,9 @@ const Settings = () => {
   return (
     <div className=" space-y-6 p-3 md:p-10 pb-16 pt-20 md:pt-14">
       <div className="space-y-0.5">
-        <h2 className="text-2xl font-bold tracking-tight">Settings</h2>
+        <h2 className="text-2xl font-bold tracking-tight">Account</h2>
         <p className="text-muted-foreground">
-          Manage your account settings and set e-mail preferences.
+          Manage your account and set e-mail preferences.
         </p>
       </div>
       <Separator className="my-6" />
