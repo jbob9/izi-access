@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useSession } from "next-auth/react";
+import { Button } from "../ui/button";
+import Image from "next/image";
 
 const Navbar = () => {
   const router = useRouter();
@@ -44,6 +46,19 @@ const Navbar = () => {
                   <span className="relative top-px">Become a member</span>
                 </Link>
               ) : null}
+              {/* <Button
+                variant="outline"
+                className="overflow-hidden rounded-full bg-neutral-950 text-white hover:text-white hover:bg-neutral-800 border-none shadow-none"
+              >
+                <Image
+                  src="/placeholder-user.webp"
+                  width={36}
+                  height={36}
+                  alt="Avatar"
+                  className="overflow-hidden rounded-full mr-2 h-5 w-5"
+                />
+                My account
+              </Button> */}
               <div>
                 <div className="flex items-center md:hidden max-h-10">
                   <label
@@ -110,14 +125,14 @@ const Navbar = () => {
                 <li>
                   <Link href="/events" className="block md:px-3 group">
                     <div className="leading-5 text-sm text-gray-500 hover:text-gray-400">
-                      <span className="">Events</span>
+                      <span className="">Évènements</span>
                     </div>
                   </Link>
                 </li>
                 <li>
                   <Link href="/projects" className="block md:px-3 group">
                     <div className="leading-5 text-sm text-gray-500 hover:text-gray-400">
-                      <span className="">Projects</span>
+                      <span className="">Projets</span>
                     </div>
                   </Link>
                 </li>

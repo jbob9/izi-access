@@ -18,12 +18,13 @@ export default async function handler(
     const form = formationFormSchema.safeParse(JSON.parse(req.body));
     if (form.success) {
       const existUser = await client.fetch<{ id: string } | null>(
-        `*[_type == "user" && email = ${form.data.email}][0]{ id }`
-      );
+        `*[_type == "user" && email == $email]{ id }[0]`
+      , { email: form.data.email });
 
       if (!existUser) {
+        console.log('User not exist')
         const userId = nanoid();
-        client
+        const r = await client
           .transaction()
           .create({
             _id: userId,
@@ -44,6 +45,8 @@ export default async function handler(
             },
           })
           .commit();
+
+        console.log(r.results , 'Transaction response')
         return res
           .status(200)
           .json({
@@ -52,6 +55,7 @@ export default async function handler(
             message: "Your request have been accepted",
           });
       }
+      console.log(existUser, 'User exist')
 
       client.create({
         _type: "formation",
