@@ -31,7 +31,7 @@ const MemberShipContract = ({ handleChangeSection }: Props) => {
 
   return (
     <div className="mx-auto max-w-2xl">
-      <article className="prose lg:prose-xl h-screen overflow-y-scroll">
+      <article className="prose h-screen overflow-y-scroll">
         <h2>Terms and conditions</h2>
         <p>
           For years parents have espoused the health benefits of eating garlic
