@@ -146,7 +146,7 @@ const About = () => {
               <div className="flex-1 justify-start items-stretch">
                 <Button className="rounded-3xl h-12 bg-neutral-950">
                   <Link href="/membership" className="flex items-center">
-                    <span>Become a member</span>
+                    <span>Devenir membre</span>
                     <ArrowRightIcon className="w-6 h-6 text-white ml-2" />
                   </Link>
                 </Button>

@@ -37,7 +37,7 @@ const Header2 = () => {
             className="w-full py-2.5 px-6 md:ml-2 text-center transition bg-neutral-950 md:w-max rounded-3xl"
           >
             <span className="block text-white text-sm font-semibold">
-              Become a member
+              Devenir membre
             </span>
           </Link>
         </div>

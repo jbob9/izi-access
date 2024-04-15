@@ -12,7 +12,7 @@ interface Props {
 
 const BlogCard = ({ withMinWidth = true, article }: Props) => {
   return (
-    <Card className="rounded-3xl">
+    <Card className="rounded-3xl shadow-none">
       <CardContent className="p-3">
         <div
           className={cn("group", {

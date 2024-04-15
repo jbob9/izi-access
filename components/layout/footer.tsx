@@ -3,9 +3,21 @@ import {
   InstagramLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
+import { ArrowRightIcon } from "@sanity/icons";
 import Link from "next/link";
+import { FormEvent } from "react";
+import { toast } from "../ui/use-toast";
 
 const Footer = () => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    console.log(formData.get("email"), "target");
+    toast({
+      title: "Your subscribe successfully to our newsletter",
+    });
+  };
+
   return (
     <footer className="mx-auto max-w-7xl px-6 lg:px-8 mt-24 w-full sm:mt-32 lg:mt-40">
       <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -13,13 +25,22 @@ const Footer = () => {
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2">
             <nav>
               <div className="space-x-3">
-                <Link href="/" className=" font-semibold tracking-wider leading-7 text-gray-900">
+                <Link
+                  href="/"
+                  className=" font-semibold tracking-wider leading-7 text-gray-900"
+                >
                   Accueil
                 </Link>
-                <Link href="/#services" className="font-semibold tracking-wider leading-7 text-gray-900">
+                <Link
+                  href="/#services"
+                  className="font-semibold tracking-wider leading-7 text-gray-900"
+                >
                   Services
                 </Link>
-                <Link href="/about" className="font-semibold tracking-wider leading-7 text-gray-900">
+                <Link
+                  href="/about"
+                  className="font-semibold tracking-wider leading-7 text-gray-900"
+                >
                   A propos
                 </Link>
               </div>
@@ -56,19 +77,20 @@ const Footer = () => {
               </div>
             </nav>
             <div className="flex lg:justify-end">
-              <form className="max-w-sm">
+              <form className="max-w-sm" onSubmit={handleSubmit}>
                 <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-                  Sign up for our newsletter
+                  Inscrivez-vous à notre newsletter
                 </h2>
                 <p className="mt-4 text-sm text-neutral-700">
-                  Subscribe to get the latest design news, articles, resources
-                  and inspiration.
+                  Abonnez-vous pour recevoir les dernières nouvelles, articles,
+                  ressources et inspiration.
                 </p>
                 <div className="relative mt-6">
                   <input
                     type="email"
+                    required
                     placeholder="Email address"
-                    autoComplete="email"
+                    name="email"
                     aria-label="Email address"
                     className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
                   />
@@ -78,18 +100,7 @@ const Footer = () => {
                       aria-label="Submit"
                       className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
                     >
-                      <svg
-                        viewBox="0 0 16 6"
-                        aria-hidden="true"
-                        className="w-4"
-                      >
-                        <path
-                          fill="currentColor"
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M16 3 10 .5v2H0v1h10v2L16 3Z"
-                        ></path>
-                      </svg>
+                      <ArrowRightIcon className="w-6 h-6" />
                     </button>
                   </div>
                 </div>
@@ -98,7 +109,11 @@ const Footer = () => {
           </div>
           <div className="my-16 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
             <Link href="/">
-              <img src="/Izi-Access-Logo.png" alt="logo Izi Access" className="m-auto w-28" />
+              <img
+                src="/Izi-Access-Logo.png"
+                alt="logo Izi Access"
+                className="m-auto w-28"
+              />
             </Link>
             <p className="text-sm text-neutral-700">© Izi access 2024</p>
           </div>
