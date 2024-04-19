@@ -1,3 +1,6 @@
+import { ArrowRightIcon } from "@sanity/icons";
+import { Button } from "./ui/button";
+
 const links = [
   { name: "Groupe 3737", href: "https://groupe3737.com/" },
   { name: "Gouvernement Canadien", href: "https://www.canada.ca" },
@@ -60,6 +63,10 @@ const CallToAction1 = () => {
               </a>
             ))}
           </div>
+          <Button className="mt-6 py-5 px-6 font-semibold rounded-xl" variant={'secondary'}>
+            Faire un Don
+            <ArrowRightIcon className="ml-2 w-6 h-6"/>
+          </Button>
           {/* <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.name} className="flex flex-col-reverse">

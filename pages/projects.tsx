@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ArrowRightIcon } from "@sanity/icons";
 
 const projects = [
   {
@@ -93,6 +94,7 @@ export default function Porjects() {
                 {project.donation ? (
                   <Button className="w-fit rounded-2xl p-6">
                     Faire un don
+                    <ArrowRightIcon className="ml-2 w-6 h-6 text-white"/>
                   </Button>
                 ) : null}
               </div>

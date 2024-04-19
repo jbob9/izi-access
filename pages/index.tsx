@@ -41,7 +41,7 @@ export default function Home({
       </div>
 
       <Testi2 />
-
+    {/* <Album/> */}
       <BlogPreview latestArticles={latestArticles} />
 
       <div>
