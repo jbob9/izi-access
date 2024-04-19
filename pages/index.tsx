@@ -25,6 +25,7 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div className="pt-0 md:pt-4">
+      
       <div className="pt-20 md:pt-4">
         <Header2 />
       </div>

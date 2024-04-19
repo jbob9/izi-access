@@ -6,7 +6,7 @@ import PoEliteSponsors from "@/components/po-elite/sponsors";
 
 const PoElite = () => {
   return (
-    <div className="pt-20 px-6">
+    <div className="pt-20 px-1.5 md:px-6">
       <PoEliteHeader/>
 
       <div className="pt-16">

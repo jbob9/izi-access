@@ -1,3 +1,4 @@
+import PDGWord from "@/components/PDG-word";
 import AboutHero from "@/components/aboutHero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -131,6 +132,10 @@ const About = () => {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="pt-6 pb-10">
+        <PDGWord/>
       </div>
 
       {/* About foooter */}

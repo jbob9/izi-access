@@ -6,7 +6,7 @@ const PoEliteActivities = () => {
           Activies that will have
         </h2>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3 lg:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-5 gap-3 lg:gap-6">
         <div className="p-4 md:p-7 bg-gray-100 rounded-lg">
           <div className="py-3 lg:py-5 text-center">
             <h1 className="font-semibold text-xl">Music</h1>
