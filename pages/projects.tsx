@@ -92,7 +92,7 @@ export default function Porjects() {
                 </p>
                 {project.donation ? (
                   <Button className="w-fit rounded-2xl p-6">
-                    Faire une donation
+                    Faire un don
                   </Button>
                 ) : null}
               </div>
