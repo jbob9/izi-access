@@ -5,18 +5,21 @@ const PoEliteHeader = () => {
     <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
         <div className="lg:col-span-3">
-          <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight ">
-            Start programme <span className="text-blue-600">Elite</span>
+          <h1 className="block text-3xl md:text-4xl font-bold text-gray-800 lg:leading-tight ">
+            PARTICIPEZ AUJOURD’HUI MEME AU PROGRAMME{" "}
+            <span className="text-blue-600">ELITE</span>
           </h1>
           <p className="mt-3 text-lg text-gray-800">
-            Introducing a new way for your brand to reach the creative
-            community.
+            PAYS A L’HONNEUR: HAITI (DRAPEAU HAITI),.
           </p>
 
-          <div className="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
-          <Button className="bg-neutral-950 py-6 rounded-xl">
-                Appliquer maintenant
-              </Button>
+          <div className="mt-5 lg:mt-8 flex space-x-0.5 md:space-x-2 items-center">
+          <Button className="bg-neutral-950  rounded-xl">
+              Appliquer maintenant
+            </Button>
+            <Button variant={'outline'} className="rounded-xl">
+            Acheter des billets
+            </Button>
           </div>
           {/* <div className="mt-6 lg:mt-12">
               <span className="text-xs font-medium text-gray-800 uppercase">

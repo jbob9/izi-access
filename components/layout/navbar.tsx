@@ -133,14 +133,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/blog" className="block md:px-3 group">
-                    <div className="leading-5 text-sm text-gray-500 hover:text-gray-400">
-                      <span className="">Articles</span>
-                    </div>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="block md:hidden md:px-3 group">
+                  <Link href="/about" className="block md:px-3 group">
                     <div className="leading-5 text-sm text-gray-500 hover:text-gray-400">
                       <span>A propos</span>
                     </div>

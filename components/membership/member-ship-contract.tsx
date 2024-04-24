@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Checkbox } from "../ui/checkbox";
-import { Button } from "../ui/button";
 import { ReloadIcon } from "@radix-ui/react-icons";
+import { useState } from "react";
+import { Button } from "../ui/button";
+import { Checkbox } from "../ui/checkbox";
 
 interface Props {
   handleChangeSection: (section: string) => void;
@@ -20,7 +20,7 @@ const MemberShipContract = ({ handleChangeSection }: Props) => {
           body: JSON.stringify({ accept: true }),
         });
         if (response.ok) {
-         handleChangeSection('membership') 
+          handleChangeSection("membership");
         }
       } catch (e) {
         setLoading(false);
@@ -34,51 +34,106 @@ const MemberShipContract = ({ handleChangeSection }: Props) => {
       <article className="prose h-screen overflow-y-scroll">
         <h2>Terms and conditions</h2>
         <p>
-          For years parents have espoused the health benefits of eating garlic
-          bread with cheese to their children, with the food earning such an
-          iconic status in our culture that kids will often dress up as warm,
-          cheesy loaf for Halloween.
+          L'organisation Izi Access est guidée par une série de principes
+          fondamentaux qui définissent notre mission, nos valeurs et nos
+          engagements envers nos membres, nos partenaires et les communautés que
+          nous servons. Cette charte vise à énoncer clairement ces principes et
+          à fournir un cadre de référence pour nos activités et nos décisions.
         </p>
+
+        <h2>Mission :</h2>
         <p>
-          But a recent study shows that the celebrated appetizer may be linked
-          to a series of rabies cases springing up around the country.
+          Notre mission est de favoriser l'innovation, l'entrepreneuriat, la
+          culture et le développement économique au sein de la communauté noire
+          au Canada et dans le monde entier. Nous nous engageons à créer des
+          opportunités d'épanouissement personnel et professionnel, tout en
+          promouvant la diversité, l'inclusion et le renforcement des liens
+          communautaires.
         </p>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit enim
-          excepturi id error maxime necessitatibus laudantium, quae voluptates
-          quaerat, nulla officiis eaque ipsam alias labore hic odit quisquam
-          dignissimos? Ipsum!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-          cupiditate quia possimus repellat hic vel illo consequuntur. Suscipit
-          itaque voluptas iste dolorem saepe debitis! Dolor quia reprehenderit
-          esse eum eaque?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-          eligendi libero tempora, vel reprehenderit cupiditate debitis quae
-          obcaecati officia nostrum nemo consequatur sit, cumque est quasi,
-          nesciunt ullam. Voluptatibus, natus.
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum minus
-          facilis, incidunt iure veritatis possimus magnam illum odit ex quos
-          cumque ea molestiae? Corporis amet alias obcaecati impedit vel,
-          quibusdam aperiam deleniti ut magnam? Corporis, nemo sit, placeat
-          doloribus, itaque illo quos iste quaerat hic similique totam. Itaque
-          quaerat quae iste saepe ad? Inventore quam est vel, quis magni
-          consectetur necessitatibus quod magnam alias quia dignissimos placeat
-          molestiae officia eos cum itaque ullam provident perferendis. Eligendi
-          nisi expedita laboriosam sunt quibusdam ipsam autem quod quisquam fuga
-          ea omnis quia facilis beatae quos, perspiciatis cum iure velit veniam
-          debitis! Repudiandae possimus quod enim repellendus doloribus eligendi
-          ex incidunt deleniti vero mollitia sint blanditiis, fugiat, est, atque
-          totam ratione? At sint aspernatur fugit repudiandae a consequuntur
-          accusantium dignissimos debitis error itaqu doloribus obcaecati quis
-          facere nulla! Alias enim tenetur voluptatum commodi dolorem labore non
-          ducimus esse.
-        </p>
+        <h2>Valeurs :</h2>
+        <div>
+          <ul>
+            <li>
+              <strong>Diversité :</strong> Nous croyons en la valeur de la
+              diversité et nous nous engageons à créer un environnement inclusif
+              où chaque individu est respecté et valorisé.
+            </li>
+            <li>
+              <strong>Intégrité :</strong> Nous agissons avec intégrité,
+              transparence et honnêteté dans toutes nos interactions et nos
+              décisions.
+            </li>
+            <li>
+              <strong>Collaboration :</strong> Nous croyons au pouvoir de la
+              collaboration et nous encourageons la coopération entre les
+              membres, les partenaires et les communautés que nous servons.
+            </li>
+            <li>
+              <strong>Innovation :</strong> Nous sommes ouverts au changement et
+              à l'innovation, et nous cherchons constamment à trouver de
+              nouvelles façons de répondre aux besoins de notre communauté.
+            </li>
+          </ul>
+        </div>
+
+        <h2>Engagements :</h2>
+        <div>
+          <ul>
+            <li>
+              <strong> Engagement envers la Communauté :</strong> Nous nous
+              engageons à servir et à soutenir notre communauté en offrant des
+              programmes et des services qui répondent à ses besoins et à ses
+              aspirations.
+            </li>
+            <li>
+              <strong>Engagement envers nos Membres :</strong> Nous nous
+              engageons à offrir à nos membres des opportunités d'apprentissage,
+              de croissance et de développement professionnel, ainsi qu'un
+              soutien continu dans la réalisation de leurs objectifs.
+            </li>
+            <li>
+              <strong>Engagement envers nos Partenaires :</strong> Nous nous
+              engageons à établir des partenariats solides et durables avec des
+              organisations qui partagent nos valeurs et notre vision, et à
+              travailler ensemble pour atteindre nos objectifs communs.
+            </li>
+          </ul>
+        </div>
+        <h2>Responsabilités :</h2>
+        <div>
+          <ul>
+            <li>
+              <strong>Responsabilité Financière :</strong> Nous sommes
+              responsables de la gestion responsable et transparente de nos
+              ressources financières, en veillant à ce qu'elles soient utilisées
+              de manière efficace et à ce que nos activités soient
+              financièrement durables.
+            </li>
+            <li>
+              <strong>Responsabilité Sociale :</strong> Nous sommes responsables
+              de l'impact social de nos actions et de nos décisions, en veillant
+              à ce qu'elles contribuent positivement au bien-être de notre
+              communauté et à la réalisation de nos objectifs sociaux.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p>
+            En adhérant à cette charte, nous nous engageons à respecter les
+            principes, les valeurs et les engagements de l'organisation Izi
+            Access dans toutes nos actions et nos décisions. Nous sommes
+            déterminés à œuvrer ensemble pour promouvoir le développement et le
+            bien-être de notre communauté, et à créer un avenir meilleur pour
+            tous.
+          </p>
+          <p>
+            Cette charte énonce les principes fondamentaux qui guident
+            l'organisation Izi Access dans l'accomplissement de sa mission et de
+            ses objectifs. Elle fournit un cadre de référence pour nos activités
+            et nos décisions, tout en soulignant notre engagement envers nos
+            membres, nos partenaires et nos communautés.
+          </p>
+        </div>
       </article>
       <div className="items-top flex space-x-2 pb-6 py-10">
         <Checkbox
@@ -91,10 +146,11 @@ const MemberShipContract = ({ handleChangeSection }: Props) => {
             htmlFor="terms1"
             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
           >
-            Accept terms and conditions
+            Accepter les termes et conditions
           </label>
           <p className="text-sm text-muted-foreground">
-            You agree to our Terms of Service and Privacy Policy.
+            Vous acceptez nos conditions d'utilisation et notre politique de
+            confidentialité.
           </p>
         </div>
       </div>
@@ -107,7 +163,7 @@ const MemberShipContract = ({ handleChangeSection }: Props) => {
           {loading ? (
             <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
           ) : null}
-          Submit
+          Soumettre
         </Button>
       </div>
     </div>

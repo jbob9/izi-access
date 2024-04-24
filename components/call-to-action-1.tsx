@@ -1,10 +1,11 @@
 import { ArrowRightIcon } from "@sanity/icons";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const links = [
-  { name: "Groupe 3737", href: "https://groupe3737.com/" },
-  { name: "Gouvernement Canadien", href: "https://www.canada.ca" },
-  { name: "Initiative Appuyer les Communautés Noires du Canada (IACNC)", href: "https://iacnc.ca" },
+  { name: "Formation & Developpement Professionel", href: "/formation" },
+  { name: "Accompagnement Personnalise", href: "/accompagnement" },
+  { name: "Financement & Investissement", href: "/funding" },
 ];
 // const stats = [
 //   { name: "Offices worldwide", value: "12" },
@@ -48,25 +49,21 @@ const CallToAction1 = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Nos Partenaires Financiers
+          Nos services
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            IZI ACCESS est fière de compter sur le soutien de partenaires
-            engagés qui partagent notre vision et notre mission.
+          Demarrer un projet, ça commence par avoir toutes les ressources nécessaires qui vous permettront de le mener à bien. Izi Access vous propose tout ce dont vous avez besoin pour mettre toutes les chances de votre coté
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
-              <a key={link.name} href={link.href} target="_blank">
+              <Link key={link.name} href={link.href}>
                 {link.name} <span aria-hidden="true">&rarr;</span>
-              </a>
+              </Link>
             ))}
           </div>
-          <Button className="mt-6 py-5 px-6 font-semibold rounded-xl" variant={'secondary'}>
-            Faire un Don
-            <ArrowRightIcon className="ml-2 w-6 h-6"/>
-          </Button>
+          
           {/* <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.name} className="flex flex-col-reverse">

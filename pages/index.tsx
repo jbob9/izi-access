@@ -2,8 +2,8 @@ import BlogPreview from "../components/blog/blog-preview";
 // import Services from "../components/home/services";
 import CallToAction1 from "@/components/call-to-action-1";
 import CallToAction2 from "@/components/call-to-action-2";
+import FinancePartner from "@/components/finance-partner";
 import Header2 from "@/components/home/header2";
-import Services from "@/components/services";
 import Sponsors from "@/components/sponsors";
 import Testi2 from "@/components/testimonials/testi2";
 import { getArticles } from "@/sanity/queries";
@@ -25,7 +25,6 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div className="pt-0 md:pt-4">
-      
       <div className="pt-20 md:pt-4">
         <Header2 />
       </div>
@@ -33,16 +32,20 @@ export default function Home({
         <Sponsors />
       </div>
 
-      <div className="pb-12" id="services">
+      {/* <div className="pb-12" id="services">
         <Services />
-      </div>
+      </div> */}
 
-      <div className="py-20 md:py-28">
+      <div className="py-20 md:py-28" id="services">
         <CallToAction1 />
       </div>
 
+      <div className="py-20 md:py-28">
+        <FinancePartner />
+      </div>
+
       <Testi2 />
-    {/* <Album/> */}
+      {/* <Album/> */}
       <BlogPreview latestArticles={latestArticles} />
 
       <div>

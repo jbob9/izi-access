@@ -71,9 +71,18 @@ const Footer = () => {
                 >
                   <LinkedInLogoIcon className="w-5 h-5" />
                 </a>
-                <a href="mailto:hello@mail.com" aria-label="send mail">
+                <a href="mailto:" aria-label="send mail">
                   <EnvelopeClosedIcon className="w-5 h-5" />
                 </a>
+              </div>
+              <div className="pt-4">
+                <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+                Addresse:
+                </h2>
+                <p className="mt-1.5 text-sm text-neutral-700">
+                Bureau: 8365, Boulevard Langelier, Saint-Léonard, QC, Canada
+                  H1P 2C3
+                </p>
               </div>
             </nav>
             <div className="flex lg:justify-end">

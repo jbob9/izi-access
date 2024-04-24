@@ -28,7 +28,7 @@ const AboutHero = () => {
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               viewBox="0 0 24 24"
               width="24"
             >
