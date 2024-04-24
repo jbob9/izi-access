@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "../ui/button";
 
 const PoEliteHeader = () => {
@@ -14,11 +15,13 @@ const PoEliteHeader = () => {
           </p>
 
           <div className="mt-5 lg:mt-8 flex space-x-0.5 md:space-x-2 items-center">
-          <Button className="bg-neutral-950  rounded-xl">
+            <Button className="bg-neutral-950  rounded-xl" asChild>
+              <Link href="/po-elite/form">
               Appliquer maintenant
+              </Link>
             </Button>
-            <Button variant={'outline'} className="rounded-xl">
-            Acheter des billets
+            <Button variant={"outline"} className="rounded-xl">
+              Acheter des billets
             </Button>
           </div>
           {/* <div className="mt-6 lg:mt-12">

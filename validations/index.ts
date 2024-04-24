@@ -67,3 +67,18 @@ export const accountFormSchema = z.object({
     )
     .optional(),
 });
+
+
+export const programmeEliteFormSchema = z.object({
+  firstname: z.string(),
+  lastname: z.string(),
+  sexe: z.string(),
+  birthdate: z.date(),
+  email: z.string().email(),
+  address: z.string(),
+  phonenumber: z.string(),
+  nationality: z.string(),
+  residance_country: z.string(),
+  activity: z.string(),
+  why: z.string()
+})

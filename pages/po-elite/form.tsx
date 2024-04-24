@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
 import {
   Form,
   FormControl,
@@ -8,23 +9,37 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { formationFormSchema } from "@/validations";
+import { cn } from "@/lib/utils";
+import { programmeEliteFormSchema } from "@/validations";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CheckIcon, ReloadIcon } from "@radix-ui/react-icons";
+import { CalendarIcon, CheckIcon, ReloadIcon } from "@radix-ui/react-icons";
+import dayjs from "dayjs";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 const PoEliteForm = () => {
   const [loading, setLoading] = useState(false);
-  const { toast } = useToast()
-  const form = useForm<z.infer<typeof formationFormSchema>>({
-    resolver: zodResolver(formationFormSchema),
+  const { toast } = useToast();
+  const form = useForm<z.infer<typeof programmeEliteFormSchema>>({
+    resolver: zodResolver(programmeEliteFormSchema),
   });
 
-  async function onSubmit(values: z.infer<typeof formationFormSchema>) {
+  async function onSubmit(values: z.infer<typeof programmeEliteFormSchema>) {
     try {
       setLoading(true);
       // const user = await signUp({
@@ -36,7 +51,7 @@ const PoEliteForm = () => {
       //   country: values.country,
       //   address: values.address
       // });
-  
+
       // if(user){
       //   await signIn('sanity-login', {
       //     redirect: false,
@@ -51,7 +66,7 @@ const PoEliteForm = () => {
       if (response.ok) {
         toast({
           title: "Your request have been accepted.",
-        })
+        });
       }
     } catch (e) {
       setLoading(false);
@@ -65,60 +80,54 @@ const PoEliteForm = () => {
       <div className="px-2 pt-8 pb-16 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <h1 className="text-3xl font-bold leading-7 text-gray-900">
-            FORMATION
+            FORMULAIRE DE CANDIDATURE
           </h1>
           <p className="text-sm opacity-80 leading-relaxed pt-2">
-            Formulaire de Demande de Formation
+            Ce programme est destiné a tous les professionnels, artistes et
+            entrepreneurs qui souhaitent venir faire une experience au Canada
           </p>
 
           <div className="pt-8">
             <h2 className="text-base font-semibold leading-7 text-gray-900">
-              Pourquoi Choisir Izi Access pour Votre Formation ?
+              Pourquoi voulez-vous participer au Programme Elite?
             </h2>
             <div className="pt-4 space-y-6">
               <div className="flex space-x-2">
                 <CheckIcon className="text-green-500 w-10 h-10" />
                 <p className="text-sm opacity-90 leading-relaxed">
                   {" "}
-                  Nous proposons des programmes de formation personnalisés
-                  adaptés à vos besoins spécifiques et à vos objectifs
-                  professionnels.
+                  Notre mission est de créer une plateforme inclusive qui
+                  célèbre l'excellence et promeut le développement
+                  professionnel, culturel et économique au sein de la communauté
+                  noire.
                 </p>
               </div>
               <div className="flex space-x-2">
                 <CheckIcon className="text-green-500 w-10 h-10" />
                 <p className="text-sm opacity-90 leading-relaxed">
                   {" "}
-                  Nos formateurs sont des experts dans leur domaine, offrant des
-                  connaissances et des compétences de pointe pour vous aider à
-                  réussir.
+                  Le Programme Elite propose une série d'événements stimulants,
+                  notamment des conférences, des concerts, des spectacles
+                  artistiques et des formations professionnelles.
                 </p>
               </div>
               <div className="flex space-x-2">
                 <CheckIcon className="text-green-500 w-10 h-10" />
                 <p className="text-sm opacity-90 leading-relaxed">
                   {" "}
-                  En plus de la formation, vous aurez accès à une variété de
-                  ressources supplémentaires pour enrichir votre expérience
-                  d'apprentissage.
+                  Chez Programme Elite, nous croyons fermement en l'excellence
+                  sous toutes ses formes. Nous nous engageons à fournir des
+                  expériences de qualité exceptionnelle à nos participants.
                 </p>
               </div>
               <div className="flex space-x-2">
                 <CheckIcon className="text-green-500 w-10 h-10" />
                 <p className="text-sm opacity-90 leading-relaxed">
                   {" "}
-                  En participant à nos formations, vous aurez l'opportunité de
-                  rencontrer d'autres professionnels de votre domaine et de
-                  développer votre réseau.
-                </p>
-              </div>
-              <div className="flex space-x-2">
-                <CheckIcon className="text-green-500 w-10 h-10" />
-                <p className="text-sm opacity-90 leading-relaxed">
-                  {" "}
-                  Nous restons à votre disposition même après la formation pour
-                  vous fournir un soutien et des conseils supplémentaires selon
-                  vos besoins.
+                  Que vous soyez un professionnel en quête de développement de
+                  carrière, un artiste désireux de partager votre art avec le
+                  monde, ou un entrepreneur ambitieux à la recherche de
+                  nouvelles opportunités.
                 </p>
               </div>
             </div>
@@ -149,6 +158,61 @@ const PoEliteForm = () => {
                     <FormControl>
                       <Input placeholder="Last name" required {...field} />
                     </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="sexe"
+                render={({ field }) => (
+                  <FormItem className="sm:col-span-3">
+                    <FormLabel>Sexe</FormLabel>
+                    <FormControl>
+                      <Input placeholder="First name" required {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="birthdate"
+                render={({ field }) => (
+                  <FormItem className="flex flex-col">
+                    <FormLabel>Date of birth</FormLabel>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            variant={"outline"}
+                            className={cn(
+                              "w-[240px] pl-3 text-left font-normal",
+                              !field.value && "text-muted-foreground"
+                            )}
+                          >
+                            {field.value ? (
+                              dayjs(field.value).format("DD MMM YYYY")
+                            ) : (
+                              <span>Pick a date</span>
+                            )}
+                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="start">
+                        <Calendar
+                          mode="single"
+                          selected={field.value}
+                          onSelect={field.onChange}
+                          disabled={(date) =>
+                            date > new Date() || date < new Date("1900-01-01")
+                          }
+                          initialFocus
+                        />
+                      </PopoverContent>
+                    </Popover>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -191,14 +255,43 @@ const PoEliteForm = () => {
               />
               <FormField
                 control={form.control}
-                name="message"
+                name="activity"
                 render={({ field }) => (
                   <FormItem className="col-span-full">
-                    <FormLabel>Objectif de la formation</FormLabel>
+                    <FormLabel>Vous voulez participez dans quelle categorie d’activite?</FormLabel>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select a activity" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="concert">Concert</SelectItem>
+                        <SelectItem value="humour">Humour</SelectItem>
+                        <SelectItem value="slam">Slam/Poesie</SelectItem>
+                        <SelectItem value="conference">Conference</SelectItem>
+                        <SelectItem value="formation">Formation PAB</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="why"
+                render={({ field }) => (
+                  <FormItem className="col-span-full">
+                    <FormLabel>
+                      Pourquoi voulez-vous participer au Programme Elite?
+                    </FormLabel>
                     <FormControl>
                       <Textarea
                         rows={6}
-                        placeholder="Objectif de la formation"
+                        placeholder="-Pourquoi voulez-vous participer au Programme Elite?"
                         required
                         {...field}
                       />

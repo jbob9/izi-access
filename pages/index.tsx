@@ -2,6 +2,7 @@ import BlogPreview from "../components/blog/blog-preview";
 // import Services from "../components/home/services";
 import CallToAction1 from "@/components/call-to-action-1";
 import CallToAction2 from "@/components/call-to-action-2";
+import Faqs from "@/components/faqs";
 import FinancePartner from "@/components/finance-partner";
 import Header2 from "@/components/home/header2";
 import Sponsors from "@/components/sponsors";
@@ -40,7 +41,7 @@ export default function Home({
         <CallToAction1 />
       </div>
 
-      <div className="py-20 md:py-28">
+      <div>
         <FinancePartner />
       </div>
 
@@ -51,6 +52,7 @@ export default function Home({
       <div>
         <CallToAction2 />
       </div>
+      <Faqs/>
     </div>
   );
 }

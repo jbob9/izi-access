@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "../ui/button";
 
 const PoEliteAbout = () => {
@@ -15,15 +16,13 @@ const PoEliteAbout = () => {
         <div className="mt-5 sm:mt-10 lg:mt-0">
           <div className="space-y-6 sm:space-y-8">
             <div className="space-y-2 md:space-y-4">
-              <h2 className="font-bold text-sm text-blue-500">About Us</h2>
               <h2 className="font-bold text-3xl lg:text-4xl text-gray-800">
-                We tackle the challenges start-ups face
+                Le Programme Elite est une initiative dynamique et d'échanges.
               </h2>
               <p className="text-gray-500">
-                Besides working with start-up enterprises as a partner for
-                digitalization, we have built enterprise products for common
-                pain points that we have encountered in various products and
-                projects.
+                Le Programme Elite est une initiative dynamique visant à
+                faciliter les échanges et les collaborations entre la communauté
+                noire à travers le monde et sa diaspora au Canada.
               </p>
             </div>
             <ul className="space-y-2 sm:space-y-4">
@@ -97,8 +96,8 @@ const PoEliteAbout = () => {
               </li>
             </ul>
             <div>
-              <Button className="bg-neutral-950 w-full rounded-2xl">
-                Appliquer
+              <Button className="bg-neutral-950 w-full rounded-2xl" asChild>
+                <Link href="/po-elite/form">Appliquer</Link>
               </Button>
             </div>
           </div>
