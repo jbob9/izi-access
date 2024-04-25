@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "@sanity/icons";
 
-const projects = [
+export const projects = [
   {
     name: 'Lancement du Centre Communautaire "CHEZ MANMI BARBARA"',
     description:

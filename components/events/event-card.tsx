@@ -6,12 +6,12 @@ export const EventCard = ({
   className,
   title,
   description,
-  header,
+  // header,
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
-  header?: React.ReactNode;
+  // header?: React.ReactNode;
 }) => {
   return (
     <div
@@ -20,11 +20,12 @@ export const EventCard = ({
         className
       )}
     >
-      {header}
+      {/* {header} */}
+      <img src="/lancement-po-elite-live.jpeg" className="w-full h-full max-h-[10rem] rounded-xl object-cover"/>
       <div>
         <div className="flex items-center text-neutral-500 font-semibold text-xs space-x-1">
           <CalendarIcon className="w-5 h-5" />
-          <span>Dec 12 2024, 16:30</span>
+          <span>April 27 2024, 17:00</span>
         </div>
         <div className="font-sans font-bold text-neutral-600 mb-2 mt-1">
           {title}
@@ -32,7 +33,7 @@ export const EventCard = ({
         <div className="font-sans font-normal text-neutral-600 text-xs line-clamp-2">
           {description}
         </div>
-        <Button className="mt-2 w-full">Buy ticket</Button>
+        <Button className="my-2 w-full">Buy ticket</Button>
       </div>
     </div>
   );

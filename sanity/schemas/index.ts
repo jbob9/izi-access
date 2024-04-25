@@ -8,6 +8,7 @@ import formation from "./documents/formation";
 import funding from "./documents/funding";
 import user from "./documents/user";
 import verificationToken from "./documents/verificationToken";
+import poElite from "./documents/po-elite";
 
 const documents = [
   user,
@@ -19,6 +20,7 @@ const documents = [
   funding,
   formation,
   accompagnement,
+  poElite,
 ];
 
 // // Singleton document types

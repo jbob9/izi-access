@@ -11,7 +11,7 @@ import { getArticles } from "@/sanity/queries";
 import { InferGetStaticPropsType } from "next";
 
 export async function getStaticProps() {
-  const latestArticles = await getArticles(6);
+  const latestArticles = await getArticles(2);
 
   return {
     props: {

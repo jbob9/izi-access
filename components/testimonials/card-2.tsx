@@ -1,24 +1,26 @@
-import { StarFilledIcon } from "@radix-ui/react-icons";
-import React from "react";
+import { projects } from "@/pages/projects";
+import { Badge } from "../ui/badge";
 
-const Card2 = () => {
+const Card2 = ({ project }: { project: (typeof projects)[number] }) => {
   return (
-    <div className="aspect-auto py-6 px-6 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none min-w-80 max-w-[22rem]">
-      <div className="flex items-center gap-2">
-        <StarFilledIcon className="text-yellow-400 w-5 h-5" />
-        <StarFilledIcon className="text-yellow-400 w-5 h-5" />
-        <StarFilledIcon className="text-yellow-400 w-5 h-5" />
-        <StarFilledIcon className="text-yellow-400 w-5 h-5" />
-        <StarFilledIcon className="text-yellow-400 w-5 h-5" />
-      </div>
-      <p className="mt-4 text-neutral-600">
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid
-        quo eum quae quos illo earum ipsa doloribus nostrum minus libero
-        aspernatur laborum cum."
-      </p>
-      <div className="mt-6 border-t pt-4">
-        <h6 className="font-bold text-neutral-900">Eric Ampire</h6>
-        <p className="text-sm text-neutral-500 pt-1">Mobile dev</p>
+    <div className="aspect-auto pb-6 pt-3 px-3 border border-gray-100 rounded-3xl bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 dark:shadow-none min-w-80 max-w-[22rem]">
+      <img
+        src={project.image}
+        className="w-full h-full max-h-56 rounded-xl object-cover"
+      />
+      <div className="mt-3 border-t pt-4">
+        <h6 className="font-bold text-neutral-900">{project.name}</h6>
+        <div className="pt-2.5">
+          {project.building ? (
+            <Badge  className="w-fit ">
+              Project en cours
+            </Badge>
+          ) : (
+            <Badge variant="secondary" className="w-fit ">
+              Projets Réalisés
+            </Badge>
+          )}
+        </div>
       </div>
     </div>
   );

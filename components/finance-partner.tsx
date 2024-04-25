@@ -6,7 +6,7 @@ const partners = [
   },
   {
     name: "Gouvernement Canadien",
-    logo: "/group-37-37.jpeg",
+    logo: "/funded-by-the-government-of-canada-logo-vector-600x333.png",
     href: "https://www.canada.ca",
   },
   {
@@ -30,10 +30,10 @@ const FinancePartner = () => {
       </div>
       <div className="flex justify-center gap-x-6 sm:gap-x-8">
         {partners.map((partner, i) => (
-          <a href={partner.href} key={i} target="_blank" className="w-48 h-32">
+          <a href={partner.href} key={i} target="_blank" className="w-56 h-32">
             <img
               src={partner.logo}
-              className="py-3 lg:py-5 object-contain w-full h-full  mx-auto sm:mx-0 text-gray-500"
+              className="py-3 lg:py-5 object-contain w-full h-full mx-auto sm:mx-0 text-gray-500"
             />
           </a>
         ))}
