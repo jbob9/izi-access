@@ -19,11 +19,11 @@ const partners = [
 const FinancePartner = () => {
   return (
     <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-      <div className="w-2/3 mx-auto text-center mb-6">
+      <div className="w-5/6 md:w-2/3 mx-auto text-center mb-6">
         <h2 className="text-4xl font-bold tracking-tight  sm:text-6xl">
           Nos Partenaires Financiers
         </h2>
-        <p className="mt-2 text-lg leading-8 text-gray-600">
+        <p className="mt-2 text-base md:text-lg leading-8 text-gray-600">
           IZI ACCESS est fière de compter sur le soutien de partenaires engagés
           qui partagent notre vision et notre mission.
         </p>

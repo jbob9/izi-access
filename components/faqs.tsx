@@ -19,29 +19,83 @@ const Faqs = () => {
       <div className="max-w-2xl mx-auto">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-2xl font-semibold">
-              Is it accessible?
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
+              Qu'est-ce que IZI ACCESS ?
             </AccordionTrigger>
             <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+              IZI ACCESS est une organisation incubatrice qui encourage
+              l'innovation, l'entrepreneuriat, la culture et le développement
+              économique au sein de la communauté noire. Nos programmes et
+              services sont conçus pour soutenir les individus et les
+              entreprises dans leur parcours vers le succès.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-2xl font-semibold">
-              Is it styled?
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
+              Qui peut bénéficier des services de IZI ACCESS ?
             </AccordionTrigger>
             <AccordionContent>
-              Yes. It comes with default styles that matches the other
-              components&apos; aesthetic.
+              Nos services sont ouverts à tous les membres de la communauté
+              noire, qu'ils soient entrepreneurs, artistes, professionnels ou
+              simplement intéressés par le développement personnel et
+              professionnel.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger className="text-2xl font-semibold">
-              Is it animated?
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
+              Comment puis-je m'inscrire en tant que membre de la IZI ACCESS ?
             </AccordionTrigger>
             <AccordionContent>
-              Yes. It's animated by default, but you can disable it if you
-              prefer.
+              Pour vous inscrire en tant que membre, vous devez suivre les
+              deux(2) etapes d’adhesion: -Faire la demande d’adhesion etpayez
+              les frais; (Devenir Membre) -Ouvrir son compte “Fonds Commun” pour
+              avoir acces a tous nos services subventionnes. (Mon Fonds Commun)
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
+              Quels types de soutien financier offrez-vous aux entrepreneurs et
+              aux entreprises ?
+            </AccordionTrigger>
+            <AccordionContent>
+              Nous offrons une variété de solutions de financement, y compris
+              des subventions, des prêts et des investissements en capital, pour
+              soutenir les projets et les entreprises à fort potentiel de
+              croissance.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-5">
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
+              Comment puis-je devenir partenaire de IZI ACCESS ?
+            </AccordionTrigger>
+            <AccordionContent>
+              Si vous êtes intéressé à devenir partenaire de IZI Access,
+              veuillez nous contacter pour discuter des possibilités de
+              collaboration et des avantages mutuels a partenariat@iziaccess.org
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-6">
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
+              Comment puis-je soutenir les initiatives de IZI Access en tant que
+              donateur ou bénévole ?
+            </AccordionTrigger>
+            <AccordionContent>
+              Nous accueillons avec gratitude les dons et le soutien des membres
+              de la communauté. Pour faire un don, cliquez sur Faire un Don ou
+              pour vous impliquer en tant que bénévole, veuillez nous contacter
+              a l’adresse email suivante: contact@iziaccess.org pour obtenir des
+              informations sur les différentes façons de contribuer.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-7">
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
+              Comment puis-je rester informé des événements et des initiatives
+              de IZI Access ?
+            </AccordionTrigger>
+            <AccordionContent>
+              Pour rester informé des dernières nouvelles, événements et
+              initiatives de IZI Access, veuillez vous abonner à notre
+              newsletter et nous suivre sur les réseaux sociaux.
             </AccordionContent>
           </AccordionItem>
         </Accordion>

@@ -1,11 +1,10 @@
 import { projects } from "@/pages/projects";
-import Carousel from "../carousel";
-import Card2 from "./card-2";
 import Marquee from "react-fast-marquee";
+import Card2 from "./card-2";
 
 const Testi2 = () => {
   return (
-    <div className="pb-28 pt-16">
+    <div className="pb-28 pt-10">
       <div className="container m-auto px-3 md:px-6">
         <div className="mb-12 space-y-4 px-6 md:px-0 text-center ">
           <h2 className="text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
@@ -21,8 +20,8 @@ const Testi2 = () => {
           <Marquee>
             {projects.map((project, i) => (
               <div className="mx-2" key={i}>
-              <Card2 project={project}/>
-            </div>
+                <Card2 project={project} />
+              </div>
             ))}
           </Marquee>
         </div>

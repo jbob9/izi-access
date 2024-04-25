@@ -11,7 +11,7 @@ const Layout = ({ children }: PropsWithChildren) => {
       <div className="bg-gradient-to-r from-purple-600 to-blue-400 rounded-2xl mx-2 mt-1">
         <div className="py-2">
           <div className="flex items-center justify-center">
-            <p className="me-5 inline-block text-sm font-semibold text-white">
+            <p className="inline-block text-sm font-semibold text-white mr-2">
               Programme d'élite dans les airs.
             </p>
             <Link

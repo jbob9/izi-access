@@ -37,7 +37,7 @@ export default function Home({
         <Services />
       </div> */}
 
-      <div className="py-20 md:py-28" id="services">
+      <div className="pb-20 pt-14 md:pt-20 md:py-28" id="services">
         <CallToAction1 />
       </div>
 

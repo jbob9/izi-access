@@ -13,7 +13,7 @@ const Header2 = () => {
       <div className="flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start">
         <h1
           className={cn(
-            "font-extrabold text-4xl lg:text-6xl tracking-tight md:-mb-4 flex flex-col gap-3 items-center lg:items-start",
+            "font-extrabold text-3xl sm:text-3xl lg:text-6xl tracking-tight md:-mb-4 flex flex-col gap-3 items-center lg:items-start",
             Brico.className
           )}
         >
@@ -26,7 +26,7 @@ const Header2 = () => {
             </span>
           </span>
         </h1>
-        <p className="text-lg opacity-80 leading-relaxed">
+        <p className="text-base md:text-lg opacity-80 leading-relaxed">
           Chez IZI ACCESS, nous croyons fermement au pouvoir de l'innovation, de
           l'entrepreneuriat et de la collaboration pour créer un impact positif
           dans les communautés.

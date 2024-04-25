@@ -94,9 +94,9 @@ const Navbar = () => {
             <div className="flex md:hidden w-full pb-5">
               <a href="/" aria-label="logo">
                 <img
-                  src="Izi-Access-Logo.png"
+                  src="/Izi-Access-Logo.png"
                   className="w-28 h-8 object-cover"
-                  alt="tailus logo"
+                  alt="Izi Access logo"
                   width="50"
                   height="40"
                 />

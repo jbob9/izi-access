@@ -19,7 +19,7 @@ const PoEliteFaqs = () => {
       <div className="max-w-2xl mx-auto">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-2xl font-semibold text-left">
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
               Qu'est-ce que le Programme Elite?
             </AccordionTrigger>
             <AccordionContent>
@@ -34,7 +34,7 @@ const PoEliteFaqs = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-2xl font-semibold text-left">
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
               Qui peut participer au Programme Elite?
             </AccordionTrigger>
             <AccordionContent>
@@ -48,7 +48,7 @@ const PoEliteFaqs = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger className="text-2xl font-semibold text-left">
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
               Quels types d'événements proposez-vous?
             </AccordionTrigger>
             <AccordionContent>
@@ -61,8 +61,8 @@ const PoEliteFaqs = () => {
               d’informations, allez a la section Premiere Edition au Canada)
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger className="text-2xl font-semibold text-left">
+          <AccordionItem value="item-4">
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
               Quels types d'événements proposez-vous?
             </AccordionTrigger>
             <AccordionContent>
@@ -75,8 +75,8 @@ const PoEliteFaqs = () => {
               d’informations, allez a la section Premiere Edition au Canada)
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger className="text-2xl font-semibold text-left">
+          <AccordionItem value="item-5">
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
               Comment puis-je m'inscrire aux événements du Programme Elite?
             </AccordionTrigger>
             <AccordionContent>
@@ -85,8 +85,8 @@ const PoEliteFaqs = () => {
               d’application (Apply Now);
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger className="text-2xl font-semibold text-left">
+          <AccordionItem value="item-6">
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
               Y a-t-il des frais pour participer au Programme Elite?
             </AccordionTrigger>
             <AccordionContent>
@@ -97,9 +97,8 @@ const PoEliteFaqs = () => {
               d'événement.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger className="text-2xl font-semibold text-left">
-              {" "}
+          <AccordionItem value="item-7">
+            <AccordionTrigger className="text-xl font-semibold text-gray-600 text-left">
               Comment puis-je contacter l'équipe du Programme Elite?
             </AccordionTrigger>
             <AccordionContent>
