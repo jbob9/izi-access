@@ -22,7 +22,6 @@ export default async function handler(
       , { email: form.data.email });
 
       if (!existUser) {
-        console.log('User not exist')
         const userId = nanoid();
         const r = await client
           .transaction()

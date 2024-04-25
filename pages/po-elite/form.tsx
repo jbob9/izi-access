@@ -28,6 +28,7 @@ import { programmeEliteFormSchema } from "@/validations";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CalendarIcon, CheckIcon, ReloadIcon } from "@radix-ui/react-icons";
 import dayjs from "dayjs";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -35,6 +36,7 @@ import { z } from "zod";
 const PoEliteForm = () => {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
+  const router = useRouter();
   const form = useForm<z.infer<typeof programmeEliteFormSchema>>({
     resolver: zodResolver(programmeEliteFormSchema),
   });
@@ -42,38 +44,23 @@ const PoEliteForm = () => {
   async function onSubmit(values: z.infer<typeof programmeEliteFormSchema>) {
     try {
       setLoading(true);
-      // const user = await signUp({
-      //   email: values.email,
-      //   password: values.password,
-      //   name: `${values.firstname} ${values.lastname}`,
-      //   firstname: values.firstname,
-      //   lastname: values.lastname,
-      //   country: values.country,
-      //   address: values.address
-      // });
-
-      // if(user){
-      //   await signIn('sanity-login', {
-      //     redirect: false,
-      //     email: values.email,
-      //     password: values.password
-      //   });
-      // }
-      const response = await fetch("/api/formation", {
+      const response = await fetch("/api/po-elite", {
         method: "POST",
         body: JSON.stringify(values),
       });
       if (response.ok) {
         toast({
-          title: "Your request have been accepted.",
+          title: "Your request have been applied",
         });
+        router.push("/po-elite");
       }
     } catch (e) {
       setLoading(false);
     }
-
     setLoading(false);
   }
+
+  console.log(form.formState.errors, "ffkfk");
 
   return (
     <div className="xl:container mx-3 md:m-auto pt-24 md:px-12 lg:px-20">
@@ -168,10 +155,22 @@ const PoEliteForm = () => {
                 name="sexe"
                 render={({ field }) => (
                   <FormItem className="sm:col-span-3">
-                    <FormLabel>Sexe</FormLabel>
-                    <FormControl>
-                      <Input placeholder="First name" required {...field} />
-                    </FormControl>
+                    <FormLabel>Select a sexe</FormLabel>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select a sexe" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="male">Male</SelectItem>
+                        <SelectItem value="female">Female</SelectItem>
+                        <SelectItem value="others">Others</SelectItem>
+                      </SelectContent>
+                    </Select>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -253,12 +252,60 @@ const PoEliteForm = () => {
                   </FormItem>
                 )}
               />
+
+              <FormField
+                control={form.control}
+                name="residance_country"
+                render={({ field }) => (
+                  <FormItem className="sm:col-span-3">
+                    <FormLabel>Pays Residant</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Pays Residant" required {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="nationality"
+                render={({ field }) => (
+                  <FormItem className="sm:col-span-3">
+                    <FormLabel>Nationalite</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Nationalite" required {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="address"
+                render={({ field }) => (
+                  <FormItem className="col-span-full">
+                    <FormLabel>Address</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Votre Addresse"
+                        type="string"
+                        required
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
               <FormField
                 control={form.control}
                 name="activity"
                 render={({ field }) => (
                   <FormItem className="col-span-full">
-                    <FormLabel>Vous voulez participez dans quelle categorie d’activite?</FormLabel>
+                    <FormLabel>
+                      Vous voulez participez dans quelle categorie d’activite?
+                    </FormLabel>
                     <Select
                       onValueChange={field.onChange}
                       defaultValue={field.value}
