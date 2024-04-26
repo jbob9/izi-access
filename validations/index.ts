@@ -6,7 +6,7 @@ export const savePersonalInfoSchema = z.object({
   lastname: z.string(),
   email: z.string().email(),
   country: z.string(),
-  password: z.string().min(8),
+  // password: z.string().min(8),
   address: z.string(),
 })
 
