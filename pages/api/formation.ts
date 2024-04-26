@@ -18,12 +18,13 @@ export default async function handler(
     const form = formationFormSchema.safeParse(JSON.parse(req.body));
     if (form.success) {
       const existUser = await client.fetch<{ id: string } | null>(
-        `*[_type == "user" && email == $email]{ id }[0]`
-      , { email: form.data.email });
+        `*[_type == "user" && email == $email]{ id }[0]`,
+        { email: form.data.email }
+      );
 
       if (!existUser) {
         const userId = nanoid();
-        const r = await client
+        await client
           .transaction()
           .create({
             _id: userId,
@@ -36,7 +37,7 @@ export default async function handler(
           })
           .create({
             _type: "formation",
-            ...form.data,
+            message: form.data.message,
             user: {
               _key: nanoid(),
               _ref: userId,
@@ -45,33 +46,28 @@ export default async function handler(
           })
           .commit();
 
-        console.log(r.results , 'Transaction response')
-        return res
-          .status(200)
-          .json({
-            error: false,
-            userId,
-            message: "Your request have been accepted",
-          });
+        return res.status(200).json({
+          error: false,
+          userId,
+          message: "Your request have been accepted",
+        });
       }
-      console.log(existUser, 'User exist')
+      console.log(existUser, "User exist");
 
       client.create({
         _type: "formation",
-        ...form.data,
+        message: form.data.message,
         user: {
           _key: nanoid(),
           _ref: existUser.id,
           _type: "reference",
         },
-      })
-      return res
-        .status(200)
-        .json({
-          error: false,
-          userId: existUser.id,
-          message: "Your request have been accepted",
-        });
+      });
+      return res.status(200).json({
+        error: false,
+        userId: existUser.id,
+        message: "Your request have been accepted",
+      });
     }
 
     return res.status(400).json({ error: true, message: form.error.message });
