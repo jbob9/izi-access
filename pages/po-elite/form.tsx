@@ -285,7 +285,7 @@ const PoEliteForm = () => {
                 name="address"
                 render={({ field }) => (
                   <FormItem className="col-span-full">
-                    <FormLabel>Address</FormLabel>
+                    <FormLabel>Addresse</FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Votre Addresse"
@@ -321,6 +321,7 @@ const PoEliteForm = () => {
                         <SelectItem value="slam">Slam/Poesie</SelectItem>
                         <SelectItem value="conference">Conference</SelectItem>
                         <SelectItem value="formation">Formation PAB</SelectItem>
+                        <SelectItem value="concours-eloquence ">Concours Eloquence</SelectItem>
                       </SelectContent>
                     </Select>
                     <FormMessage />

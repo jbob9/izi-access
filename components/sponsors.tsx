@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
 
-const logos = [
+export const logos = [
   {
     image: "/logos/ahq-logo.png",
     name: "ahq-logo",
