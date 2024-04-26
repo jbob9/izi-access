@@ -9,8 +9,8 @@ const PoEliteSponsors = () => {
       </div>
       <div>
         <Marquee pauseOnHover pauseOnClick>
-          {logos.map((logo) => (
-            <img src={logo.image} className="size-24 object-contain  mx-4" />
+          {logos.map((logo, i) => (
+            <img src={logo.image} key={i} className="size-24 object-contain mx-4" alt="" />
           ))}
         </Marquee>
       </div>
