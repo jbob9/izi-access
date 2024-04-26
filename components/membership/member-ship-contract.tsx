@@ -32,7 +32,7 @@ const MemberShipContract = ({ handleChangeSection }: Props) => {
   return (
     <div className="mx-auto max-w-2xl">
       <article className="prose h-screen overflow-y-scroll">
-        <h2>Terms and conditions</h2>
+        <h2>Termes et conditions</h2>
         <p>
           L'organisation Izi Access est guidée par une série de principes
           fondamentaux qui définissent notre mission, nos valeurs et nos
@@ -154,9 +154,9 @@ const MemberShipContract = ({ handleChangeSection }: Props) => {
           </p>
         </div>
       </div>
-      <div className="flex justify-end pb-4 pr-3">
+      <div className="flex justify-end pb-4 pr-3 mt-4">
         <Button
-          className="rounded-2xl"
+          className="rounded-2xl w-full"
           disabled={!accept || loading}
           onClick={handleSubmit}
         >

@@ -62,13 +62,13 @@ const MemberShipLoginForm = ({ handleChangeSection }: Props) => {
       <div className="space-y-12">
         <div className="pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">
-            Personal Information
+            Informations personnelles
           </h2>
           <p className="mt-1 text-sm leading-6 text-gray-600">
-            Use a permanent address where you can receive mail.
+            Utilisez une adresse email permanente où vous pouvez recevoir du courrier.
           </p>
           <p className="mt-1 text-sm leading-6 text-gray-600">
-            This will be private and not shared
+            Ce sera privé et non partagé
           </p>
 
           <Form {...form}>
@@ -172,10 +172,10 @@ const MemberShipLoginForm = ({ handleChangeSection }: Props) => {
                 )}
                 /> */}
               </div>
-              <div className="mt-5 flex items-center justify-end gap-x-6">
+              <div className="mt-7 flex items-center justify-end gap-x-6">
                 <Button
                   type="submit"
-                  className="rounded-2xl"
+                  className="rounded-2xl w-full"
                   disabled={loading}
                 >
                   {loading ? (
