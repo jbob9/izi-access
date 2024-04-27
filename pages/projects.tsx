@@ -8,7 +8,7 @@ export const projects = [
     name: 'Lancement du Centre Communautaire "CHEZ MANMI BARBARA"',
     description:
       'Nous sommes  fiers de soutenir le lancement du Centre Communautaire "CHEZ MANMI BARBARA" à Montréal. Ce centre servira de point de rencontre et de ressources pour la communauté noire, offrant des programmes éducatifs, culturels et sociaux.',
-    image: "/slide-1.jpg",
+    image: "/centre-communotaire.jpeg",
     building: true,
     donation: true,
   },
@@ -16,7 +16,7 @@ export const projects = [
     name: "Construction d'une École pour les Orphelins en Haïti",
     description:
       'Nous sommes  fiers de soutenir le lancement du Centre Communautaire "CHEZ MANMI BARBARA" à Montréal. Ce centre servira de point de rencontre et de ressources pour la communauté noire, offrant des programmes éducatifs, culturels et sociaux.',
-    image: "/slide-2.jpg",
+    image: "/const-ecole.jpeg",
     building: true,
     donation: true,
   },
@@ -24,7 +24,7 @@ export const projects = [
     name: "Izi Transfer",
     description:
       "Izi Transfer est une plateforme de recharge en ligne qui permet aux membres de la communauté noire d'envoyer des Top-Up rapidement, en toute sécurité et à moindre coût à leurs proches à l'étranger, notamment en Haïti. Grâce à des partenariats stratégiques avec des fournisseurs de services financiers, Izi Transfer a simplifié le processus de transfert de Top-Up transfrontalier, offrant ainsi une solution pratique et abordable pour répondre aux besoins de la diaspora.",
-    image: "/slide-1.jpg",
+    image: "/izi-transfer-2.jpeg",
     building: false,
     donation: false,
   },
@@ -36,7 +36,7 @@ export const projects = [
     ressources, poser des questions et trouver du soutien dans leur parcours professionnel,
     entrepreneurial et personnel. Izi Connect vise à renforcer les liens au sein de la communauté
     noire et à promouvoir la collaboration et la solidarité entre ses membres.`,
-    image: "/slide-2.jpg",
+    image: "/izi-connect-2.jpeg",
     building: false,
     donation: false,
   },
@@ -48,7 +48,7 @@ export const projects = [
     public. Grâce à des spectacles réguliers, des événements spéciaux et des collaborations avec
     d'autres artistes et organisations, Cantave. K Comedy Club contribue à faire connaître et
     apprécier la riche tradition comique de la culture haïtienne`,
-    image: "/slide-2.jpg",
+    image: "/cantavek-2.jpeg",
     building: false,
     donation: false,
   },
