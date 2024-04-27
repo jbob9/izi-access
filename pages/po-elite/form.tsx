@@ -128,7 +128,7 @@ const PoEliteForm = () => {
                 name="firstname"
                 render={({ field }) => (
                   <FormItem className="sm:col-span-3">
-                    <FormLabel>First name</FormLabel>
+                    <FormLabel>Prenom</FormLabel>
                     <FormControl>
                       <Input placeholder="First name" required {...field} />
                     </FormControl>
@@ -141,7 +141,7 @@ const PoEliteForm = () => {
                 name="lastname"
                 render={({ field }) => (
                   <FormItem className="sm:col-span-3">
-                    <FormLabel>Last name</FormLabel>
+                    <FormLabel>Nom</FormLabel>
                     <FormControl>
                       <Input placeholder="Last name" required {...field} />
                     </FormControl>
@@ -155,7 +155,7 @@ const PoEliteForm = () => {
                 name="sexe"
                 render={({ field }) => (
                   <FormItem className="sm:col-span-3">
-                    <FormLabel>Select a sexe</FormLabel>
+                    <FormLabel>Choisir son sexe</FormLabel>
                     <Select
                       onValueChange={field.onChange}
                       defaultValue={field.value}
@@ -180,7 +180,7 @@ const PoEliteForm = () => {
                 name="birthdate"
                 render={({ field }) => (
                   <FormItem className="flex flex-col">
-                    <FormLabel>Date of birth</FormLabel>
+                    <FormLabel>Date de naissance</FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
@@ -194,7 +194,7 @@ const PoEliteForm = () => {
                             {field.value ? (
                               dayjs(field.value).format("DD MMM YYYY")
                             ) : (
-                              <span>Pick a date</span>
+                              <span>Choisir une date</span>
                             )}
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                           </Button>
@@ -221,10 +221,10 @@ const PoEliteForm = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem className="col-span-full">
-                    <FormLabel>Email address</FormLabel>
+                    <FormLabel>Addresse Mail</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Email address"
+                        placeholder="Addresse Mail"
                         type="email"
                         required
                         {...field}
@@ -239,7 +239,7 @@ const PoEliteForm = () => {
                 name="phonenumber"
                 render={({ field }) => (
                   <FormItem className="col-span-full">
-                    <FormLabel>Telelphone</FormLabel>
+                    <FormLabel>Telephone</FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Numero de telephone"
@@ -258,9 +258,9 @@ const PoEliteForm = () => {
                 name="residance_country"
                 render={({ field }) => (
                   <FormItem className="sm:col-span-3">
-                    <FormLabel>Pays Residant</FormLabel>
+                    <FormLabel>Pays</FormLabel>
                     <FormControl>
-                      <Input placeholder="Pays Residant" required {...field} />
+                      <Input placeholder="Pays" required {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -312,7 +312,7 @@ const PoEliteForm = () => {
                     >
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a activity" />
+                          <SelectValue placeholder="Selectionnez un activite" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>

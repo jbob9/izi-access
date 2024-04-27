@@ -37,15 +37,15 @@ const PoEliteAbout = () => {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </span>
 
                 <span className="text-sm sm:text-base text-gray-500">
-                  <span className="font-bold">Easy & fast</span> designing
+                  <span className="font-bold">Faciliter</span> les échanges
                 </span>
               </li>
 
@@ -59,16 +59,16 @@ const PoEliteAbout = () => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </span>
 
                 <span className="text-sm sm:text-base text-gray-500">
-                  Powerful <span className="font-bold">features</span>
+                  Promouvoir  <span className="font-bold">la diversité et l'inclusion</span>
                 </span>
               </li>
 
@@ -82,16 +82,16 @@ const PoEliteAbout = () => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </span>
 
                 <span className="text-sm sm:text-base text-gray-500">
-                  User Experience Design
+                  Renforcer les liens Économiques et socioculturels
                 </span>
               </li>
             </ul>

@@ -11,7 +11,7 @@ const PoEliteHeader = () => {
             <span className="text-blue-600">ELITE</span>
           </h1>
           <p className="mt-3 text-lg text-gray-800 flex items-center">
-            <span>PAYS A L’HONNEUR: HAITI</span> <img src="/haiti-flag.svg" className="ml-3 h-6 w-6" alt="haiti flag" />.
+            <span>PAYS A L’HONNEUR: HAITI</span> <img src="/haiti-flag.svg" className="ml-3 h-6 w-6" alt="haiti flag" />
           </p>
 
           <div className="mt-5 lg:mt-8 flex space-x-0.5 md:space-x-2 items-center">
@@ -20,8 +20,10 @@ const PoEliteHeader = () => {
               Appliquer maintenant
               </Link>
             </Button>
-            <Button variant={"outline"} className="rounded-xl">
-              Acheter des billets
+            <Button variant={"outline"} className="rounded-xl" asChild>
+              <Link href="/events">
+                Acheter des billets
+              </Link>
             </Button>
           </div>
         </div>
@@ -29,7 +31,7 @@ const PoEliteHeader = () => {
         <div className="lg:col-span-4 mt-10 lg:mt-0">
           <img
             className="w-full rounded-xl"
-            src="https://images.unsplash.com/photo-1665686376173-ada7a0031a85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&h=700&q=80"
+            src="/po-elite-header-image.jpeg"
             alt="Image Description"
           />
         </div>
