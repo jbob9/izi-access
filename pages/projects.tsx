@@ -102,7 +102,7 @@ export default function Porjects() {
                 alt="Project Showcase"
                 className="aspect-video h-80 md:h-96 overflow-hidden rounded-xl object-cover object-center order-first"
                 height="450"
-                src="/slide-1.jpg"
+                src={project.image}
                 width="800"
               />
             </div>
