@@ -99,7 +99,7 @@ export default function Porjects() {
                 ) : null}
               </div>
               <img
-                alt="Project Showcase"
+                alt={`${project.image} image`}
                 className="aspect-video h-80 md:h-96 overflow-hidden rounded-xl object-cover object-center order-first"
                 height="450"
                 src={project.image}

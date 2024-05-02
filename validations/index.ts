@@ -11,6 +11,7 @@ export const savePersonalInfoSchema = z.object({
 })
 
 export const acceptConditionSchema = z.object({
+  email: z.string().email(),
   accept: z.boolean(),
 })
 

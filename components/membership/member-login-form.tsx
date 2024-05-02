@@ -21,12 +21,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import { toast } from "../ui/use-toast";
 
 interface Props {
   handleChangeSection: (section: string) => void;
+  handleAddEmail: (email: string) => void;
 }
 
-const MemberShipLoginForm = ({ handleChangeSection }: Props) => {
+const MemberShipLoginForm = ({
+  handleChangeSection,
+  handleAddEmail,
+}: Props) => {
   const [loading, setLoading] = useState(false);
   const form = useForm<z.infer<typeof savePersonalInfoSchema>>({
     resolver: zodResolver(savePersonalInfoSchema),
@@ -49,7 +54,11 @@ const MemberShipLoginForm = ({ handleChangeSection }: Props) => {
         body: JSON.stringify(values),
       });
       if (response.ok) {
+        handleAddEmail(values.email);
         handleChangeSection("condition-info");
+      } else {
+        const data = await response.json();
+        toast({ title: data?.message, variant: "destructive" });
       }
     } catch (e) {
       setLoading(false);
@@ -65,7 +74,8 @@ const MemberShipLoginForm = ({ handleChangeSection }: Props) => {
             Informations personnelles
           </h2>
           <p className="mt-1 text-sm leading-6 text-gray-600">
-            Utilisez une adresse email permanente où vous pouvez recevoir du courrier.
+            Utilisez une adresse email permanente où vous pouvez recevoir du
+            courrier.
           </p>
           <p className="mt-1 text-sm leading-6 text-gray-600">
             Ce sera privé et non partagé
@@ -181,7 +191,7 @@ const MemberShipLoginForm = ({ handleChangeSection }: Props) => {
                   {loading ? (
                     <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
                   ) : null}
-                  Save personal info
+                  Enregister
                 </Button>
               </div>
             </form>

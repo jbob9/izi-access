@@ -20,7 +20,7 @@ export default async function handler(
       );
 
       if (user) {
-        return res.status(400).json({ message: "User already exist" });
+        return res.status(400).json({ message: "Your are already a member of iziaccess" });
       }
       await client.create({
         _id: nanoid(),

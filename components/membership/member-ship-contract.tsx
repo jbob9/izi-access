@@ -2,22 +2,32 @@ import { ReloadIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { Checkbox } from "../ui/checkbox";
+import { toast } from "../ui/use-toast";
 
 interface Props {
   handleChangeSection: (section: string) => void;
+  email: string | null;
 }
 
-const MemberShipContract = ({ handleChangeSection }: Props) => {
+const MemberShipContract = ({ handleChangeSection, email }: Props) => {
   const [accept, setAccept] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async () => {
     if (accept) {
       try {
+        if (!email) {
+          toast({
+            title: "You should provide save personal info first",
+            variant: "destructive",
+          });
+          return;
+        }
         setLoading(true);
+
         const response = await fetch("/api/sanity/update-user", {
           method: "POST",
-          body: JSON.stringify({ accept: true }),
+          body: JSON.stringify({ accept: true, email }),
         });
         if (response.ok) {
           handleChangeSection("membership");
