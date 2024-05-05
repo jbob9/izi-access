@@ -15,7 +15,7 @@ export const projects = [
   {
     name: "Construction d'une École pour les Orphelins en Haïti",
     description:
-      'Nous sommes  fiers de soutenir le lancement du Centre Communautaire "CHEZ MANMI BARBARA" à Montréal. Ce centre servira de point de rencontre et de ressources pour la communauté noire, offrant des programmes éducatifs, culturels et sociaux.',
+      "En partenariat avec des organisations locales, nous contribuons à la construction d'une école pour les orphelins en Haïti. Cette école offrira une éducation de qualité et des opportunités pour les enfants",
     image: "/const-ecole.jpeg",
     building: true,
     donation: true,

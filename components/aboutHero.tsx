@@ -24,7 +24,7 @@ const AboutHero = () => {
           <div className="bg-neutral-950 p-3 rounded-lg h-fit text-white">
             <svg
               className="text-current w-5 h-5"
-              shape-rendering="geometricPrecision"
+              shapeRendering="geometricPrecision"
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -51,7 +51,7 @@ const AboutHero = () => {
               className="with-icon_icon__MHUeb text-current w-5 h-5"
               fill="none"
               height="24"
-              shape-rendering="geometricPrecision"
+              shapeRendering="geometricPrecision"
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -80,7 +80,7 @@ const AboutHero = () => {
               className="text-current w-5 h-5"
               fill="none"
               height="24"
-              shape-rendering="geometricPrecision"
+              shapeRendering="geometricPrecision"
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"

@@ -108,8 +108,8 @@ const PDGWord = () => {
               <div className="flex items-center">
                 <div className="md:hidden flex-shrink-0">
                   <img
-                    className="size-12 rounded-full"
-                    src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
+                    className="size-12 rounded-full object-cover"
+                    src="/fredjy-photo.jpeg"
                     alt="Image Description"
                   />
                 </div>

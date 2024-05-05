@@ -22,10 +22,6 @@ export const logos = [
     name: "izi-transfer-logo",
   },
   {
-    image: "/logos/izi-transfer-logo.png",
-    name: "izi-transfer-logo",
-  },
-  {
     image: "/logos/livementor-logo.png",
     name: "livementor-logo",
   },

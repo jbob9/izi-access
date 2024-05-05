@@ -48,7 +48,7 @@ const MemberShipPayment = ({ handleChangeSection }: Props) => {
                 </Select>
               </div>
               <h3 className="text-center text-3xl font-semibold text-gray-700 dark:text-white">
-                MemberShip
+                Frais d'Adhésion
               </h3>
               <div>
                 <div className="relative flex justify-around">
