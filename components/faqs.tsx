@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
 
 const Faqs = () => {
   return (
@@ -46,10 +47,21 @@ const Faqs = () => {
               Comment puis-je m'inscrire en tant que membre de la IZI ACCESS ?
             </AccordionTrigger>
             <AccordionContent>
-              Pour vous inscrire en tant que membre, vous devez suivre les
-              deux(2) etapes d’adhesion: -Faire la demande d’adhesion etpayez
-              les frais; (Devenir Membre) -Ouvrir son compte “Fonds Commun” pour
-              avoir acces a tous nos services subventionnes. (Mon Fonds Commun)
+              <p>
+                Pour vous inscrire en tant que membre, vous devez suivre les
+                deux(2) etapes d’adhesion:{" "}
+              </p>
+              <p>
+                {" "}
+                -Faire la demande d’adhesion etpayez les frais{" "}
+                <Link href="/membership" className="underline">
+                  (Devenir Membre)
+                </Link>
+              </p>
+              <p>
+                -Ouvrir son compte “Fonds Commun” pour avoir acces a tous nos
+                services subventionnes
+              </p>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
@@ -71,7 +83,10 @@ const Faqs = () => {
             <AccordionContent>
               Si vous êtes intéressé à devenir partenaire de IZI Access,
               veuillez nous contacter pour discuter des possibilités de
-              collaboration et des avantages mutuels a partenariat@iziaccess.org
+              collaboration et des avantages mutuels a{" "}
+              <a href="mailto:partenariat@iziaccess.org" className="underline">
+                partenariat@iziaccess.org
+              </a>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-6">
@@ -83,8 +98,12 @@ const Faqs = () => {
               Nous accueillons avec gratitude les dons et le soutien des membres
               de la communauté. Pour faire un don, cliquez sur Faire un Don ou
               pour vous impliquer en tant que bénévole, veuillez nous contacter
-              a l’adresse email suivante: contact@iziaccess.org pour obtenir des
-              informations sur les différentes façons de contribuer.
+              a l’adresse email suivante:{" "}
+              <a href="mailto:contact@iziaccess.org" className="underline">
+                contact@iziaccess.org
+              </a>{" "}
+              pour obtenir des informations sur les différentes façons de
+              contribuer.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-7">

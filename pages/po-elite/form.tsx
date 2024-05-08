@@ -60,8 +60,6 @@ const PoEliteForm = () => {
     setLoading(false);
   }
 
-  console.log(form.formState.errors, "ffkfk");
-
   return (
     <div className="xl:container mx-3 md:m-auto pt-24 md:px-12 lg:px-20">
       <div className="px-2 pt-8 pb-16 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -179,39 +177,15 @@ const PoEliteForm = () => {
                 control={form.control}
                 name="birthdate"
                 render={({ field }) => (
-                  <FormItem className="flex flex-col">
+                  <FormItem className="sm:col-span-3">
                     <FormLabel>Date de naissance</FormLabel>
-                    <Popover>
-                      <PopoverTrigger asChild>
-                        <FormControl>
-                          <Button
-                            variant={"outline"}
-                            className={cn(
-                              "w-[240px] pl-3 text-left font-normal",
-                              !field.value && "text-muted-foreground"
-                            )}
-                          >
-                            {field.value ? (
-                              dayjs(field.value).format("DD MMM YYYY")
-                            ) : (
-                              <span>Choisir une date</span>
-                            )}
-                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                          </Button>
-                        </FormControl>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0" align="start">
-                        <Calendar
-                          mode="single"
-                          selected={field.value}
-                          onSelect={field.onChange}
-                          disabled={(date) =>
-                            date > new Date() || date < new Date("1900-01-01")
-                          }
-                          initialFocus
-                        />
-                      </PopoverContent>
-                    </Popover>
+                    <FormControl>
+                      <Input
+                        placeholder="Date de naissance"
+                        required
+                        {...field}
+                      />
+                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}

@@ -39,7 +39,7 @@ const MemberShipLoginForm = ({
       firstname: "",
       lastname: "",
       email: "",
-      country: "us",
+      country: "",
       address: "",
       // password: ''
     },
@@ -89,9 +89,9 @@ const MemberShipLoginForm = ({
                   name="firstname"
                   render={({ field }) => (
                     <FormItem className="sm:col-span-3">
-                      <FormLabel>First name</FormLabel>
+                      <FormLabel>Prenom</FormLabel>
                       <FormControl>
-                        <Input placeholder="First name" required {...field} />
+                        <Input placeholder="Prenom" required {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -102,9 +102,9 @@ const MemberShipLoginForm = ({
                   name="lastname"
                   render={({ field }) => (
                     <FormItem className="sm:col-span-3">
-                      <FormLabel>Last name</FormLabel>
+                      <FormLabel>Nom</FormLabel>
                       <FormControl>
-                        <Input placeholder="Last name" required {...field} />
+                        <Input placeholder="Nom" required {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -115,10 +115,10 @@ const MemberShipLoginForm = ({
                   name="email"
                   render={({ field }) => (
                     <FormItem className="col-span-full">
-                      <FormLabel>Email address</FormLabel>
+                      <FormLabel>Addresse mail</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="Email address"
+                          placeholder="Addresse mail"
                           type="email"
                           required
                           {...field}
@@ -134,22 +134,14 @@ const MemberShipLoginForm = ({
                   name="country"
                   render={({ field }) => (
                     <FormItem className="col-span-full">
-                      <FormLabel>Country</FormLabel>
-                      <Select
-                        onValueChange={field.onChange}
-                        defaultValue={field.value}
-                      >
-                        <FormControl>
-                          <SelectTrigger className="w-full">
-                            <SelectValue placeholder="Select a country" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="us">United States</SelectItem>
-                          <SelectItem value="ca">Canada</SelectItem>
-                          <SelectItem value="ht">Haiti</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      <FormLabel>Pays</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Pays"
+                          required
+                          {...field}
+                        />
+                      </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
@@ -160,9 +152,9 @@ const MemberShipLoginForm = ({
                   name="address"
                   render={({ field }) => (
                     <FormItem className="col-span-full">
-                      <FormLabel>Address</FormLabel>
+                      <FormLabel>Addresse</FormLabel>
                       <FormControl>
-                        <Input placeholder="Address" required {...field} />
+                        <Input placeholder="Addresse" required {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

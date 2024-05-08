@@ -81,11 +81,11 @@ export default function Porjects() {
                 </h2>
                 {project.building ? (
                   <Badge variant="secondary" className="w-fit bg-blue-500/80">
-                    Project en cours
+                    Projet en cours
                   </Badge>
                 ) : (
                   <Badge variant="secondary" className="w-fit bg-green-500/80">
-                    Projets Réalisés
+                    Projet Réalisé
                   </Badge>
                 )}
                 <p className="text-sm opacity-80 leading-relaxed pt-2">

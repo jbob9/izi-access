@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
 
 const PoEliteFaqs = () => {
   return (
@@ -42,9 +43,16 @@ const PoEliteFaqs = () => {
               et entrepreneurs de la communauté noire à travers le monde, ainsi
               qu'à ceux qui souhaitent se connecter et collaborer avec la
               diaspora noire au Canada. Neanmoins, il faut obligatoirement:
-              -ETRE MEMBRE DE LA IZI ACCESS (Sinon, Decouvrez Comment devenir
-              membre de la Izi Access); -POSSEDER UN PASSEPORT VALIDE (Si vous
-              ne residez pas au Canada).
+              <p>
+                -ETRE MEMBRE DE LA IZI ACCESS{" "}
+                <Link href="/membership" className="underline">
+                  (Devenir Membre)
+                </Link>
+              </p>{" "}
+              <p>
+                -POSSEDER UN PASSEPORT VALIDE (Si vous ne residez pas au
+                Canada).
+              </p>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
@@ -82,7 +90,11 @@ const PoEliteFaqs = () => {
             <AccordionContent>
               Les inscriptions aux événements du Programme Elite se font
               généralement en ligne via notre site web. Remplissez le formulaire
-              d’application (Apply Now);
+              d’application{" "}
+              <Link href="/po-elite/form" className="underline">
+                (Apply Now)
+              </Link>
+              ;
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-6">
@@ -104,7 +116,13 @@ const PoEliteFaqs = () => {
             <AccordionContent>
               Si vous avez des questions ou des préoccupations, vous pouvez nous
               contacter en utilisant le formulaire de contact sur notre site web
-              ou en nous envoyant un e-mail à programmeelite@iziaccess.org
+              ou en nous envoyant un e-mail à{" "}
+              <a
+                href="mailto:programmeelite@iziaccess.org"
+                className="underline"
+              >
+                programmeelite@iziaccess.org
+              </a>
             </AccordionContent>
           </AccordionItem>
         </Accordion>

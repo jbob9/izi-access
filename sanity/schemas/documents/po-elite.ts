@@ -41,7 +41,7 @@ export default defineType({
     defineField({
       name: "birthdate",
       title: "BirthDate",
-      type: "datetime",
+      type: "string",
     }),
     defineField({
       name: "nationality",
