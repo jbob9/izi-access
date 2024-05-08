@@ -31,7 +31,7 @@ const PoEliteHeader = () => {
         <div className="lg:col-span-4 mt-10 lg:mt-0">
           <img
             className="w-full rounded-xl"
-            src="/po-elite-header-image.jpeg"
+            src="/po-elite-header-image-2.jpeg"
             alt="Image Description"
           />
         </div>
