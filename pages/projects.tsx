@@ -8,7 +8,7 @@ export const projects = [
     name: 'Lancement du Centre Communautaire "CHEZ MANMI BARBARA"',
     description:
       'Nous sommes  fiers de soutenir le lancement du Centre Communautaire "CHEZ MANMI BARBARA" à Montréal. Ce centre servira de point de rencontre et de ressources pour la communauté noire, offrant des programmes éducatifs, culturels et sociaux.',
-    image: "/centre-communotaire.jpeg",
+    image: "/centre-communotaire-2.jpeg",
     building: true,
     donation: true,
   },

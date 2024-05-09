@@ -30,7 +30,7 @@ const MemberShipContract = ({ handleChangeSection, email }: Props) => {
           body: JSON.stringify({ accept: true, email }),
         });
         if (response.ok) {
-          handleChangeSection("membership");
+          handleChangeSection("success");
         }
       } catch (e) {
         setLoading(false);

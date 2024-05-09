@@ -3,10 +3,10 @@ import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import MemberShipLoginForm from "./member-login-form";
 import MemberShipContract from "./member-ship-contract";
-import MemberShipPayment from "./membership-payment";
+import MemberSuccess from "./member-success";
 
 const MemberShip = () => {
-  const [section, setSection] = useState("personal-info");
+  const [section, setSection] = useState("success");
   const [email, setEmail] = useState<string | null>(null);
   const { data: session } = useSession();
 
@@ -49,7 +49,6 @@ const MemberShip = () => {
             className={cn("flex items-center cursor-pointer", {
               "text-blue-600": section === "condition-info",
             })}
-            onClick={() => handleChangeSection("condition-info")}
           >
             Condition{" "}
             <span className="hidden sm:inline-flex sm:ms-2">Info</span>
@@ -71,11 +70,10 @@ const MemberShip = () => {
           </li>
           <li
             className={cn("flex items-center cursor-pointer", {
-              "text-blue-600": section === "membership",
+              "text-blue-600": section === "success",
             })}
-            onClick={() => handleChangeSection("membership")}
           >
-            Membership
+            Success
           </li>
         </ol>
       </div>
@@ -92,9 +90,7 @@ const MemberShip = () => {
             email={email}
           />
         )}
-        {section === "membership" && (
-          <MemberShipPayment handleChangeSection={handleChangeSection} />
-        )}
+        {section === "success" && <MemberSuccess />}
       </div>
     </div>
   );
