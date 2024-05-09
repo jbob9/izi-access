@@ -6,7 +6,7 @@ import MemberShipContract from "./member-ship-contract";
 import MemberSuccess from "./member-success";
 
 const MemberShip = () => {
-  const [section, setSection] = useState("success");
+  const [section, setSection] = useState("personal-info");
   const [email, setEmail] = useState<string | null>(null);
   const { data: session } = useSession();
 
