@@ -28,7 +28,7 @@ const Events = () => {
           <Tabs defaultValue="next" className="w-full md:w-[400px]" dir="rtl">
             <TabsList>
               <TabsTrigger value="past">Evenements Passes</TabsTrigger>
-              <TabsTrigger value="next">Prohains Evenements</TabsTrigger>
+              <TabsTrigger value="next">Prochains Evenements</TabsTrigger>
             </TabsList>
           </Tabs>
         </div>
