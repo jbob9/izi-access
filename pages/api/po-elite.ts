@@ -15,11 +15,8 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   if (req.method === "POST") {
-    const { birthdate, ...rest }= JSON.parse(req.body)
-    const form = programmeEliteFormSchema.safeParse({ 
-      ...rest,
-      birthdate: dayjs(birthdate).toDate()
-    });
+    const body = JSON.parse(req.body)
+    const form = programmeEliteFormSchema.safeParse(body);
 
     if (form.success) {
       client.create({
