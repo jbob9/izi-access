@@ -19,7 +19,7 @@ export default async function handler(
     const form = programmeEliteFormSchema.safeParse(body);
 
     if (form.success) {
-      client.create({
+      await client.create({
         _type: "po-elite",
         ...form.data,
       });
